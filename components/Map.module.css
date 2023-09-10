@@ -1,0 +1,36 @@
+.container {
+    box-sizing: border-box;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.mapTitle {
+    text-align: center;
+    margin: 0;
+    /* vertical-align: middle; */
+    /* margin-top: 30px; */
+}
+
+.mapContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 0px 40px; */
+    gap: 40px;
+    line-height: 30px;
+    padding: 0 60px;
+}
+
+.image {
+border-radius: 30px}
+
+.mapSentence {
+    font-size: 16px;
+}
+
+.mapSequence {
+    margin-bottom: 20px;
+}

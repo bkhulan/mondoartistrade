@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+
+.formContainer {
+    height: 90vh;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #0C3561;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.formQuestion {
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+    padding-top: 20px;
+}
+
+.formSentence {
+    padding: 20px;
+    padding-bottom: 40px;
+}
+
+.form {
+    width: 700px;
+}
+
+.formInput {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.input {
+    width: 300px;
+    font-size: 20px;
+    padding: 15px 20px;
+    border: 1px solid #0C3561;
+    margin: 0;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.textArea {
+    width: 663px;
+    height: 150px;
+    margin-bottom: 20px;
+    border: 1px solid #0C3561;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 15px 20px;
+}
+
+.buttonContainer {
+    text-align: center;
+}
+.formButton {
+    background-color: #FFB629;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    padding: 15px 20px;
+    border: none;
+    margin: 0 auto;
+    cursor: pointer;
+    text-align: center;
+}
+

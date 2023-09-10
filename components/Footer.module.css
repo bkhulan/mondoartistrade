@@ -1,0 +1,35 @@
+.footerContainer {
+    height: 90vh;
+    background-color: rgba(155, 172, 190, 0.5);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   line-height: 30px;
+   padding: 0 70px;
+}
+
+.footerList {
+    display: flex;
+    /* align-items: center; */
+    margin: 40px;
+}
+
+.list1 {
+    flex: 0.5;
+    /* margin-top: 10px; */
+    margin: auto 5px;
+}
+
+.list2 {
+    flex: 1.2;
+}
+
+.list3 {
+    flex: 2.5;
+}
+
+.line {
+    border-bottom: 0.5px solid rgba(12, 53, 97, 0.2);
+    width: 90%;
+    margin: 0 auto;
+}

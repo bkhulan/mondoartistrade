@@ -1,0 +1,190 @@
+.mainContainer {
+    width: 100%;    
+    box-sizing: border-box;
+}
+
+.productContainer {
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    color: #161616;
+    /* border-bottom: 0.5px solid #e7ebef; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.productContainerSectionTomorLaaz, .productContainerSectionSelbeg {
+    position: relative;
+}
+
+.shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* .shadowBuilding {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+} */
+
+.productPartTitleContainer {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.listContainer {
+    margin: 30px;
+ }
+
+.boxContainer {
+    display: flex;
+    gap: 30px;
+}
+
+.boxContainerMarginBottom {
+    margin-bottom: 30px;
+}
+
+.imageBox1 {
+    width: 679px;
+    height: 327px;
+    position: relative;
+}
+
+.imageBox2 {
+    width: 462px;
+    height: 327px;
+    position: relative;
+}
+
+/* SECTION 2 */
+
+.imageBox2_1 {
+    width: 561px;
+    height: 327px;
+    position: relative;
+}
+
+/* SECTION 3 */
+
+.imageBox3_1 {
+    width: 561px;
+    height: 429px;
+    position: relative;
+}
+
+.imageBox3_2 {
+    width: 414px;
+    height: 300px;
+    position: relative;
+}
+
+.imageBox3_3 {
+    width: 708px;
+    height: 300px;
+    position: relative;
+}
+
+/* SECTION 4 */
+.imageContainer4 {
+    display: flex;
+    gap: 30px;
+}
+
+.imageBox4_1 {
+    width: 672px;
+    height: 759px;
+    position: relative;
+}
+
+.imageBox4_2 {
+    width: 450px;
+    height: 250px;
+    position: relative;
+}
+
+.boxContainer4 {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* SECTION 5 */
+
+.imageContainer5 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.imageBox5_1 {
+    width: 1152px;
+    height: 357px;
+    position: relative;
+}
+
+.imageBox5_2 {
+    width: 561px;
+    height: 327px;
+    position: relative;
+}
+
+.boxContainer5 {
+    display: flex;
+    gap: 30px;
+}
+
+/* Metal Section */
+.productContainerSectionMetal {
+    position: relative;
+}
+
+.metalContainer {
+    display: flex;
+    gap: 30px;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.hongonTsagaanTitle {
+    text-align: center;
+}
+
+.hongonTsagaan {
+    display: flex;
+    gap: 30px;
+}
+
+.truckBox {
+    border: 2px solid rgba(12, 53, 97, 0.5);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 680px;
+    height: 280px;
+}
+
+.bottomLine {
+    width: 75%;
+    height: 1px;
+    background-color: silver;
+    margin-top: 60px;
+}
+
+.productContainerSectionLast {
+    margin-bottom: 60px;
+}
+
