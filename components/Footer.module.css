@@ -5,13 +5,15 @@
    flex-direction: column;
    justify-content: center;
    line-height: 30px;
-   padding: 0 70px;
+   padding: 20px 70px;
+   font-size: 14px;
+   /* box-sizing: border-box; */
 }
 
 .footerList {
     display: flex;
     /* align-items: center; */
-    margin: 40px;
+    margin: 20px;
 }
 
 .list1 {
