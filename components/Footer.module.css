@@ -22,6 +22,7 @@
 
 .list2 {
     flex: 1.2;
+    text-transform: uppercase;
 }
 
 .list3 {

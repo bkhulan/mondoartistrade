@@ -43,7 +43,7 @@ export default function RequestForm() {
                     <div>- TUMEN Dampilov (Agent) Tel:+79146352828</div>
                     <div>- tumen2005@mail.ru</div>
                     <div>- st.Yaseniev Build-7A, Ulan-Ude, Buryatia Russian Federation 670050.</div>
-                    <div>- DUGAR Puntsukov (Agent) Tel:+79266337819</div>
+                    <div>- DUGAR Puntsukov (Agent) Tel: +79266337819</div>
                     <div>- st.Autozavodskaya Build-23A Block-2, Moskow Russian Federation 115280</div>
                   </div>
            </div>
@@ -59,12 +59,10 @@ export default function RequestForm() {
               <div className={styles.list2}>
                 <div>Name:</div>
                 <div>Address:</div>
-                <div>Telephone:</div>
               </div>
               <div className={styles.list3}>
                 <div>- Choi.S.I</div>
-                <div>- GYEONGGI DO, ILSAN SEGU DAESAN RO 123, 302-306 SEOUL, KOREA. </div>
-                <div>- +82-1068503690</div>
+                <div>- GYEONGGI DO, ILSAN SEGU DAESAN RO 123, 302-306 SEOUL, KOREA. Tel: +82-1068503690</div>
               </div>
            </div>
 
@@ -87,7 +85,7 @@ export default function RequestForm() {
                 <div>- TUMEN Gerile (Agent) Tel: 15647065391</div>
                 <div>- Saihan district st.University, apartment Yang Guang Ming Zuo 1-302, city Huhehaote Inner Mongolia China</div>
                 <div>- Erlian haote, Inner Mongolia 内蒙古自治区锡林郭勒盟二连浩特市环宇商贸城
-6-11门市 达尔苏收 Tel: 13734819003</div>
+6-11门市 达尔苏收 Tel: +13734819003</div>
               </div>
            </div>
         </section>

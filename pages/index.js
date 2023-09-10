@@ -13,7 +13,7 @@ import styles from "../styles/Home.module.css";
 export default function Home() {
   return (
     <>
-      {/* <Script strategy='afterInteractive' src="https://www.googletagmanager.com/gtag/js?id=G-7DGDMC5GLX" />
+      <Script strategy='afterInteractive' src="https://www.googletagmanager.com/gtag/js?id=G-7DGDMC5GLX" />
       <Script id="google-analytics" strategy='afterInteractive'>
         {`
           window.dataLayer = window.dataLayer || [];
@@ -22,7 +22,7 @@ export default function Home() {
  
           gtag('config', 'G-7DGDMC5GLX');
         `}
-      </Script> */}
+      </Script>
     <div id="home" className={styles.container}>
       <main className={styles.main}>
         <Image alt='overlay' width={870} height={200} src={"/planet.png"} className={styles.planet} style={{
@@ -40,8 +40,8 @@ export default function Home() {
           <div>          
             <p className={`${styles.firstList}`}>Guide for Packaging solutions, Spare parts, <br/>Equipments, Building and Raw materials</p>
             <p className={styles.homeTitleList}>Product Research and Data Materials</p>
-            <p className={styles.homeTitleList}>Transportation Options Materials</p>
-            <p className={styles.homeTitleList}>Low Cost</p>
+            <p className={styles.homeTitleList}>Payment and Transportation Options</p>
+            <p className={styles.homeTitleList}>Professional consulting</p>
           </div>
         </div>
       </main>
@@ -91,13 +91,12 @@ export default function Home() {
         Хэрхэн захиалах вэ ?
             </span></h3>
         <ol className={styles.orderSentence}>
-         <li>Захиалах бүтээгдэхүүүний мэдээлэл өгнө.</li>
-         <li>Үйлдвэрт мэдээлэл илгээж материал, хэлбэр хийцлэл, 
-үнийн санал авна.</li>
-         <li>Загвар дизайн, сери дугаар, код, тоо хэмжээг тохирно.</li>
-         <li>Бараа үйлдвэрлэгдэж ачилт хийгдэх үед үлдэгдлийг
-шилжүүлнэ.</li>
-         <li>Бараа замдаа гарч сонгосонмаршрут ба тээвэр зуучаар захиалсан хаягт хүргэгдэнэ.</li>
+         <li>Захиалах бүтээгдэхүүний иж бүрэн мэдээллийг бидэнд өгнө.</li>
+         <li>Үйлдвэрт мэдээллийг илгээж үнийн санал, материал хийцлэлийн мэдээлэл авна.</li>
+         <li>Загвар, өнгө, сери дугаар, код, тоо хэмжээг тохирч гэрээ хийгдэнэ.</li>
+         <li>Барааны урьдчилгаа төлбөр төлж захиалга баталгаажна.</li>
+         <li>Бараа үйлдвэрлэгдэж, ачихад бэлэн болмогц үлдэгдэл төлбөрийг төлнө.</li>
+         <li>Бараа замдаа гарч сонгосон маршрут ба тээвэр зуучаар захиалсан хаягт хүргэгдэнэ.</li>
         </ol>
       </section>
       <Map />
