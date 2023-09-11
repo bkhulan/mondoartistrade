@@ -34,7 +34,7 @@
     position: relative;
 }
 
-.linkLi::before {
+/* .linkLi::before {
     content: "";
     position: absolute;
     left: -20px;
@@ -43,7 +43,7 @@
     width: 1px;
     background: #0C3561;
     opacity: 0.5;
-}
+} */
 
 .navLi {
     display: block;

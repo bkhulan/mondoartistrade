@@ -28,17 +28,19 @@ export default function Home() {
       </Script>
       <div id="home" className={styles.container}>
         <main className={styles.main}>
-          <Image
-            alt="overlay"
-            width={870}
-            height={200}
-            src={"/planet.png"}
-            className={styles.planet}
-            style={{
-              maxWidth: "100%",
-              height: "auto",
-            }}
-          />
+          <div className={styles.planetBox}>
+            <Image
+              alt="planet"
+              width={831}
+              height={636}
+              src={"/planet.png"}
+              className={styles.planet}
+              style={{
+                maxWidth: "100%",
+                height: "100%",
+              }}
+            />
+          </div>
           <Image
             alt="overlay"
             width={200}
