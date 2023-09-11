@@ -22,12 +22,14 @@ export default function RequestForm() {
         <div className={styles.list2}>
           <div>Ulaanbaatar Mongolia: </div>
           <div>Company CEO:</div>
+          <div>Company Sales</div>
           <div>Web site: </div>
           <div>Email: </div>
         </div>
         <div className={styles.list3}>
-          <div>- Bayangol district 1st khoroo Building-68/30, Zip:16030</div>
+          <div>- Bayangol district 1st khoroo building-68/30, Zip:16030</div>
           <div>- B. OCHI (Co-founder) Tel: +976-88105320</div>
+          <div>- A. TEMUULEN (Co-founder)  Tel: +976-99331363</div>
           <div>- www.mondoartis.com</div>
           <div>- sales@mondoartis.com</div>
         </div>
@@ -52,9 +54,9 @@ export default function RequestForm() {
           <div>Address:</div>
         </div>
         <div className={styles.list3}>
-          <div>- Choi.S.I</div>
+          <div>- CHOI.S.I</div>
           <div>
-            - GYEONGGI DO, ILSAN SEGU DAESAN RO 123, 302-306 SEOUL, KOREA. Tel:
+            - Gyeonggi do, Ilsan segu daesan ro 123, 302-306 Seoul, Korea Tel:
             +82-1068503690
           </div>
         </div>
@@ -81,7 +83,7 @@ export default function RequestForm() {
           <div>Storage address:</div>
         </div>
         <div className={styles.list3}>
-          <div>- TUMEN Gerile (Agent) Tel: 15647065391</div>
+          <div>- TUMEN GERILE (Agent) Tel: 15647065391</div>
           <div>
             - Saihan district st.University, apartment Yang Guang Ming Zuo
             1-302, city Huhehaote Inner Mongolia China
@@ -117,7 +119,7 @@ export default function RequestForm() {
           <div>Branch address:</div>
         </div>
         <div className={styles.list3}>
-          <div>- TUMEN Dampilov (Agent) Tel:+79146352828</div>
+          <div>- TUMEN DAMPILOV (Agent) Tel:+79146352828</div>
           <div>- tumen2005@mail.ru</div>
           <div>
             - st.Yaseniev Build-7A, Ulan-Ude, Buryatia Russian Federation
