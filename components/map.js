@@ -8,19 +8,22 @@ export default function Map() {
   return (
     <section className={styles.container}>
       <div className={styles.mapContainer}>
-        <div className={styles.imageContainer}>
-        <Image
-          alt="map"
-          className={styles.image}
-          width={600}
-          height={300}
-          src={"/mapFixed.png"}
-          style={{
-            maxWidth: "100%",
-            height: "100%",
-          }}
-        />
-        </div>
+        {/* <div className={styles.imageContainer} style={{
+          width: "600px",
+          height: "300px"
+        }}> */}
+          <Image
+            alt="map"
+            className={styles.image}
+            width={550}
+            height={444}
+            src={"/mapFixed.png"}
+            style={{
+              maxWidth: "100%",
+              height: "auto",
+            }}
+          />
+        {/* </div> */}
         <ol className={styles.mapSentence}>
           <h3
             className={`${styles2.mainTitle} ${styles.teewerlehTitle}`}

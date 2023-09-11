@@ -177,7 +177,7 @@ export default function Home() {
         <Map />
         <section id="collaboration" className={styles.teewerZuuch}>
           <h3
-            className={`${styles.mainTitle} ${styles.collaborationSentence}`}
+            className={`${styles.mainTitle} ${styles.collaborationTitle}`}
             style={
               {
                 // color: "#0C3561"

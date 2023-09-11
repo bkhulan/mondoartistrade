@@ -108,12 +108,12 @@
   padding-top: 15px;
   margin: 0;
   color: #0C3561;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 @media (max-width: 1440px) {
   .servicePartText {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 
@@ -201,6 +201,12 @@
   line-height: 40px;
 }
 
+@media (max-width: 1440px) {
+  .orderSentence {
+    font-size: 14px;
+  }
+}
+
 .collaboration {
   height: 450px;
   background-color: #E7EBEF;
@@ -219,9 +225,11 @@
   color: #ffffff;
   text-align: center;
   line-height: 30px;
+  padding: 10px 60px;
+  box-sizing: border-box;
 }
 
-.collaborationSentence {
+.collaborationTitle, .collaborationSentence {
   color: white;
   z-index: 1000;
 }
@@ -230,7 +238,16 @@
   z-index: 1000;
 }
 
+.collaborationSentence, .teewerZuuchSentence {
+  font-size: 16px;
+}
 
+@media (max-width: 1440px) {
+  .collaborationSentence, .teewerZuuchSentence {
+    font-size: 14px;
+  }
+  
+}
 .teewerZuuch::after {
   content: "";
   position: absolute;
