@@ -31,41 +31,6 @@ export default function RequestForm() {
         </div>
       </div>
       <div className={styles.line} />
-      <div className={styles.footerList}>
-        <div className={styles.list1}>
-          <Image
-            alt="flag"
-            width={70}
-            height={50}
-            src={"/flagR.png"}
-            style={{
-              maxWidth: "90%",
-              height: "auto",
-            }}
-          />
-        </div>
-        <div className={styles.list2}>
-          <div>Ulan-Ude Russia:</div>
-          <div>E-mail:</div>
-          <div>Office address:</div>
-          <div>Moskow Russia:</div>
-          <div>Branch address:</div>
-        </div>
-        <div className={styles.list3}>
-          <div>- TUMEN Dampilov (Agent) Tel:+79146352828</div>
-          <div>- tumen2005@mail.ru</div>
-          <div>
-            - st.Yaseniev Build-7A, Ulan-Ude, Buryatia Russian Federation
-            670050.
-          </div>
-          <div>- DUGAR Puntsukov (Agent) Tel: +79266337819</div>
-          <div>
-            - st.Autozavodskaya Build-23A Block-2, Moskow Russian Federation
-            115280
-          </div>
-        </div>
-      </div>
-      <div className={styles.line} />
 
       <div className={styles.footerList}>
         <div className={styles.list1}>
@@ -123,6 +88,43 @@ export default function RequestForm() {
             - Erlian haote, Inner Mongolia
             内蒙古自治区锡林郭勒盟二连浩特市环宇商贸城 6-11门市 达尔苏收 Tel:
             +13734819003
+          </div>
+        </div>
+      </div>
+
+      <div className={styles.line} />
+
+       <div className={styles.footerList}>
+        <div className={styles.list1}>
+          <Image
+            alt="flag"
+            width={70}
+            height={50}
+            src={"/flagR.png"}
+            style={{
+              maxWidth: "90%",
+              height: "auto",
+            }}
+          />
+        </div>
+        <div className={styles.list2}>
+          <div>Ulan-Ude Russia:</div>
+          <div>E-mail:</div>
+          <div>Office address:</div>
+          <div>Moskow Russia:</div>
+          <div>Branch address:</div>
+        </div>
+        <div className={styles.list3}>
+          <div>- TUMEN Dampilov (Agent) Tel:+79146352828</div>
+          <div>- tumen2005@mail.ru</div>
+          <div>
+            - st.Yaseniev Build-7A, Ulan-Ude, Buryatia Russian Federation
+            670050.
+          </div>
+          <div>- DUGAR Puntsukov (Agent) Tel: +79266337819</div>
+          <div>
+            - st.Autozavodskaya Build-23A Block-2, Moskow Russian Federation
+            115280
           </div>
         </div>
       </div>
