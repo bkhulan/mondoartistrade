@@ -18,10 +18,10 @@ export default function Map() {
             width={550}
             height={444}
             src={"/mapFixed.png"}
-            style={{
-              maxWidth: "100%",
-              height: "auto",
-            }}
+            // style={{
+            //   maxWidth: "100%",
+            //   height: "auto",
+            // }}
           />
         {/* </div> */}
         <ol className={styles.mapSentence}>

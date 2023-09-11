@@ -32,6 +32,15 @@
 .image {
     border-radius: 30px;
     flex: 1;
+    max-width: 90%;
+    height: auto;
+}
+
+@media (max-width: 1195px) {
+    .image {
+        width: 450px;
+        height: 363.54px;
+    }
 }
 
 .mapSentence {

@@ -5,7 +5,8 @@ import styles from "../components/Footer.module.css";
 
 export default function RequestForm() {
   return (
-    <section className={styles.footerContainer}>
+    <footer className={styles.footerContainer}>
+                <div className={styles.footerMainTitle}>Холбоо барих</div>
       <div className={`${styles.footerList} ${styles.headTitle}`}>
         <div className={styles.list1}></div>
         <div className={styles.list2}></div>
@@ -33,7 +34,6 @@ export default function RequestForm() {
         </div>
         <div className={`${styles.list3} ${styles.qrMainContainer}`}>
           <div className={styles.mongoliaSide}>
-          {/* <div className={styles.footerTitle}>Headquarter office: Ulaanbaatar, Mongolia</div> */}
             <div>- Bayangol district 1st khoroo building-68/30, Zip: 16030</div>
             <div>- B. OCHI (Co-founder) Tel: +976-88105320</div>
             <div>- A. TEMUULEN (Co-founder)  Tel: +976-99331363</div>
@@ -147,27 +147,28 @@ export default function RequestForm() {
           />
         </div>
         <div className={`${styles.list2} ${styles.russiaList}`}>
-          <div className={styles.russialist1}>Office address:</div>
-          <div className={styles.russialist2}>Branch address:</div>
-          <div>E-mail:</div>
           <div>Ulan-Ude Russia:</div>
+          <div className={styles.russialist1}>Office address:</div>
+          <div>E-mail:</div>
           <div>Moskow Russia:</div>
+          <div className={styles.russialist2}>Branch address:</div>
         </div>
         <div className={styles.list3}>
+          <div>- TUMEN DAMPILOV (Agent) Tel:+7-9146352828</div>
           <div>
             - st.Yaseniev Build-7A, Ulan-Ude, Buryatia Russian Federation
             670050.
           </div>
+          <div>- tumen2005@mail.ru</div>
+          <div>- DUGAR Puntsukov (Agent) Tel: +7-9266337819</div>
+          
           <div>
             - st.Autozavodskaya Build-23A Block-2, Moskow Russian Federation
             115280
           </div>
-          <div>- tumen2005@mail.ru</div>
-          <div>- TUMEN DAMPILOV (Agent) Tel:+7-9146352828</div>
-          <div>- DUGAR Puntsukov (Agent) Tel: +7-9266337819</div>
           
         </div>
       </div>
-    </section>
+    </footer>
   );
 }
