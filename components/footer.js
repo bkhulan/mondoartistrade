@@ -23,11 +23,13 @@ export default function RequestForm() {
           <div>Ulaanbaatar Mongolia: </div>
           <div>Company CEO:</div>
           <div>Web site: </div>
+          <div>Email: </div>
         </div>
         <div className={styles.list3}>
           <div>- Bayangol district 1st khoroo Building-68/30, Zip:16030</div>
           <div>- B. OCHI (Co-founder) Tel: +976-88105320</div>
           <div>- www.mondoartis.com</div>
+          <div>- sales@mondoartis.com</div>
         </div>
       </div>
       <div className={styles.line} />

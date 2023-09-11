@@ -82,8 +82,6 @@
   .homeTitleContainer {
     margin-bottom: 30px;
   }
-
-
 }
 
 /* SERVICE ============================================ */
@@ -113,6 +111,13 @@
   font-size: 20px;
 }
 
+@media (max-width: 1440px) {
+  .servicePartText {
+    font-size: 16px;
+  }
+}
+
+
 /* About us  */
 
 .aboutUs {
@@ -139,6 +144,25 @@
   line-height: 30px;
 }
 
+.aboutUsTextDiv {
+  font-size: 16px;
+  color: #666C89;
+
+}
+
+@media (max-width: 1440px) {
+  .aboutUsTextDiv {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .aboutUs {
+    padding: 10px 30px;
+  }
+}
+
+
 /* MAIN TITLE ================================================= */
 
 .mainTitle {
@@ -159,11 +183,6 @@
   height: 26px;
   width: 4px;
   background-image: linear-gradient(to right, #FFAC29 , #FFDA56, #FFD7A6);
-}
-
-.aboutUsTextDiv {
-  color: #666C89;
-  font-size: 16px;
 }
 
 /* ======================= */
