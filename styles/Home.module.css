@@ -84,6 +84,19 @@
   }
 }
 
+@media (max-width: 1440px) {
+  .planetBox {
+    width: 600px;
+    height: 467.15px;
+    border-radius: 10px solid red;
+  }
+
+  .planet {
+    width: 100%;
+    height: 100%;
+  }
+}
+
 /* SERVICE ============================================ */
 
 .ourService {
