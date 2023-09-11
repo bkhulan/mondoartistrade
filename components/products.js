@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Script from "next/script";
 
 import styles from "./Products.module.css";
 import styles2 from "../styles/Home.module.css";

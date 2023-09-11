@@ -6,6 +6,11 @@ import styles from "../components/Footer.module.css";
 export default function RequestForm() {
   return (
     <section className={styles.footerContainer}>
+      <div className={`${styles.footerList} ${styles.headTitle}`}>
+        <div className={styles.list1}></div>
+        <div className={styles.list2}></div>
+        <div className={`${styles.list3} ${styles.footerTitle}`}>Headquarter office: Ulaanbaatar, Mongolia</div>
+        </div>
       <div className={styles.footerList}>
         <div className={styles.list1}>
           <Image
@@ -20,7 +25,6 @@ export default function RequestForm() {
           />
         </div>
         <div className={styles.list2}>
-          <div>Headquarter office: </div>
           <div className={styles.mongolialist1}>Address: </div>
           <div>Company CEO:</div>
           <div className={styles.mongolialist3}>Company Sales:</div>
@@ -29,7 +33,7 @@ export default function RequestForm() {
         </div>
         <div className={`${styles.list3} ${styles.qrMainContainer}`}>
           <div className={styles.mongoliaSide}>
-            <div>- Ulaanbaatar, Mongolia</div>
+          {/* <div className={styles.footerTitle}>Headquarter office: Ulaanbaatar, Mongolia</div> */}
             <div>- Bayangol district 1st khoroo building-68/30, Zip: 16030</div>
             <div>- B. OCHI (Co-founder) Tel: +976-88105320</div>
             <div>- A. TEMUULEN (Co-founder)  Tel: +976-99331363</div>
@@ -39,8 +43,8 @@ export default function RequestForm() {
           <div className={styles.qrContainer}>
             <Image
               alt="Whatsup"
-              width={70}
-              height={68.8}
+              width={120}
+              height={117.94}
               src={"/qrCode/whatsup.jpg"}
               style={{
                 maxWidth: "100%",
@@ -50,8 +54,8 @@ export default function RequestForm() {
             />
             <Image
                 alt="Wechat"
-                width={70}
-                height={68.8}
+                width={120}
+                height={117.94}
                 src={"/qrCode/wechat.jpg"}
                 style={{
                   maxWidth: "100%",
@@ -108,12 +112,13 @@ export default function RequestForm() {
             }}
           />
         </div>
-        <div className={`${styles.list2} ${styles.chinaList}`}>
-          <div>Office address:</div>
-          <div>Storage address:</div>
+        <div className={`${styles.list2}`}>
           <div>Hohhot China:</div>
+          <div className={styles.chinaList1}>Office address:</div>
+          <div className={styles.chinaList2}>Storage address:</div>
         </div>
         <div className={styles.list3}>
+          <div>- TUMEN GERILE (Agent) Tel: +86-15647065391</div>
           <div>
             - Saihan district st.University, apartment Yang Guang Ming Zuo
             1-302, city Huhehaote Inner Mongolia China
@@ -121,9 +126,8 @@ export default function RequestForm() {
           <div>
             - Erlian haote, Inner Mongolia
             内蒙古自治区锡林郭勒盟二连浩特市环宇商贸城 6-11门市 达尔苏收 Tel:
-            +13734819003
+            +86-13734819003
           </div>
-          <div>- TUMEN GERILE (Agent) Tel: 15647065391</div>
         </div>
       </div>
 
@@ -159,8 +163,8 @@ export default function RequestForm() {
             115280
           </div>
           <div>- tumen2005@mail.ru</div>
-          <div>- TUMEN DAMPILOV (Agent) Tel:+79146352828</div>
-          <div>- DUGAR Puntsukov (Agent) Tel: +79266337819</div>
+          <div>- TUMEN DAMPILOV (Agent) Tel:+7-9146352828</div>
+          <div>- DUGAR Puntsukov (Agent) Tel: +7-9266337819</div>
           
         </div>
       </div>
