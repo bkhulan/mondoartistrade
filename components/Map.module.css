@@ -24,29 +24,29 @@
     padding: 0 60px;
 }
 
-/* .imageContainer {
-    width: 600px;
-    height: 300px;
-} */
+.mapBox {
+    position: relative;
+    width: 550px;
+    height: 444px;
+    flex: 1;
+}
 
 .image {
     border-radius: 30px;
-    flex: 1;
-    max-width: 90%;
-    height: auto;
+}
+
+.mapSentence {
+    font-size: 16px;
+    flex: 1.1;
 }
 
 @media (max-width: 1262px) {
-    .image {
+    .mapBox {
         width: 450px;
         height: 363.54px;
     }
 }
 
-.mapSentence {
-    font-size: 16px;
-    flex: 1.5;
-}
 
 .mapSequence {
     margin-bottom: 20px;

@@ -10,14 +10,15 @@
 }
 
 .planetBox {
-  width: 831px;
-  height: 636px;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.planetBoxExample {
+  width: 800px;
+  height: 500px;
+  position: relative;
 }
 
 .homeOverlay {
@@ -62,17 +63,6 @@
 }
 
 @media (max-width: 1440px) {
-  .planetBox {
-    width: 700px;
-    height: 535px;
-    border-radius: 10px solid red;
-  }
-
-  .planet {
-    width: 100%;
-    height: 100%;
-  }
-
   .home {
     top: 180px;
     left: 100px;
@@ -84,44 +74,77 @@
   }
 }
 
-/* @media (max-width: 1440px) {
-  .planetBox {
-    width: 600px;
-    height: 467.15px;
-    border-radius: 10px solid red;
-  }
+/* MAIN TITLE ================================================= */
 
-  .planet {
-    width: 100%;
-    height: 100%;
-  }
-} */
+.mainTitle {
+  margin: 0;
+  color: #0C3561;
+  position: relative;
+}
+
+.mainTitleSpan {
+  background-color: rgba(232, 232, 232, 0.5);
+  padding: 3px;
+}
+
+.mainTitleSpan::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -3px;
+  height: 26px;
+  width: 4px;
+  background-image: linear-gradient(to right, #FFAC29 , #FFDA56, #FFD7A6);
+}
+
 
 /* SERVICE ============================================ */
 
 .ourService {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 60px;
   height: 300px;
   background-color: rgba(155, 172, 190, 0.5);
-  box-sizing: border-box;
-  padding: 40px;
 }
 
 .serviceParts {
-  display: flex;
-  gap: 50px;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
 }
 
 .servicePart {
-  flex: 1;
   text-align: center;
 }
 
-.servicePartText {
-  padding: 0;
-  padding-top: 15px;
-  margin: 0;
-  color: #0C3561;
-  font-size: 16px;
+.iconBox {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.serviceTitle {
+  margin-bottom: 20px;
+  margin-left: 37px;
+}
+
+.mainTitleServiceAndProductSpan {
+  background-color: rgba(232, 232, 232, 0.5);
+  padding: 3px;
+}
+
+.mainTitleServiceAndProductSpan::before {
+  content: "";
+  position: absolute;
+  top: -3.5px;
+  left: -3px;
+  height: 26px;
+  width: 4px;
+  background-image: linear-gradient(to right, #FFAC29 , #FFDA56, #FFD7A6);
 }
 
 @media (max-width: 1440px) {
@@ -129,7 +152,6 @@
     font-size: 15px;
   }
 }
-
 
 /* About us  */
 
@@ -160,7 +182,10 @@
 .aboutUsTextDiv {
   font-size: 16px;
   color: #666C89;
+}
 
+.aboutUsMainTitle {
+  margin-bottom: 40px;
 }
 
 @media (max-width: 1440px) {
@@ -173,29 +198,6 @@
   .aboutUs {
     padding: 10px 30px;
   }
-}
-
-
-/* MAIN TITLE ================================================= */
-
-.mainTitle {
-  margin: 0;
-  color: #0C3561;
-  position: relative;
-}
-.mainTitleSpan {
-  background-color: rgba(232, 232, 232, 0.5);
-  padding: 3px;
-}
-
-.mainTitleSpan::before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: -3px;
-  height: 26px;
-  width: 4px;
-  background-image: linear-gradient(to right, #FFAC29 , #FFDA56, #FFD7A6);
 }
 
 /* ======================= */
@@ -271,29 +273,4 @@
   height: 100%;
   width: 100%;
   background: url("/blueOverlay.png");
-}
-
-.serviceTitle {
-margin: 0;
-  margin-left: 45px;
-  margin-bottom: 15px; 
-}
-
-.aboutUsMainTitle {
-  margin-bottom: 40px;
-}
-
-.serviceTitleSpan {
-  background-color: rgba(232, 232, 232, 0.5);
-  padding: 3px;
-}
-
-.serviceTitleSpan::before {
-  content: "";
-  position: absolute;
-  top: -3px;
-  left: -3px;
-  height: 26px;
-  width: 4px;
-  background-image: linear-gradient(to right, #FFAC29 , #FFDA56, #FFD7A6);
 }

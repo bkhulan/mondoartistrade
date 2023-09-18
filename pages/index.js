@@ -8,6 +8,9 @@ import RequestForm from "../components/requestForm";
 import Footer from "../components/footer";
 import Image from "next/image";
 
+import planetBackground from "../public/planetBackground.png";
+// import product from "../public/products/sawlagaa/shil";
+
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -28,26 +31,26 @@ export default function Home() {
       </Script>
       <div id="home" className={styles.container}>
         <main className={styles.main}>
-          <div className={styles.planetBox}>
+       
+            <div className={styles.planetBox}>
+              <Image
+                alt="Home planet image"
+                src={planetBackground}
+                fill
+                placeholder="blur"
+                // quality={100}
+                // style={{
+                //   objectFit: "cover"
+                // }}
+              />
+            </div>    
             <Image
-              alt="planet"
-              width={831}
-              height={636}
-              src={"/planet.png"}
-              className={styles.planet}
-              style={{
-                maxWidth: "100%",
-                height: "100%",
-              }}
+              alt="overlay"
+              width={200}
+              height={200}
+              src={"/homeOverlay.png"}
+              className={styles.homeOverlay}
             />
-          </div>
-          <Image
-            alt="overlay"
-            width={200}
-            height={200}
-            src={"/homeOverlay.png"}
-            className={styles.homeOverlay}
-          />
           <Navigation />
           <div className={styles.home}>
             <div className={styles.homeTitleContainer}>
@@ -74,41 +77,59 @@ export default function Home() {
         <section id="ourservice" className={styles.ourService}>
           <div className={styles.service}>
             <h3 className={`${styles.mainTitle} ${styles.serviceTitle}`}>
-              <span className={`${styles.serviceTitleSpan}`}>
+              <span className={`${styles.mainTitleServiceAndProductSpan}`}>
                 Манай үйлчилгээ
               </span>
             </h3>
 
             <div className={styles.serviceParts}>
               <div className={styles.servicePart}>
-                <Image
-                  alt="material"
-                  width={110}
-                  height={110}
-                  src={"/icon1.png"}
-                />
+                <div className={styles.iconBox}>
+                  <Image
+                    alt="material"
+                    fill
+                    sizes="(max-width: 100px) 100vw"
+                    src={"/icon1.png"}
+                    className={styles.icon}
+                    style={{
+                    objectFit: "cover",
+                    }}
+                    />
+                </div>
                 <p className={styles.servicePartText}>
-                  Бараа материалын судалгаа, захиалга, нийлүүлэлт
+                  Бараа материалын судалгаа, захиалга, <br/>нийлүүлэлт
                 </p>
               </div>
+
               <div className={styles.servicePart}>
-                <Image
-                  alt="contract"
-                  width={110}
-                  height={110}
-                  src={"/icon2.png"}
-                />
+                <div className={styles.iconBox}>
+                  <Image
+                    alt="contract"
+                    fill
+                    sizes="(max-width: 100px) 100vw"
+                    src={"/icon2.png"}
+                    style={{
+                      objectFit: "cover"
+                    }}
+                  />
+                </div>
                 <p className={styles.servicePartText}>
                   Гэрээ хэлцэл, хууль зүйн зөвлөгөө
                 </p>
               </div>
+
               <div className={styles.servicePart}>
-                <Image
-                  alt="cashflow"
-                  width={110}
-                  height={110}
-                  src={"/icon3.png"}
-                />
+                <div className={styles.iconBox}>
+                  <Image
+                    alt="cashflow"
+                    fill
+                    sizes="(max-width: 100px) 100vw"
+                    src={"/icon3.png"}
+                    style={{
+                      objectFit: "cover"
+                    }}
+                  />
+                  </div>
                 <p className={styles.servicePartText}>
                   Ачаа тээвэр, мөнгөн гүйлгээний шийдэл
                 </p>
@@ -150,7 +171,7 @@ export default function Home() {
 
         <section id="order" className={styles.order}>
           <h3 className={styles.mainTitle}>
-            <span className={`${styles.serviceTitleSpan}`}>
+            <span className={`${styles.mainTitleServiceAndProductSpan}`}>
               Хэрхэн захиалах вэ ?
             </span>
           </h3>

@@ -14,17 +14,20 @@ export default function Navigation() {
 
   return (
     <nav className={styles.navigation}>
-      <Image
-        alt="logo"
-        width={70}
-        height={60}
-        src={"/logoMondo2.png"}
-        className={styles.logo}
-        style={{
-          maxWidth: "100%",
-          height: "auto",
-        }}
-      />
+      <div className={styles.logoBox}>
+        <Image
+          alt="logo"
+          // width={70}
+          // height={60}
+          src={"/logoMondo2.png"}
+          fill
+          sizes="(max-width: 70px) 100vw"
+          // style={{
+            //   maxWidth: "100%",
+            //   height: "auto",
+            // }}
+            />
+        </div>
       <ul className={styles.link}>
         {/* className={`${styles.aTagLink} ${
                   router.pathname == "/protectedroute/home" ? styles.active : ""
@@ -94,17 +97,19 @@ export default function Navigation() {
         <div className={styles.language}>
           {!languageRussian ? (
             <>
-              <Image
-                alt="mongolia"
-                width={30}
-                height={30}
-                src={"/flagMongolia.png"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                  borderRadius: "4px",
-                }}
-              />
+              <div className={styles.navFlagBox}>
+                <Image
+                  alt="mongolia"
+                  // width={30}
+                  // height={30}
+                  src={"/flagMongolia.png"}
+                  fill
+                  sizes="(max-width: 70px) 100vw"
+                  style={{
+                    borderRadius: "4px",
+                  }}
+                />
+              </div>
               <p
                 style={{
                   fontSize: "12px",
@@ -115,17 +120,19 @@ export default function Navigation() {
             </>
           ) : (
             <>
+            <div className={styles.navFlagBox}>
               <Image
                 alt="russia"
-                width={30}
-                height={30}
+                // width={30}
+                // height={30}
                 src={"/flagRussia.png"}
+                fill
+                sizes="(max-width: 70px) 100vw"
                 style={{
-                  maxWidth: "100%",
-                  height: "auto",
                   borderRadius: "4px",
                 }}
-              />
+                />
+              </div>
               <p
                 style={{
                   fontSize: "12px",

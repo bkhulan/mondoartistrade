@@ -16,6 +16,11 @@
     padding: 0 100px;
 }
 
+.logoBox {
+    position: relative;
+    width: 70px;
+    height: 60px;
+}
 
 .logo {
     background-color: #e7ebef;
@@ -57,4 +62,10 @@
     align-items: center;
     gap: 5px;
     color: #0C3561;
+}
+
+.navFlagBox {
+    position: relative;
+    width: 30px;
+    height: 20px;
 }

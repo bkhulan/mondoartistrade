@@ -6,24 +6,30 @@ import styles from "../components/Footer.module.css";
 export default function RequestForm() {
   return (
     <footer className={styles.footerContainer}>
-                <div className={styles.footerMainTitle}>Холбоо барих</div>
+      <div className={styles.footerMainTitle}>Холбоо барих</div>
       <div className={`${styles.footerList} ${styles.headTitle}`}>
         <div className={styles.list1}></div>
         <div className={styles.list2}></div>
-        <div className={`${styles.list3} ${styles.footerTitle}`}>Headquarter office: Ulaanbaatar, Mongolia</div>
+        <div className={`${styles.list3} ${styles.footerTitle}`}>
+          Headquarter office: Ulaanbaatar, Mongolia
         </div>
+      </div>
       <div className={styles.footerList}>
         <div className={styles.list1}>
-          <Image
-            alt="flag"
-            width={70}
-            height={50}
-            src={"/flagM.png"}
-            style={{
-              maxWidth: "90%",
-              height: "auto",
-            }}
-          />
+          <div className={styles.flagBox}>
+            <Image
+              alt="flag"
+              // width={70}
+              // height={50}
+              src={"/flagM.png"}
+              fill
+              sizes="(max-width: 70px) 100vw"
+              // style={{
+              //   maxWidth: "70px",
+              //   height: "auto",
+              // }}
+            />
+          </div>
         </div>
         <div className={styles.list2}>
           <div className={styles.mongolialist1}>Address: </div>
@@ -36,7 +42,7 @@ export default function RequestForm() {
           <div className={styles.mongoliaSide}>
             <div>- Bayangol district 1st khoroo building-68/30, Zip: 16030</div>
             <div>- B. OCHI (Co-founder) Tel: +976-88105320</div>
-            <div>- A. TEMUULEN (Co-founder)  Tel: +976-99331363</div>
+            <div>- A. TEMUULEN (Co-founder) Tel: +976-99331363</div>
             <div>- www.mondoartis.com</div>
             <div>- sales@mondoartis.com</div>
           </div>
@@ -49,19 +55,18 @@ export default function RequestForm() {
               style={{
                 maxWidth: "100%",
                 height: "auto",
-                
               }}
             />
             <Image
-                alt="Wechat"
-                width={120}
-                height={117.94}
-                src={"/qrCode/wechat.jpg"}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
+              alt="Wechat"
+              width={120}
+              height={117.94}
+              src={"/qrCode/wechat.jpg"}
+              style={{
+                maxWidth: "100%",
+                height: "auto",
+              }}
+            />
           </div>
         </div>
       </div>
@@ -69,18 +74,21 @@ export default function RequestForm() {
       <div className={styles.line} />
 
       <div className={styles.footerList}>
-
         <div className={styles.list1}>
-          <Image
-            alt="flag"
-            width={70}
-            height={50}
-            src={"/flagK.png"}
-            style={{
-              maxWidth: "90%",
-              height: "auto",
-            }}
-          />
+          <div className={styles.flagBox}>
+            <Image
+              alt="flag"
+              // width={70}
+              // height={50}
+              src={"/flagK.png"}
+              fill
+              sizes="(max-width: 70px) 100vw"
+              // style={{
+              //   maxWidth: "90%",
+              //   height: "auto",
+              // }}
+            />
+          </div>
         </div>
         <div className={styles.list2}>
           <div className={styles.koreList1}>Address:</div>
@@ -101,16 +109,20 @@ export default function RequestForm() {
 
       <div className={styles.footerList}>
         <div className={styles.list1}>
-          <Image
-            alt="flag"
-            width={70}
-            height={50}
-            src={"/flagC.png"}
-            style={{
-              maxWidth: "90%",
-              height: "auto",
-            }}
-          />
+          <div className={styles.flagBox}>
+            <Image
+              alt="flag"
+              // width={70}
+              // height={50}
+              src={"/flagC.png"}
+              fill
+              sizes="(max-width: 70px) 100vw"
+              // style={{
+              //   maxWidth: "90%",
+              //   height: "auto",
+              // }}
+            />
+          </div>
         </div>
         <div className={`${styles.list2}`}>
           <div>Hohhot China:</div>
@@ -133,18 +145,22 @@ export default function RequestForm() {
 
       <div className={styles.line} />
 
-       <div className={styles.footerList}>
+      <div className={styles.footerList}>
         <div className={styles.list1}>
-          <Image
-            alt="flag"
-            width={70}
-            height={50}
-            src={"/flagR.png"}
-            style={{
-              maxWidth: "90%",
-              height: "auto",
-            }}
-          />
+          <div className={styles.flagBox}>
+            <Image
+              alt="flag"
+              // width={70}
+              // height={50}
+              src={"/flagR.png"}
+              fill
+              sizes="(max-width: 70px) 100vw"
+              // style={{
+              //   maxWidth: "90%",
+              //   height: "auto",
+              // }}
+            />
+          </div>
         </div>
         <div className={`${styles.list2} ${styles.russiaList}`}>
           <div>Ulan-Ude Russia:</div>
@@ -161,12 +177,11 @@ export default function RequestForm() {
           </div>
           <div>- tumen2005@mail.ru</div>
           <div>- DUGAR Puntsukov (Agent) Tel: +7-9266337819</div>
-          
+
           <div>
             - st.Autozavodskaya Build-23A Block-2, Moskow Russian Federation
             115280
           </div>
-          
         </div>
       </div>
     </footer>
