@@ -35,7 +35,7 @@ export default function RequestForm() {
           <input
             className={styles.input}
             name="Phone number"
-            type="number"
+            type="tel"
             placeholder="Утасны дугаар*"
           />
           <input
