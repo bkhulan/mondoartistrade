@@ -14,7 +14,7 @@ export default function RequestForm() {
 
       <form
         className={styles.form}
-        action="https://formsubmit.co/sales@mondoartis.com"
+        action="https://formsubmit.co/ba1163bdf0ad84a3c300b9a6f1da7edf"
         method="POST"
       >
         <div className={styles.formInput}>
