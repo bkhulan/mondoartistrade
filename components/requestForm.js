@@ -22,33 +22,33 @@ export default function RequestForm() {
             className={styles.input}
             name="Name"
             type="text"
-            placeholder="Нэр*"
+            placeholder="Name*"
             required
           />
           <input
             className={styles.input}
             name="Email"
             type="email"
-            placeholder="Емэйл хаяг*"
+            placeholder="Email*"
             required
           />
           <input
             className={styles.input}
             name="Phone number"
             type="tel"
-            placeholder="Утасны дугаар*"
+            placeholder="Phone number*"
           />
           <input
             className={styles.input}
             name="City"
             type="text"
-            placeholder="Хот*"
+            placeholder="City*"
           />
         </div>
         <textarea
           className={styles.textArea}
           name="Message"
-          placeholder="Зурвас*"
+          placeholder="Message*"
           required
         />
         <div className={styles.buttonContainer}>

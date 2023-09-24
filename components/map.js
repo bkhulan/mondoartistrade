@@ -31,35 +31,32 @@ export default function Map() {
               marginBottom: "10px",
             }}
           >
-            <span className={`${styles2.mainTitleSpan}`}>Тээвэрлэх чиглэл</span>
+            <span className={`${styles2.mainTitleMapSpan}`}>Тээвэрлэх чиглэл</span>
           </h3>
           <div className={styles.mapSequence}>
             БНХАУ болон БНСУ-с захиалгат барааг ОХУ-руу усан тээврээр
             Владивосток, төмөр замаар Забайкальск, Монгол улсаар транзит авто
             болон төмөр замаар Улан-Үд хот руу тус тус тээвэрлэнэ.
           </div>
-          <li>ЭРЭЭН БООМТ</li>
-          <div className={styles.mapSequence}>
+          <li className={styles.destination1}>Эрээн боомт</li>
+          <div className={styles.mapSequence1}>
             БНХАУ-ын үйлвэрийн бүсээс Эрээн хот хүртэл тээвэрлэлтийн хугацаа
-            дунджаар 7-9 хоног
+            дунджаар 7-9 хоног.
           </div>
 
-          <li>УЛААНБААТАР ХОТ</li>
-          <div className={styles.mapSequence}>
-            Эрээн хотоос Улаанбаатар хот хүртэл тээвэрлэлтийн хугацаа дунджаар
-            5-7 хоног
+          <li className={styles.destination2}>Улаанбаатар хот</li>
+          <div className={styles.mapSequence2}>
+            Эрээн хотоос Улаанбаатар хот хүртэл тээвэрлэлтийн хугацаа дунджаар 5-7 хоног.
           </div>
 
-          <li>УЛААН-ҮҮД ХОТ</li>
-          <div className={styles.mapSequence}>
-            Улаанбаатар хотоос Улаан-Үүд хот хүртэл тээвэрлэлтийн хугацаа
-            дунджаар 5 хоног
+          <li className={styles.destination3}>Улаан-үүд хот</li>
+          <div className={styles.mapSequence3}>
+            Улаанбаатар хотоос Улаан-Үүд хот хүртэл тээвэрлэлтийн хугацаа дунджаар 5-7 хоног.
           </div>
 
-          <li>НИЙТ ТЭЭВЭРЛЭЛТИЙН ХУГАЦАА</li>
-          <div className={styles.mapSequence}>
-            Бараа тээвэрлэх хот, тээвэрлэлтийн ачаалал зэргээс шалтгаалан
-            дунджаар 22-30 хоног тээвэрлэлтэнд зарцуулагдана
+          <li className={styles.destination4}>Нийт тээвэрлэлтийн хугацаа</li>
+          <div className={styles.mapSequence4}>
+            Бараа тээвэрлэх хот, тээвэрлэлтийн ачаалал зэргээс шалтгаалан дунджаар 22-30 хоног тээвэрлэлтэнд зарцуулагдана.
           </div>
         </ol>
       </div>

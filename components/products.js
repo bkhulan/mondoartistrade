@@ -14,7 +14,7 @@ export default function Products() {
           marginLeft: "90px",
         }}
       >
-        <span className={`${styles2.mainTitleServiceAndProductSpan}`}>
+        <span className={`${styles2.mainTitleProductSpan}`}>
           Манай бүтээгдэхүүнүүд
         </span>
       </h3>
@@ -27,12 +27,14 @@ export default function Products() {
             height={50}
             src={"/icons/icon1.png"}
           />
-          <h4 className={styles.productPartTitle}>Савлагааны бүтээгдэхүүн</h4>
+          <h4 className={styles.productTitleSawlagaa}>
+            Савлагааны бүтээгдэхүүн
+          </h4>
         </div>
 
         <div className={styles.listContainer}>
-          <ul className={styles.productList1}>
-            <li>Шилэн сав, лонх</li>
+          <ul>
+            <li className={styles.glass}>Шилэн сав, лонх</li>
           </ul>
         </div>
 
@@ -106,7 +108,7 @@ export default function Products() {
         />
         <div className={styles.listContainer}>
           <ul className={styles.productList1}>
-            <li>Төмөр лааз</li>
+            <li className={styles.can}>Төмөр лааз</li>
           </ul>
         </div>
 
@@ -174,7 +176,7 @@ export default function Products() {
       >
         <div className={styles.listContainer}>
           <ul className={styles.productList1}>
-            <li>Хуванцар сав, баглаа</li>
+            <li className={styles.plastic}>Хуванцар сав, баглаа</li>
           </ul>
         </div>
 
@@ -238,7 +240,7 @@ export default function Products() {
       >
         <div className={styles.listContainer}>
           <ul className={styles.productList1}>
-            <li>Хэвлэмэл уут</li>
+            <li className={styles.print}>Хэвлэмэл уут</li>
           </ul>
         </div>
 
@@ -316,16 +318,15 @@ export default function Products() {
             height={40}
             src={"/icons/icon3.png"}
           />
-          <h4 className={styles.productPartTitle}>
-            Автомашин, хүнд механизм, уул уурхайн тоног төхөөрөмж, сэлбэг,
-            тоноглол
+          <h4 className={styles.productTitleAwtomashin}>
+            Автомашин, хүнд механизм, уул уурхайн тоног төхөөрөмж, сэлбэг, тоноглол
           </h4>
         </div>
 
         <div className={`${styles.listContainer} ${styles.listTransport}`}>
           <ul className={styles.productListSelbeg}>
-            <li>Авто машины сэлбэг</li>
-            <li>Механизм, эд анги, тоноглол</li>
+            <li className={styles.selbeg}>Авто машины сэлбэг</li>
+            <li className={styles.mechanism}>Механизм, эд анги, тоноглол</li>
           </ul>
         </div>
 
@@ -381,13 +382,13 @@ export default function Products() {
             height={50}
             src={"/icons/icon4.png"}
           />
-          <h4 className={styles.productPartTitle}>Металл бэлдэц, хийцлэл</h4>
+          <h4 className={styles.productTitleMetal}>Металл бэлдэц, хийцлэл</h4>
         </div>
 
         <div className={styles.metalContainer}>
           <div className={styles.column}>
             <ul className={styles.listContainer}>
-              <li>Ган лист</li>
+              <li className={styles.gan}>Ган лист</li>
             </ul>
 
             <div className={styles.imageBox3}>
@@ -406,7 +407,7 @@ export default function Products() {
 
           <div className={styles.column}>
             <ul className={styles.listContainer}>
-              <li>Двутавр, швеллер, угольник</li>
+              <li className={styles.dwutawr}>Двутавр, швеллер, угольник</li>
             </ul>
 
             <div className={styles.imageBox3}>
@@ -427,7 +428,7 @@ export default function Products() {
         <div className={styles.metalContainer}>
           <div className={styles.column}>
             <ul className={styles.listContainer}>
-              <li>Труба, квадрат төмөр</li>
+              <li className={styles.cube}>Труба, квадрат төмөр</li>
             </ul>
 
             <div className={styles.imageBox3}>
@@ -446,7 +447,7 @@ export default function Products() {
 
           <div className={styles.column}>
             <ul className={styles.listContainer}>
-              <li>Металл лист</li>
+              <li className={styles.metal}>Металл лист</li>
             </ul>
 
             <div className={styles.imageBox3}>
@@ -477,13 +478,13 @@ export default function Products() {
             height={50}
             src={"/icons/icon2.png"}
           />
-          <h4 className={styles.productPartTitle}>Барилгын материал</h4>
+          <h4 className={styles.productTitleBuilding}>Барилгын материал</h4>
         </div>
 
         <div className={styles.metalContainer}>
           <div className={styles.column}>
             <ul className={styles.listContainer}>
-              <li>Плита</li>
+              <li className={styles.plita}>Плита</li>
             </ul>
 
             <div className={styles.imageBox3}>
@@ -502,7 +503,7 @@ export default function Products() {
 
           <div className={styles.column}>
             <ul className={styles.listContainer}>
-              <li>Гадна дотно эмульс будаг</li>
+              <li className={styles.paint}>Гадна дотно эмульс будаг</li>
             </ul>
 
             <div className={styles.imageBox3}>
@@ -523,7 +524,7 @@ export default function Products() {
         <div className={styles.metalContainer}>
           <div className={styles.column}>
             <ul className={styles.listContainer}>
-              <li>Модон ба паркетан шал</li>
+              <li className={styles.floor}>Модон ба паркетан шал</li>
             </ul>
 
             <div className={styles.imageBox3}>
@@ -541,8 +542,10 @@ export default function Products() {
           </div>
 
           <div className={styles.column}>
-            <ul className={styles.listContainer}>
-              <li>Электрон тоноглол, автоматжуулалт, дохиолол</li>
+            <ul className={styles.listContainer} style={{ paddingLeft: "0px" }}>
+              <li className={styles.eloctronic}>
+                Электрон тоноглол, автоматжуулалт, дохиолол
+              </li>
             </ul>
 
             <div className={styles.imageBox3}>
@@ -570,7 +573,7 @@ export default function Products() {
         <div className={styles.metalContainer}>
           <div className={styles.column}>
             <ul className={styles.listContainer}>
-              <li>Сантехник хоолой, тоноглол</li>
+              <li className={styles.hooloi}>Сантехник хоолой, тоноглол</li>
             </ul>
 
             <div className={styles.imageBox3}>
@@ -589,7 +592,7 @@ export default function Products() {
 
           <div className={styles.column}>
             <ul className={styles.listContainer}>
-              <li>Цахилгаан утас, тоноглол</li>
+              <li className={styles.erchim}>Эрчим хүч ба цахилгаан тоноглол</li>
             </ul>
 
             <div className={styles.imageBox3}>
@@ -610,7 +613,7 @@ export default function Products() {
         <div className={styles.metalContainer}>
           <div className={styles.column}>
             <ul className={styles.listContainer}>
-              <li>Фанер хавтан</li>
+              <li className={styles.paner}>Фанер хавтан</li>
             </ul>
 
             <div className={styles.imageBox3}>
@@ -629,7 +632,7 @@ export default function Products() {
 
           <div className={styles.column}>
             <ul className={styles.listContainer}>
-              <li>Plywood</li>
+              <li className={styles.plywood}>Plywood</li>
             </ul>
 
             <div className={styles.imageBox3}>
@@ -648,12 +651,14 @@ export default function Products() {
         </div>
 
         <div className={styles.hongonTsagaanContainer}>
-          <div style={{
+          <div
+            style={{
               display: "flex",
-              justifyContent: "center"
-            }}>
+              justifyContent: "center",
+            }}
+          >
             <ul className={styles.listContainer}>
-              <li>Хөнгөн цагаан бэлдэц</li>
+              <li className={styles.hongon}>Хөнгөн цагаан бэлдэц</li>
             </ul>
           </div>
 

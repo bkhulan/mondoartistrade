@@ -1,71 +1,95 @@
 .navigation {
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    background-color: #ffffff;
-    background-color: #e7ebef;
-    height: 70px;
-    padding: 0;
-    margin: 0;
-    gap: 10px;
-    top: 0;
-    left: 0;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-    padding: 0 100px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  background-color: #e7ebef;
+  height: 70px;
+  padding: 0;
+  margin: 0;
+  gap: 10px;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  padding: 0 100px;
 }
 
 .logoBox {
-    position: relative;
-    width: 70px;
-    height: 60px;
+  position: relative;
+  width: 70px;
+  height: 60px;
 }
 
 .logo {
-    background-color: #e7ebef;
-    height: 100%;
+  background-color: #e7ebef;
+  height: 100%;
 }
 
 .link {
-    width: 80%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .link li {
-    list-style: none;
-    position: relative;
+  list-style: none;
+  position: relative;
 }
 
-/* .linkLi::before {
-    content: "";
-    position: absolute;
-    left: -20px;
-    bottom: 8px;
-    height: 12px;
-    width: 1px;
-    background: #0C3561;
-    opacity: 0.5;
-} */
+.home,
+.homeService,
+.homeAboutUs,
+.homeProducts,
+.homeOrder,
+.homeCollaboration {
+  display: block;
+  text-decoration: none;
+  color: #0c3561;
+  padding: 5px;
+}
 
-.navLi {
-    display: block;
-    text-decoration: none;
-    color: #0C3561;
-    padding: 5px;
+.languageContainer {
+  position: relative;
 }
 
 .language {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    color: #0C3561;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #0c3561;
 }
 
-.navFlagBox {
-    position: relative;
-    width: 30px;
-    height: 20px;
+.flagBox {
+  position: relative;
+  width: 30px;
+  height: 20px;
+}
+
+.flagList {
+  font-size: 12px;
+}
+
+.otherLanguagesUl {
+  position: absolute;
+  left: -15px;
+  top: 60px;
+  padding: 0px;
+  background-color: #e7ebef;
+}
+
+.otherLanguagesLi {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 1px 15px;
+}
+
+.otherLanguagesLi:hover {
+  background-color: rgba(155, 172, 190, 0.3);
+}
+
+.display {
+  display: none;
 }
