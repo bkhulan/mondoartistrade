@@ -25,15 +25,15 @@
 .mapBox {
   position: relative;
   flex: 1;
-  width: 500px;
-  height: 650px;
+  width: 100%;
+  aspect-ratio: 70/60;
 }
 
 .mapBoxMobile {
   display: none;
   position: relative;
   width: 80%;
-  height: 650px;
+  aspect-ratio: 70/60;
   z-index: 0;
 }
 
@@ -59,11 +59,6 @@
 }
 
 @media (max-width: 1440px) {
-  .mapBox {
-    width: 500px;
-    height: 450px;
-  }
-
   .mapSequence,
   .mapSequence1,
   .mapSequence2,
@@ -78,20 +73,6 @@
   .destination4 {
     font-size: var(--fontSize15);
   }
-}
-
-@media (max-width: 1359px) {
-  /* .mapBox {
-    width: 450px;
-    height: 363.54px;
-  } */
-  /* .mapBox {
-    flex: 1;
-  }
-  
-  .mapSentence {
-    flex: 1.4;
-  } */
 }
 
 @media (max-width: 1100px) {
@@ -110,67 +91,21 @@
   }
 }
 
-@media (max-width: 950px) {
-  .mapBoxMobile {
-    width: 90%;
-    height: 600px;
-  }
-}
-
 @media (max-width: 850px) {
-  .mapBoxMobile {
-    height: 550px;
-  }
   .mainContainer {
     padding: 50px 60px;
   }
 }
 
-@media (max-width: 750px) {
-  .mapBoxMobile {
-    height: 480px;
-  }
-}
-
 @media (max-width: 650px) {
-  .mapBoxMobile {
-    height: 445px;
-  }
   .mainContainer {
     padding: 50px 30px;
   }
 }
 
-@media (max-width: 550px) {
-  .mapBoxMobile {
-    height: 400px;
-  }
-}
-
-@media (max-width: 550px) {
-  .mapBoxMobile {
-    height: 370px;
-  }
-}
-
 @media (max-width: 450px) {
-  .mapBoxMobile {
-    height: 320px;
-  }
   .mapSentence {
     padding-left: 20px;
-  }
-}
-
-@media (max-width: 400px) {
-  .mapBoxMobile {
-    height: 290px;
-  }
-}
-
-@media (max-width: 360px) {
-  .mapBoxMobile {
-    height: 250px;
   }
 }
 
