@@ -1,47 +1,44 @@
-.container {
-  box-sizing: border-box;
+.mainContainer {
+  position: relative;
   height: 90vh;
+  box-sizing: border-box;
+  width: 100%;
+  line-height: 30px;
+  padding: 0 100px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-}
-
-.mapTitle {
-  text-align: center;
-  margin: 0;
-}
-
-.mapContainer {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 40px;
-  line-height: 30px;
-  padding: 0 60px;
+  justify-content: center;
+  gap: 30px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.sentence {
+  flex: 1;
 }
 
 .mapBox {
   position: relative;
-  width: 550px;
-  height: 444px;
   flex: 1;
+  width: 500px;
+  height: 650px;
+}
+
+.mapBoxMobile {
+  display: none;
+  position: relative;
+  width: 80%;
+  height: 650px;
+  z-index: 0;
 }
 
 .image {
   border-radius: 30px;
-}
-
-.mapSentence {
-  font-size: 16px;
-  flex: 1.1;
-}
-
-@media (max-width: 1262px) {
-  .mapBox {
-    width: 450px;
-    height: 363.54px;
-  }
 }
 
 .mapSequence,
@@ -62,18 +59,118 @@
 }
 
 @media (max-width: 1440px) {
+  .mapBox {
+    width: 500px;
+    height: 450px;
+  }
+
   .mapSequence,
   .mapSequence1,
   .mapSequence2,
   .mapSequence3,
   .mapSequence4 {
-    font-size: 14px;
+    font-size: var(--fontSize15);
   }
 
   .destination1,
   .destination2,
   .destination3,
   .destination4 {
-    font-size: 14px;
+    font-size: var(--fontSize15);
   }
 }
+
+@media (max-width: 1359px) {
+  /* .mapBox {
+    width: 450px;
+    height: 363.54px;
+  } */
+  /* .mapBox {
+    flex: 1;
+  }
+  
+  .mapSentence {
+    flex: 1.4;
+  } */
+}
+
+@media (max-width: 1100px) {
+  .mainContainer {
+    position: relative;
+    height: auto;
+    padding: 50px 60px;
+  }
+  .mapBox {
+    display: none;
+  }
+
+  .mapBoxMobile {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 950px) {
+  .mapBoxMobile {
+    width: 90%;
+    height: 600px;
+  }
+}
+
+@media (max-width: 850px) {
+  .mapBoxMobile {
+    height: 550px;
+  }
+  .mainContainer {
+    padding: 50px 60px;
+  }
+}
+
+@media (max-width: 750px) {
+  .mapBoxMobile {
+    height: 480px;
+  }
+}
+
+@media (max-width: 650px) {
+  .mapBoxMobile {
+    height: 445px;
+  }
+  .mainContainer {
+    padding: 50px 30px;
+  }
+}
+
+@media (max-width: 550px) {
+  .mapBoxMobile {
+    height: 400px;
+  }
+}
+
+@media (max-width: 550px) {
+  .mapBoxMobile {
+    height: 370px;
+  }
+}
+
+@media (max-width: 450px) {
+  .mapBoxMobile {
+    height: 320px;
+  }
+  .mapSentence {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .mapBoxMobile {
+    height: 290px;
+  }
+}
+
+@media (max-width: 360px) {
+  .mapBoxMobile {
+    height: 250px;
+  }
+}
+

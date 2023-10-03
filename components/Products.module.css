@@ -1,11 +1,10 @@
 .mainContainer {
-  width: 100%;
   box-sizing: border-box;
+  height: auto;
+  max-width: 100%;
 }
 
 .mainTitleProduct {
-  /* margin: 0px;
-    margin-left: 90px; */
   color: #0c3561;
 }
 
@@ -16,12 +15,59 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 50px;
+  margin: 0 auto;
+}
+
+.boxContainer {
+  width: 80%;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(500px, auto));
+  align-items: center;
+  justify-content: stretch;
+}
+
+.boxContainerAwto {
+  width: 80%;
+  display: grid;
+}
+
+.imageBox1 {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 70/40;
+}
+
+.imageBoxHewlemel1 {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 70/70;
+}
+
+.imageBoxMetal {
+  position: relative;
+  width: 80%;
+  aspect-ratio: 70/23;
+  margin: 2rem auto;
+}
+
+.imageBoxPlastic {
+  aspect-ratio: 70/50;
+}
+
+.imageBoxPlastic2 {
+  aspect-ratio: 70/35;
+}
+
+.imageBoxPlastic2Long {
+  grid-column: span 1.5;
 }
 
 .productPartTitleContainer {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 30px;
 }
 
@@ -32,9 +78,61 @@
   color: #161616;
 }
 
+.boxContainer3 {
+  width: 80%;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 2fr 1fr;
+  grid-auto-rows: minmax(100px, auto);
+  align-items: stretch;
+}
+
+.imageBoxHewlemel1 {
+  grid-column: 1/2;
+  grid-row: 1/4;
+}
+
+@media (max-width: 1269px) {
+  .boxContainer {
+    grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+  }
+}
+
+@media (max-width: 1050px) {
+  .boxContainer {
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  }
+}
+
+@media (max-width: 780px) {
+  .productPartTitleContainer {
+    margin: 0 50px;
+  }
+
+  .productListSelbeg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .boxContainer {
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  }
+}
+
+@media (max-width: 669px) {
+  .boxContainer3 {
+    width: 80%;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+}
+
 .listContainer {
   margin: 30px;
   font-size: 14px;
+  display: flex;
+  justify-content: center;
 }
 
 .glass,
@@ -49,6 +147,7 @@
 }
 
 .productListSelbeg {
+  width: 80%;
   display: flex;
   justify-content: space-around;
 }
@@ -62,54 +161,12 @@
 .plita,
 .paint,
 .floor,
-.eloctronic
-.hooloi,
+.eloctronic .hooloi,
 .erchim,
 .paner,
 .plywood,
 .hongon {
   color: #161616;
-}
-
-/* .eloctronic {
-  display: flex;
-  flex-direction: column;
-  <span className={styles.eloctronic1}>Электрон тоноглол, </span>
-                <span className={styles.eloctronic2}>автоматжуулалт, дохиолол</span>
-} */
-
-.boxContainer {
-  display: flex;
-  gap: 30px;
-}
-
-.boxContainerMarginBottom {
-  margin-bottom: 30px;
-}
-
-.imageBox1 {
-  position: relative;
-  width: 679px;
-  height: 327px;
-}
-
-.imageBox2 {
-  width: 462px;
-  height: 327px;
-  position: relative;
-}
-
-@media (max-width: 1440px) {
-  .imageBox1 {
-    width: 593px;
-    height: 281px;
-    position: relative;
-  }
-
-  .imageBox2 {
-    width: 425px;
-    height: 281px;
-  }
 }
 
 .productContainerSectionTomorLaaz,
@@ -137,143 +194,15 @@
   z-index: -1;
 }
 
-/* SECTION 2 */
-
-.imageBox3 {
-  width: 561px;
-  height: 327px;
-  position: relative;
-}
-
-@media (max-width: 1440px) {
-  .imageBox3 {
-    width: 509px;
-    height: 281px;
-  }
-}
-
-/* SECTION 3 */
-
-.imageBox4 {
-  width: 561px;
-  height: 429px;
-  position: relative;
-}
-
-.imageBox5 {
-  width: 414px;
-  height: 300px;
-  position: relative;
-}
-
-.imageBox6 {
-  width: 708px;
-  height: 300px;
-  position: relative;
-}
-
-@media (max-width: 1440px) {
-  .imageBox4 {
-    width: 510px;
-    height: 349px;
-  }
-
-  .imageBox5 {
-    width: 377px;
-    height: 244px;
-  }
-
-  .imageBox6 {
-    width: 644px;
-    height: 244px;
-  }
-}
-
-/* SECTION 4 */
-
-.imageContainer4 {
+.subContainer {
   display: flex;
-  gap: 30px;
-}
-
-.imageBox7 {
-  width: 672px;
-  height: 759px;
-  position: relative;
-}
-
-.imageBox8 {
-  width: 450px;
-  height: 250px;
-  position: relative;
-}
-
-.boxContainer4 {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-@media (max-width: 1440px) {
-  .imageBox7 {
-    width: 613px;
-    height: 656px;
-  }
-
-  .imageBox8 {
-    width: 410px;
-    height: 216px;
-  }
-}
-
-/* SECTION 5 */
-
-.imageContainer5 {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.imageBox9 {
-  width: 1152px;
-  height: 357px;
-  position: relative;
-}
-
-.boxContainer5 {
-  display: flex;
-  gap: 30px;
-}
-
-@media (max-width: 1440px) {
-  .imageBox9 {
-    width: 1048px;
-    height: 315px;
-  }
-}
-
-/* Metal Section */
-
-.productContainerSectionMetal {
-  position: relative;
-}
-
-.metalContainer {
-  display: flex;
-  gap: 30px;
-}
-
-.column {
-  flex-direction: column;
-}
-
-.hongonTsagaanTitle {
-  text-align: center;
 }
 
 .hongonTsagaan {
+  width: 100%;
   display: flex;
-  gap: 30px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .truckBox {
@@ -290,7 +219,7 @@
   width: 75%;
   height: 1px;
   background-color: silver;
-  margin-top: 60px;
+  margin: 60px 0px;
 }
 
 .productContainerSectionLast {

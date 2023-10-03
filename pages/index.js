@@ -1,16 +1,17 @@
 "use client";
 import React, { useEffect, useState, useRef } from "react";
-import { Head } from "next/document";
-import Script from "next/script";
 
 import { useRouter } from "next/navigation";
+import Image from "next/image";
+import Link from "next/link";
+import Script from "next/script";
+
+// import { IconX } from "@tabler/icons";
 
 import Products from "../components/products";
 import Map from "../components/map";
 import RequestForm from "../components/requestForm";
 import Footer from "../components/footer";
-import Image from "next/image";
-import Link from "next/link";
 
 import planetBackground from "../public/planetBackground.png";
 
@@ -28,6 +29,8 @@ export default function Home() {
   const [selected, setSelected] = useState("MN");
   const [isActive, setIsActive] = useState(false);
 
+  const [navButt, setnavButt] = useState(false);
+
   // const data = [
   //   {
   //     languageENG: "ENG",
@@ -43,6 +46,13 @@ export default function Home() {
       homeProducts: "Бүтээгдэхүүн",
       homeOrder: "Захиалга",
       homeCollaboration: "Хамтын ажиллагаа",
+
+      homeColumn: "Нүүр хуудас",
+      homeServiceColumn: "Үйлчилгээ",
+      homeAboutUsColumn: "Бидний тухай",
+      homeProductsColumn: "Бүтээгдэхүүн",
+      homeOrderColumn: "Захиалга",
+      homeCollaborationColumn: "Хамтын ажиллагаа",
 
       homeTitle: "MONDO ARTIS TRADE LLC",
       homeInfo: "International trading company",
@@ -147,6 +157,13 @@ export default function Home() {
       homeProducts: "Ассортименты товаров",
       homeOrder: "Заказ",
       homeCollaboration: "Сотрудничество",
+
+      homeColumn: "Главное",
+      homeServiceColumn: "Наш сервис",
+      homeAboutUsColumn: "О компаний",
+      homeProductsColumn: "Ассортименты товаров",
+      homeOrderColumn: "Заказ",
+      homeCollaborationColumn: "Сотрудничество",
 
       homeTitle: "Мондо Артиз Трейд",
       homeInfo: "Международная торговая компания КОО",
@@ -335,6 +352,9 @@ export default function Home() {
                   Хамтын ажиллагаа
                 </Link>
               </li>
+            </ul>
+            <div className={stylesNav.btnLangBox}>
+              {/* Language ==== */}
 
               <div
                 className={stylesNav.languageContainer}
@@ -390,6 +410,23 @@ export default function Home() {
                       );
                       const homeCollaboration = document.querySelector(
                         `.${stylesNav.homeCollaboration}`
+                      );
+
+                      const homeColumn = document.querySelector(`.${stylesNav.homeColumn}`);
+                      const homeServiceColumn = document.querySelector(
+                        `.${stylesNav.homeServiceColumn}`
+                      );
+                      const homeAboutUsColumn = document.querySelector(
+                        `.${stylesNav.homeAboutUsColumn}`
+                      );
+                      const homeProductsColumn = document.querySelector(
+                        `.${stylesNav.homeProductsColumn}`
+                      );
+                      const homeOrderColumn = document.querySelector(
+                        `.${stylesNav.homeOrderColumn}`
+                      );
+                      const homeCollaborationColumn = document.querySelector(
+                        `.${stylesNav.homeCollaborationColumn}`
                       );
 
                       const homeTitle = document.querySelector(
@@ -610,6 +647,14 @@ export default function Home() {
                       homeCollaboration.textContent =
                         dataRussian.MN.homeCollaboration;
 
+                      homeColumn.textContent = dataRussian.MN.homeColumn;
+                      homeServiceColumn.textContent = dataRussian.MN.homeServiceColumn;
+                      homeAboutUsColumn.textContent = dataRussian.MN.homeAboutUsColumn;
+                      homeProductsColumn.textContent = dataRussian.MN.homeProductsColumn;
+                      homeOrderColumn.textContent = dataRussian.MN.homeOrderColumn;
+                      homeCollaborationColumn.textContent =
+                        dataRussian.MN.homeCollaborationColumn;
+
                       homeTitle.textContent = dataRussian.MN.homeTitle;
                       homeInfo.textContent = dataRussian.MN.homeInfo;
                       firstList1.textContent = dataRussian.MN.firstList1;
@@ -716,8 +761,6 @@ export default function Home() {
                     <div className={stylesNav.flagBox}>
                       <Image
                         alt="mongolia"
-                        // width={30}
-                        // height={30}
                         src={"/flagMongolia.png"}
                         fill
                         sizes="(max-width: 70px) 100vw"
@@ -732,7 +775,6 @@ export default function Home() {
                     key={"RU"}
                     className={stylesNav.otherLanguagesLi}
                     onClick={(e) => {
-                      // e.preventDefault();
                       setSelected("RU");
                       setIsActive(false);
                       const home = document.querySelector(`.${stylesNav.home}`);
@@ -750,6 +792,23 @@ export default function Home() {
                       );
                       const homeCollaboration = document.querySelector(
                         `.${stylesNav.homeCollaboration}`
+                      );
+
+                      const homeColumn = document.querySelector(`.${stylesNav.homeColumn}`);
+                      const homeServiceColumn = document.querySelector(
+                        `.${stylesNav.homeServiceColumn}`
+                      );
+                      const homeAboutUsColumn = document.querySelector(
+                        `.${stylesNav.homeAboutUsColumn}`
+                      );
+                      const homeProductsColumn = document.querySelector(
+                        `.${stylesNav.homeProductsColumn}`
+                      );
+                      const homeOrderColumn = document.querySelector(
+                        `.${stylesNav.homeOrderColumn}`
+                      );
+                      const homeCollaborationColumn = document.querySelector(
+                        `.${stylesNav.homeCollaborationColumn}`
                       );
 
                       const homeTitle = document.querySelector(
@@ -969,6 +1028,14 @@ export default function Home() {
                       homeCollaboration.textContent =
                         dataRussian.RU.homeCollaboration;
 
+                      homeColumn.textContent = dataRussian.RU.homeColumn;
+                      homeServiceColumn.textContent = dataRussian.RU.homeServiceColumn;
+                      homeAboutUsColumn.textContent = dataRussian.RU.homeAboutUsColumn;
+                      homeProductsColumn.textContent = dataRussian.RU.homeProductsColumn;
+                      homeOrderColumn.textContent = dataRussian.RU.homeOrderColumn;
+                      homeCollaborationColumn.textContent =
+                        dataRussian.RU.homeCollaborationColumn;
+
                       homeTitle.textContent = dataRussian.RU.homeTitle;
                       homeInfo.textContent = dataRussian.RU.homeInfo;
                       firstList1.textContent = dataRussian.RU.firstList1;
@@ -1089,7 +1156,60 @@ export default function Home() {
                   </li>
                 </ul>
               </div>
-            </ul>
+
+              {navButt ? (
+                <button
+                  className={`${stylesNav.navButt} ${stylesNav.navCloseButt}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setnavButt(!navButt);
+                  }}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-x"
+                    width="25"
+                    height="25"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="#2c3e50"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M18 6l-12 12" />
+                    <path d="M6 6l12 12" />
+                  </svg>
+                </button>
+              ) : (
+                <button
+                  className={`${stylesNav.navButt} ${stylesNav.navMenuButt}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setnavButt(!navButt);
+                  }}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-menu-2"
+                    width="25"
+                    height="25"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="#2c3e50"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M4 6l16 0" />
+                    <path d="M4 12l16 0" />
+                    <path d="M4 18l16 0" />
+                  </svg>
+                </button>
+              )}
+            </div>
           </nav>
 
           <div className={styles.home}>
@@ -1128,6 +1248,60 @@ export default function Home() {
               <p className={`${styles.fourthList}`}>Professional consulting</p>
             </div>
           </div>
+
+          <ul
+            className={`${stylesNav.linkColumn} ${
+              navButt ? stylesNav.linkColDisplay : ""
+            }`}
+          >
+            <li>
+              <Link className={`${stylesNav.homeColumn}`} href={"/#home"}>
+                Нүүр хуудас
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                className={`${stylesNav.homeServiceColumn}`}
+                href={"#ourservice"}
+              >
+                Үйлчилгээ
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                className={`${stylesNav.homeAboutUsColumn}`}
+                href={"#aboutus"}
+              >
+                Бидний тухай
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                className={`${stylesNav.homeProductsColumn}`}
+                href={"#products"}
+              >
+                Бүтээгдэхүүн
+              </Link>
+            </li>
+
+            <li>
+              <Link className={`${stylesNav.homeOrderColumn}`} href={"#order"}>
+                Захиалга
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                className={`${stylesNav.homeCollaborationColumn}`}
+                href={"#collaboration"}
+              >
+                Хамтын ажиллагаа
+              </Link>
+            </li>
+          </ul>
         </main>
 
         <section id="ourservice" className={styles.ourService}>
@@ -1153,7 +1327,8 @@ export default function Home() {
                   />
                 </div>
                 <p className={`${styles.serviceProduct}`}>
-                  Бараа материалын судалгаа, захиалга, <br />
+                  Бараа материалын судалгаа, захиалга,
+                  <br />
                   нийлүүлэлт
                 </p>
               </div>
@@ -1233,7 +1408,7 @@ export default function Home() {
         <Products />
 
         <section id="order" className={styles.order}>
-          <h3 className={styles.mainTitle}>
+          <h3 className={`${styles.mainTitle} ${styles.orderMainTitle}`}>
             <span className={`${styles.mainTitleOrderSpan}`}>
               Хэрхэн захиалах вэ ?
             </span>
@@ -1263,15 +1438,10 @@ export default function Home() {
           </ol>
         </section>
         <Map />
-        <section id="collaboration" className={styles.teewerZuuch}>
-          <h3
-            className={`${styles.mainTitle} ${styles.collaborationTitle}`}
-            style={
-              {
-                // color: "#0C3561"
-              }
-            }
-          >
+
+        <section id="collaboration" className={styles.collaboration}>
+          <div className={styles.overlay} />
+          <h3 className={`${styles.mainTitle} ${styles.collaborationTitle}`}>
             <span className={`${styles.mainTitleCollaborationSpan}`}>
               Хамтын ажиллагаа
             </span>

@@ -1,17 +1,15 @@
 .navigation {
-  box-sizing: border-box;
   display: flex;
   align-items: center;
-  background-color: #e7ebef;
+  background-color: var(--navigationColor);
   height: 70px;
-  padding: 0;
   margin: 0;
   gap: 10px;
   top: 0;
   left: 0;
   position: fixed;
   width: 100%;
-  z-index: 1000;
+  z-index: 1000000;
   padding: 0 100px;
 }
 
@@ -21,11 +19,6 @@
   height: 60px;
 }
 
-.logo {
-  background-color: #e7ebef;
-  height: 100%;
-}
-
 .link {
   width: 80%;
   display: flex;
@@ -33,9 +26,40 @@
   align-items: center;
 }
 
-.link li {
-  list-style: none;
+.btnLangBox {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.link,
+.linkColumn {
+  padding-left: 0px;
+}
+
+.link li,
+.linkColumn li {
   position: relative;
+  list-style: none;
+}
+
+.linkColumn {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  margin: 0;
+  padding: 100px 30px;
+  height: 100%;
+  background-color: var(--navigationColor);
+  z-index: 10000;
+}
+
+.linkColDisplay {
+  display: flex;
+  transition: all 0.3s ease-in-out;
 }
 
 .home,
@@ -48,6 +72,16 @@
   text-decoration: none;
   color: #0c3561;
   padding: 5px;
+}
+
+.homeColumn,
+.homeServiceColumn,
+.homeAboutUsColumn,
+.homeProductsColumn,
+.homeOrderColumn,
+.homeCollaborationColumn {
+  text-decoration: none;
+  color: #0c3561;
 }
 
 .languageContainer {
@@ -74,9 +108,9 @@
 .otherLanguagesUl {
   position: absolute;
   left: -15px;
-  top: 60px;
+  top: 43px;
   padding: 0px;
-  background-color: #e7ebef;
+  background-color: var(--navigationColor);
 }
 
 .otherLanguagesLi {
@@ -92,4 +126,42 @@
 
 .display {
   display: none;
+}
+
+/* Close button */
+
+.navButt {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.navMenuButt {
+  display: none;
+}
+
+@media only screen and (max-width: 1144px) {
+  .navigation {
+    justify-content: space-between;
+    padding: 0 50px;
+  }
+
+  .link {
+    display: none;
+  }
+
+  .navMenuButt {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1144px) {
+  .linkColDisplay,
+  .navButt {
+    display: none;
+  }
+
+  /* .linkColDisplay {
+    transition: 0.3s ease-in-out;
+  } */
 }

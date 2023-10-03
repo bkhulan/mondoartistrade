@@ -9,18 +9,6 @@
   width: 100%;
 }
 
-.planetBox {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.planetBoxExample {
-  width: 800px;
-  height: 500px;
-  position: relative;
-}
-
 .homeOverlay {
   position: absolute;
   top: 0;
@@ -50,7 +38,9 @@
 }
 
 .homeInfo {
+  font-size: 22px;
   font-weight: 600;
+  text-transform: capitalize;
 }
 
 .firstList1,
@@ -58,22 +48,18 @@
 .secondList,
 .thirdList,
 .fourthList {
+  font-size: 18px;
+}
+
+.planetBox {
+  display: block;
+  width: 100%;
+  height: 100%;
   position: relative;
+  z-index: 0;
 }
 
-@media (max-width: 1440px) {
-  .home {
-    top: 180px;
-    left: 100px;
-    font-size: 15px;
-  }
-
-  .homeTitleContainer {
-    margin-bottom: 30px;
-  }
-}
-
-/* MAIN TITLE ================================================= */
+/* MAIN TITLE =================================== */
 
 .mainTitle {
   margin: 0;
@@ -143,7 +129,7 @@
 .serviceAdvice,
 .serviceSolutionSpan1,
 .serviceSolutionSpan2 {
-  font-size: 15px;
+  font-size: var(--fontSize16);
 }
 
 .mainTitleServiceSpan,
@@ -172,8 +158,8 @@
   background-color: #ffffff;
   display: flex;
   align-items: center;
-  height: 600px;
-  padding: 30px 100px;
+  height: 530px;
+  padding: 0px 100px;
   gap: 30px;
 }
 
@@ -181,6 +167,7 @@
   flex: 1;
   text-align: center;
   font-size: 35px;
+  margin: 30px 0px;
 }
 
 .aboutUsTextContainer {
@@ -195,28 +182,18 @@
   margin-bottom: 40px;
 }
 
-.aboutUsText1, .aboutUsText2 {
-  font-size: 16px;
+.aboutUsText1,
+.aboutUsText2 {
+  font-size: var(--fontSize16);
   color: #666c89;
   text-indent: 40px;
-}
-
-@media (max-width: 1440px) {
-  .aboutUsText1, .aboutUsText2 {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .aboutUs {
-    padding: 10px 30px;
-  }
 }
 
 /* Order ======================= */
 
 .order {
-  height: 450px;
+  height: 415px;
+  padding: 0px;
   background-color: rgba(155, 172, 190, 0.5);
   display: flex;
   justify-content: center;
@@ -225,7 +202,7 @@
 }
 
 .orderSentence {
-  font-size: 16px;
+  font-size: var(--fontSize16);
   line-height: 40px;
 }
 
@@ -238,32 +215,24 @@
   color: #161616;
 }
 
-@media (max-width: 1440px) {
-  .orderSentence {
-    font-size: 14px;
-  }
-}
+/* Collaboration */
 
 .collaboration {
-  height: 450px;
-  background-color: #e7ebef;
-}
-
-.teewerZuuch {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 450px;
-  background-image: url("/zam.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+  height: 415px;
   position: relative;
   color: #ffffff;
   text-align: center;
   line-height: 30px;
-  padding: 10px 60px;
+  padding: 0px 60px;
   box-sizing: border-box;
+  background-image: url("/zam.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .collaborationTitle,
@@ -278,23 +247,244 @@
 
 .collaborationSentence,
 .teewerZuuchSentence {
-  font-size: 16px;
+  font-size: var(--fontSize16);
 }
 
-@media (max-width: 1440px) {
-  .collaborationSentence,
-  .teewerZuuchSentence {
-    font-size: 14px;
-  }
-}
-.teewerZuuch::after {
-  content: "";
+.overlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  height: 100%;
-  width: 100%;
-  background: url("/blueOverlay.png");
+  background-color: rgba(7, 32, 59, 0.55);
+}
+
+@media (max-width: 1440px) {
+  /* Home =============== */
+  .home {
+    top: 200px;
+    left: 100px;
+  }
+
+  .homeInfo {
+    font-size: 20px;
+  }
+
+  .homeTitleContainer {
+    margin-bottom: 30px;
+  }
+
+  .firstList1,
+  .firstList2,
+  .secondList,
+  .thirdList,
+  .fourthList {
+    font-size: var(--fontSize16);
+  }
+  /* About us =============== */
+  .aboutUsText1,
+  .aboutUsText2,
+  .orderSentence {
+    font-size: var(--fontSize15);
+  }
+
+  .serviceProduct,
+  .serviceAdvice,
+  .serviceSolutionSpan1,
+  .serviceSolutionSpan2 {
+    font-size: var(--fontSize15);
+  }
+
+  .collaborationSentence,
+  .teewerZuuchSentence {
+    font-size: var(--fontSize15);
+  }
+}
+
+@media (max-width: 1359px) {
+  /* About us =============== */
+  .aboutUsTitle {
+    flex: 1;
+  }
+
+  .aboutUsTextContainer {
+    flex: 1.5;
+  }
+
+  .aboutUsMainTitle,
+  .orderMainTitle,
+  .collaborationTitle {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 1250px) {
+  /* About us =============== */
+
+  .aboutUs {
+    height: auto;
+    padding: 50px 60px;
+  }
+}
+
+@media (max-width: 850px) {
+  /* About us =============== */
+
+  .aboutUs {
+    flex-direction: column;
+  }
+
+  .aboutUsTextContainer {
+    border-left: 0px;
+    padding-left: 0px;
+  }
+  .ourService {
+    padding: 20px 40px;
+  }
+  .serviceParts {
+    gap: 8px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+  }
+
+  .iconBox {
+    height: 85px;
+    width: 85px;
+  }
+
+  .serviceProduct,
+  .serviceAdvice,
+  .serviceSolutionSpan1,
+  .serviceSolutionSpan2 {
+    font-size: 14px;
+  }
+
+  /* Order ============ */
+
+  .order,
+  .collaboration {
+    padding: 50px 60px;
+    height: auto;
+  }
+
+  .orderSentence {
+    font-size: var(--fontSize15);
+
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 820px) {
+  /* Home =============== */
+
+  .planetBox {
+    display: none;
+  }
+
+  .home {
+    top: 230px;
+    left: 80px;
+  }
+
+  .homeTitle {
+    font-size: 35px;
+  }
+
+  .orderMainTitle {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 650px) {
+  .home {
+    left: 50px;
+  }
+
+  .aboutUs {
+    padding: 50px 30px;
+  }
+
+  .aboutUsMainTitle {
+    margin-bottom: 20px;
+  }
+  .serviceParts {
+    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+  }
+  .ourService {
+    padding: 10px 20px;
+  }
+
+  /* Order =========== */
+  .order,
+  .collaboration {
+    padding: 50px 30px;
+  }
+}
+
+@media (max-width: 450px) {
+  /* Home =============== */
+
+  .homeTitle {
+    font-size: 25px;
+  }
+
+  .home {
+    top: 220px;
+    left: 30px;
+  }
+
+  .firstList1,
+  .firstList2,
+  .secondList,
+  .thirdList,
+  .fourthList {
+    font-size: 14px;
+  }
+
+  .homeTitleContainer {
+    margin-bottom: 50px;
+  }
+
+  /* Title =============== */
+
+  .mainTitle {
+    font-size: var(--fontSize16);
+  }
+
+  .aboutUsTitle {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 0px;
+  }
+
+  /* Service =============== */
+
+  .serviceTitle {
+    margin-left: 7px;
+  }
+
+  .ourService {
+    padding: 50px 30px;
+    height: auto;
+  }
+
+  .serviceParts {
+    grid-template-columns: repeat(auto-fit, minmax(180px, auto));
+  }
+
+  .iconBox {
+    height: 70px;
+    width: 70px;
+  }
+
+  .serviceProduct,
+  .serviceAdvice,
+  .serviceSolutionSpan1,
+  .serviceSolutionSpan2 {
+    font-size: var(--fontSize15);
+  }
+
+  /* Order =========== */
+  .orderSentence {
+    padding-left: 20px;
+  }
 }

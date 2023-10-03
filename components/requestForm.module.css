@@ -2,6 +2,7 @@
 
 .formContainer {
     height: 90vh;
+    width: 100%;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -17,38 +18,40 @@
     margin: 0;
     padding: 0;
     padding-top: 20px;
+    text-align: center;
 }
 
 .formSentence {
     padding: 20px;
     padding-bottom: 40px;
-    font-size: 14px;
+    font-size: 16px;
+    text-align: center;
 }
 
 .form {
-    width: 700px;
+    width: 60%;
 }
 
 .formInput {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
 .input {
-    width: 300px;
-    font-size: 14px;
+    width: 100%;
+    font-size: 16px;
     padding: 10px 15px;
     border: 1px solid #0C3561;
     margin: 0;
-    margin-bottom: 20px;
-    margin-right: 20px;
     font-family: 'Montserrat', sans-serif;
 }
 
 .textArea {
-    width: 663px;
+    width: 100%;
     height: 150px;
     margin-bottom: 20px;
+    margin-top: 20px;
     border: 1px solid #0C3561;
     font-size: 14px;
     font-family: 'Montserrat', sans-serif;
@@ -58,6 +61,7 @@
 .buttonContainer {
     text-align: center;
 }
+
 .formButton {
     background-color: #FFB629;
     font-family: 'Montserrat', sans-serif;
@@ -67,6 +71,51 @@
     margin: 0 auto;
     cursor: pointer;
     text-align: center;
-    font-size: 14px;
+    font-size: 18px;
+}
+
+@media (max-width: 1440px) {
+    .formSentence {
+        font-size: 15px;
+    }
+    .formButton {
+        font-size: 16px;
+    }
+
+    .input {
+        font-size: 15px;}
+}
+
+@media (max-width: 1250px) {
+    .form {
+        width: 70%;
+    }
+}
+
+@media (max-width: 850px) {
+    .formInput {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    .formContainer {
+        padding: 50px 30px;
+        height: auto;
+    }
+}
+
+@media (max-width: 520px) {
+    .form {
+        width: 80%;
+    }
+
+    .formQuestion {
+        font-size: 25px;
+    }
+
+    .formButton {
+        font-size: 15px;
+    }
 }
 

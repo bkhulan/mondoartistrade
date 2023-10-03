@@ -1,10 +1,11 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Script from "next/script";
+import { useRouter } from "next/navigation";
 
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import Image from "next/image";
+
+import { IconX } from "@tabler/icons";
 
 import styles from "./navigation.module.css";
 
@@ -19,7 +20,7 @@ export default function Navigation() {
           alt="logo"
           // width={70}
           // height={60}
-          src={"/logoMondo2.png"}
+          src={"/logoMondo.png"}
           fill
           sizes="(max-width: 70px) 100vw"
           // style={{
