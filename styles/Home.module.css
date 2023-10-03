@@ -21,6 +21,7 @@
 }
 
 .home {
+  display: grid;
   color: #0c3561;
   position: absolute;
   top: 220px;
@@ -428,6 +429,7 @@
   }
 
   .home {
+    width: 85%;
     top: 220px;
     left: 30px;
   }
@@ -441,7 +443,7 @@
   }
 
   .homeTitleContainer {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 
   /* Title =============== */

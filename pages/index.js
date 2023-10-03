@@ -1220,7 +1220,7 @@ export default function Home() {
               <p className={styles.homeInfo}>International trading company</p>
             </div>
 
-            <div>
+            <div style={{ textAlign: "start" }}>
               <p
                 className={`${styles.firstList1}`}
                 style={{
