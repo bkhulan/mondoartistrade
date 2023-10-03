@@ -298,7 +298,7 @@ export default function Home() {
                 alt="logo"
                 // width={70}
                 // height={60}
-                src={"/logoMondo2.png"}
+                src={"/logoMondo.png"}
                 fill
                 sizes="(max-width: 70px) 100vw"
                 // style={{
