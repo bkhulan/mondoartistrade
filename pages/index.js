@@ -254,6 +254,107 @@ export default function Home() {
 
       footerMainTitle: "Контакты",
     },
+    ENG: {
+      home: "Home",
+      homeService: "Service",
+      homeAboutUs: "About us",
+      homeProducts: "Product",
+      homeOrder: "Order",
+      homeCollaboration: "Cooperation",
+
+      homeColumn: "Home",
+      homeServiceColumn: "Service",
+      homeAboutUsColumn: "About us",
+      homeProductsColumn: "Product",
+      homeOrderColumn: "Order",
+      homeCollaborationColumn: "Collaboration",
+
+      homeTitle: "MONDO ARTIS TRADE LLC",
+      homeInfo: "International trading company",
+      firstList1: "Packaging and labeling, heavy machinery equipment,",
+      firstList2: "construction materials, and other supply products",
+      secondList: "Research and valuation of supply products",
+      thirdList: "Solution for payment transaction and transportation",
+      fourthList: "Professional service for international trading & legal consulting",
+      mainTitleServiceSpan: "Our services",
+      serviceProduct: "Product market research, order purchasing, supplying",
+      serviceAdvice: "Negotiation consulting services, legal consulting",
+      serviceSolutionSpan1: `Transport and logistic,`,
+      serviceSolutionSpan2: `payment transaction`,
+      aboutUsTitle: " MONDO ARTIS TRADE LLC-Д ТАВТАЙ МОРИЛ",
+      mainTitleAboutUsSpan: "About us",
+      aboutUsText1: `Our company provides international trading services, specially market research and consulting services to connect Europe and Asia areas. We are cooperating with qualified manufacturer companies from Guangdong, Zhejiang, Jiangsu, Shangdong from China, Seoul, Incheon, Busan from South Korea.`,
+      aboutUsText2: `Our official agents from Seoul (Korea), Ghuangzhou, Jinan, Shanghai, Huh hot, Erlian (China), Moscow, Ulan-Ude (Russia) will assist you to find potential supplier, to do market research, negotiate better and reasonable settlement.`,
+      mainTitleProductSpan: "Our products",
+      productTitleSawlagaa: "Packages",
+      glass: "Glass bottle",
+      can: "Tin Can",
+      plastic: "Plastic bottle, box, canister",
+      print: "Printing plastic and paper bag",
+
+      productTitleAwtomashin:
+        "Spare parts of automobile, heavy machinery, mining equipments",
+      selbeg: "Spare parts of automobile",
+      mechanism: "Механизм, эд анги, тоноглол",
+
+      productTitleMetal: "Steel and metal materials",
+      gan: "Ган лист",
+      dwutawr: "Двутавр, швеллер, угольник",
+      cube: "Труба, квадрат төмөр",
+      metal: "Металл лист",
+
+      productTitleBuilding: "Building materials",
+      plita: "Slabs",
+      paint: "Exterior and Interior emulsion paints",
+      floor: "Floor coverings",
+      eloctronic: "Electronic equipments, automation, intelligent systems",
+      hooloi: "Plumbing pipes",
+      erchim: "Electrical cable and equipments",
+      paner: "OSB panel",
+      plywood: "Plywood",
+      hongon: "Aluminum blanks",
+
+      mainTitleOrderSpan: "How to order?",
+      orderOne: "Give us complete information and material specification about the subscription product.",
+      orderTwo:
+        "Send information to the manufacturer and obtain price proposals and materials.",
+      orderThree:
+        "Agreements are made to match patterns, colors, serial numbers, codes, and numbers.",
+      orderFour: "Advanced payment of inventory guarantees orders.",
+      orderFive:
+        "As soon as the product is manufactured and ready to be loaded, the remaining amount will be paid.",
+      orderSix:
+        "The goods will be delivered to the address ordered by the chosen route and transported intermediary.",
+
+      mainTitleMapSpan: "Transit directions",
+      mapSequence:
+        "Goods ordered from China and the Republic of Korea will be delivered to Russia by sea to Vladivostok, by railway to Zabaikalsk and in transit through Mongolia to Ulan-Ude by trucks and railway.",
+      destination1: "Erlian Port",
+      mapSequence1:
+        "The average transit time from China's industrial zone to Erlian is 7-9 days.",
+      destination2: "Ulaanbaatar",
+      mapSequence2:
+        "The average transit time from Erlian to Ulaanbaatar is 5-7 days.",
+      destination3: "Ulan-Ude",
+      mapSequence3:
+        "The average transit time from Ulaanbaatar to Ulan-Ude is 5-7 days.",
+      destination4: " Total transit time",
+      mapSequence4:
+        "Delivery is carried out within 22-30 days, depending on the place of receipt of the goods and the workload in transportation.",
+
+      mainTitleCollaborationSpan: "Cooperation",
+      collaborationSentence:
+        "We supply and offer a wide range of products and inventory from partner manufacturers. We will work with you on flexible terms, at low prices, without intermediaries, we can give quality guarantees, convenient terms of payment and delivery. You can choose exactly the goods and services, offers that are most suitable for you, then fill out the questionnaire on our website and send us, and we, in turn, are ready to accept your request and cooperate with you on mutually beneficial terms.",
+      teewerZuuchSentence:
+        "Let's create together new technologies, affordable creative and smart factories and increase joint competitiveness. We will be your trusted and responsible partner in Asia.",
+
+      formQuestion: "Please fill out the questionnaire ",
+      formSentence: "We will send more details to your email address.",
+      formButton: "Submit",
+
+      footerMainTitle: "Contact",
+    },
+    
   };
 
   return (
@@ -1147,12 +1248,396 @@ export default function Home() {
                         src={"/flagRussia.png"}
                         fill
                         sizes="(max-width: 70px) 100vw"
-                        // style={{
-                        //   borderRadius: "4px",
-                        // }}
+                        style={{
+                          borderRadius: "4px",
+                        }}
                       />
                     </div>
                     <p className={`${stylesNav.flagList}`}>RU</p>
+                  </li>
+                  <li
+                    key={"ENG"}
+                    className={stylesNav.otherLanguagesLi}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setSelected("ENG");
+                      setIsActive(false);
+
+                      const home = document.querySelector(`.${stylesNav.home}`);
+                      const homeService = document.querySelector(
+                        `.${stylesNav.homeService}`
+                      );
+                      const homeAboutUs = document.querySelector(
+                        `.${stylesNav.homeAboutUs}`
+                      );
+                      const homeProducts = document.querySelector(
+                        `.${stylesNav.homeProducts}`
+                      );
+                      const homeOrder = document.querySelector(
+                        `.${stylesNav.homeOrder}`
+                      );
+                      const homeCollaboration = document.querySelector(
+                        `.${stylesNav.homeCollaboration}`
+                      );
+
+                      const homeColumn = document.querySelector(`.${stylesNav.homeColumn}`);
+                      const homeServiceColumn = document.querySelector(
+                        `.${stylesNav.homeServiceColumn}`
+                      );
+                      const homeAboutUsColumn = document.querySelector(
+                        `.${stylesNav.homeAboutUsColumn}`
+                      );
+                      const homeProductsColumn = document.querySelector(
+                        `.${stylesNav.homeProductsColumn}`
+                      );
+                      const homeOrderColumn = document.querySelector(
+                        `.${stylesNav.homeOrderColumn}`
+                      );
+                      const homeCollaborationColumn = document.querySelector(
+                        `.${stylesNav.homeCollaborationColumn}`
+                      );
+
+                      const homeTitle = document.querySelector(
+                        `.${styles.homeTitle}`
+                      );
+                      const homeInfo = document.querySelector(
+                        `.${styles.homeInfo}`
+                      );
+                      const firstList1 = document.querySelector(
+                        `.${styles.firstList1}`
+                      );
+                      const firstList2 = document.querySelector(
+                        `.${styles.firstList2}`
+                      );
+                      const secondList = document.querySelector(
+                        `.${styles.secondList}`
+                      );
+                      const thirdList = document.querySelector(
+                        `.${styles.thirdList}`
+                      );
+                      const fourthList = document.querySelector(
+                        `.${styles.fourthList}`
+                      );
+
+                      const mainTitleServiceSpan = document.querySelector(
+                        `.${styles.mainTitleServiceSpan}`
+                      );
+                      const serviceProduct = document.querySelector(
+                        `.${styles.serviceProduct}`
+                      );
+                      const serviceAdvice = document.querySelector(
+                        `.${styles.serviceAdvice}`
+                      );
+
+                      const serviceSolutionSpan1 = document.querySelector(
+                        `.${styles.serviceSolutionSpan1}`
+                      );
+                      const serviceSolutionSpan2 = document.querySelector(
+                        `.${styles.serviceSolutionSpan2}`
+                      );
+
+                      const aboutUsTitle = document.querySelector(
+                        `.${styles.aboutUsTitle}`
+                      );
+                      const mainTitleAboutUsSpan = document.querySelector(
+                        `.${styles.mainTitleAboutUsSpan}`
+                      );
+                      const aboutUsText1 = document.querySelector(
+                        `.${styles.aboutUsText1}`
+                      );
+                      const aboutUsText2 = document.querySelector(
+                        `.${styles.aboutUsText2}`
+                      );
+
+                      // // Product-----------
+
+                      const mainTitleProductSpan = document.querySelector(
+                        `.${styles.mainTitleProductSpan}`
+                      );
+                      const productTitleSawlagaa = document.querySelector(
+                        `.${stylesPro.productTitleSawlagaa}`
+                      );
+                      const glass = document.querySelector(
+                        `.${stylesPro.glass}`
+                      );
+                      const can = document.querySelector(`.${stylesPro.can}`);
+                      const plastic = document.querySelector(
+                        `.${stylesPro.plastic}`
+                      );
+                      const print = document.querySelector(
+                        `.${stylesPro.print}`
+                      );
+
+                      const productTitleAwtomashin = document.querySelector(
+                        `.${stylesPro.productTitleAwtomashin}`
+                      );
+                      const selbeg = document.querySelector(
+                        `.${stylesPro.selbeg}`
+                      );
+                      const mechanism = document.querySelector(
+                        `.${stylesPro.mechanism}`
+                      );
+
+                      const productTitleMetal = document.querySelector(
+                        `.${stylesPro.productTitleMetal}`
+                      );
+                      const gan = document.querySelector(`.${stylesPro.gan}`);
+                      const dwutawr = document.querySelector(
+                        `.${stylesPro.dwutawr}`
+                      );
+                      const cube = document.querySelector(`.${stylesPro.cube}`);
+                      const metal = document.querySelector(
+                        `.${stylesPro.metal}`
+                      );
+
+                      const productTitleBuilding = document.querySelector(
+                        `.${stylesPro.productTitleBuilding}`
+                      );
+                      const plita = document.querySelector(
+                        `.${stylesPro.plita}`
+                      );
+                      const paint = document.querySelector(
+                        `.${stylesPro.paint}`
+                      );
+                      const floor = document.querySelector(
+                        `.${stylesPro.floor}`
+                      );
+                      const eloctronic = document.querySelector(
+                        `.${stylesPro.eloctronic}`
+                      );
+                      const hooloi = document.querySelector(
+                        `.${stylesPro.hooloi}`
+                      );
+                      const erchim = document.querySelector(
+                        `.${stylesPro.erchim}`
+                      );
+                      const paner = document.querySelector(
+                        `.${stylesPro.paner}`
+                      );
+                      const plywood = document.querySelector(
+                        `.${stylesPro.plywood}`
+                      );
+                      const hongon = document.querySelector(
+                        `.${stylesPro.hongon}`
+                      );
+
+                      // Order-------------
+
+                      const mainTitleOrderSpan = document.querySelector(
+                        `.${styles.mainTitleOrderSpan}`
+                      );
+                      const orderOne = document.querySelector(
+                        `.${styles.orderOne}`
+                      );
+                      const orderTwo = document.querySelector(
+                        `.${styles.orderTwo}`
+                      );
+                      const orderThree = document.querySelector(
+                        `.${styles.orderThree}`
+                      );
+                      const orderFour = document.querySelector(
+                        `.${styles.orderFour}`
+                      );
+                      const orderFive = document.querySelector(
+                        `.${styles.orderFive}`
+                      );
+                      const orderSix = document.querySelector(
+                        `.${styles.orderSix}`
+                      );
+
+                      // Map-------------
+                      const mainTitleMapSpan = document.querySelector(
+                        `.${styles.mainTitleMapSpan}`
+                      );
+                      const mapSequence = document.querySelector(
+                        `.${stylesMap.mapSequence}`
+                      );
+                      const destination1 = document.querySelector(
+                        `.${stylesMap.destination1}`
+                      );
+                      const mapSequence1 = document.querySelector(
+                        `.${stylesMap.mapSequence1}`
+                      );
+                      const destination2 = document.querySelector(
+                        `.${stylesMap.destination2}`
+                      );
+                      const mapSequence2 = document.querySelector(
+                        `.${stylesMap.mapSequence2}`
+                      );
+                      const destination3 = document.querySelector(
+                        `.${stylesMap.destination3}`
+                      );
+                      const mapSequence3 = document.querySelector(
+                        `.${stylesMap.mapSequence3}`
+                      );
+                      const destination4 = document.querySelector(
+                        `.${stylesMap.destination4}`
+                      );
+                      const mapSequence4 = document.querySelector(
+                        `.${stylesMap.mapSequence4}`
+                      );
+
+                      // Collaboration
+
+                      const mainTitleCollaborationSpan = document.querySelector(
+                        `.${styles.mainTitleCollaborationSpan}`
+                      );
+                      const collaborationSentence = document.querySelector(
+                        `.${styles.collaborationSentence}`
+                      );
+                      const teewerZuuchSentence = document.querySelector(
+                        `.${styles.teewerZuuchSentence}`
+                      );
+
+                      // Request
+
+                      const formQuestion = document.querySelector(
+                        `.${stylesReq.formQuestion}`
+                      );
+                      const formSentence = document.querySelector(
+                        `.${stylesReq.formSentence}`
+                      );
+                      const formButton = document.querySelector(
+                        `.${stylesReq.formButton}`
+                      );
+
+                      const footerMainTitle = document.querySelector(
+                        `.${stylesFooter.footerMainTitle}`
+                      );
+
+                      // =============================================
+
+                      home.textContent = dataRussian.ENG.home;
+                      homeService.textContent = dataRussian.ENG.homeService;
+                      homeAboutUs.textContent = dataRussian.ENG.homeAboutUs;
+                      homeProducts.textContent = dataRussian.ENG.homeProducts;
+                      homeOrder.textContent = dataRussian.ENG.homeOrder;
+                      homeCollaboration.textContent =
+                        dataRussian.ENG.homeCollaboration;
+
+                      homeColumn.textContent = dataRussian.ENG.homeColumn;
+                      homeServiceColumn.textContent = dataRussian.ENG.homeServiceColumn;
+                      homeAboutUsColumn.textContent = dataRussian.ENG.homeAboutUsColumn;
+                      homeProductsColumn.textContent = dataRussian.ENG.homeProductsColumn;
+                      homeOrderColumn.textContent = dataRussian.ENG.homeOrderColumn;
+                      homeCollaborationColumn.textContent =
+                        dataRussian.ENG.homeCollaborationColumn;
+
+                      homeTitle.textContent = dataRussian.ENG.homeTitle;
+                      homeInfo.textContent = dataRussian.ENG.homeInfo;
+                      firstList1.textContent = dataRussian.ENG.firstList1;
+                      firstList2.textContent = dataRussian.ENG.firstList2;
+                      secondList.textContent = dataRussian.ENG.secondList;
+                      thirdList.textContent = dataRussian.ENG.thirdList;
+                      fourthList.textContent = dataRussian.ENG.fourthList;
+
+                      mainTitleServiceSpan.textContent =
+                        dataRussian.ENG.mainTitleServiceSpan;
+                      serviceProduct.textContent =
+                        dataRussian.ENG.serviceProduct;
+                      serviceAdvice.textContent = dataRussian.ENG.serviceAdvice;
+                      serviceSolutionSpan1.textContent =
+                        dataRussian.ENG.serviceSolutionSpan1;
+                      serviceSolutionSpan2.textContent =
+                        dataRussian.ENG.serviceSolutionSpan2;
+
+                      aboutUsTitle.textContent = dataRussian.ENG.aboutUsTitle;
+                      mainTitleAboutUsSpan.textContent =
+                        dataRussian.ENG.mainTitleAboutUsSpan;
+                      aboutUsText1.textContent = dataRussian.ENG.aboutUsText1;
+                      aboutUsText2.textContent = dataRussian.ENG.aboutUsText2;
+
+                      // Product -----------
+
+                      mainTitleProductSpan.textContent =
+                        dataRussian.ENG.mainTitleProductSpan;
+                      productTitleSawlagaa.textContent =
+                        dataRussian.ENG.productTitleSawlagaa;
+                      glass.textContent = dataRussian.ENG.glass;
+                      can.textContent = dataRussian.ENG.can;
+                      plastic.textContent = dataRussian.ENG.plastic;
+                      print.textContent = dataRussian.ENG.print;
+
+                      productTitleAwtomashin.textContent =
+                        dataRussian.ENG.productTitleAwtomashin;
+                      selbeg.textContent = dataRussian.ENG.selbeg;
+                      mechanism.textContent = dataRussian.ENG.mechanism;
+
+                      productTitleMetal.textContent =
+                        dataRussian.ENG.productTitleMetal;
+                      gan.textContent = dataRussian.ENG.gan;
+                      dwutawr.textContent = dataRussian.ENG.dwutawr;
+                      cube.textContent = dataRussian.ENG.cube;
+                      metal.textContent = dataRussian.ENG.metal;
+
+                      productTitleBuilding.textContent =
+                        dataRussian.ENG.productTitleBuilding;
+                      plita.textContent = dataRussian.ENG.plita;
+                      paint.textContent = dataRussian.ENG.paint;
+                      floor.textContent = dataRussian.ENG.floor;
+                      eloctronic.textContent = dataRussian.ENG.eloctronic;
+                      hooloi.textContent = dataRussian.ENG.hooloi;
+                      erchim.textContent = dataRussian.ENG.erchim;
+                      paner.textContent = dataRussian.ENG.paner;
+                      plywood.textContent = dataRussian.ENG.plywood;
+                      hongon.textContent = dataRussian.ENG.hongon;
+
+                      // Order-------------
+
+                      mainTitleOrderSpan.textContent =
+                        dataRussian.ENG.mainTitleOrderSpan;
+                      orderOne.textContent = dataRussian.ENG.orderOne;
+                      orderTwo.textContent = dataRussian.ENG.orderTwo;
+                      orderThree.textContent = dataRussian.ENG.orderThree;
+                      orderFour.textContent = dataRussian.ENG.orderFour;
+                      orderFive.textContent = dataRussian.ENG.orderFive;
+                      orderSix.textContent = dataRussian.ENG.orderSix;
+
+                      // Map-------------
+
+                      mainTitleMapSpan.textContent =
+                        dataRussian.ENG.mainTitleMapSpan;
+                      mapSequence.textContent = dataRussian.ENG.mapSequence;
+                      destination1.textContent = dataRussian.ENG.destination1;
+                      mapSequence1.textContent = dataRussian.ENG.mapSequence1;
+                      destination2.textContent = dataRussian.ENG.destination2;
+                      mapSequence2.textContent = dataRussian.ENG.mapSequence2;
+                      destination3.textContent = dataRussian.ENG.destination3;
+                      mapSequence3.textContent = dataRussian.ENG.mapSequence3;
+                      destination4.textContent = dataRussian.ENG.destination4;
+                      mapSequence4.textContent = dataRussian.ENG.mapSequence4;
+
+                      // Collaboration
+
+                      mainTitleCollaborationSpan.textContent =
+                        dataRussian.ENG.mainTitleCollaborationSpan;
+                      collaborationSentence.textContent =
+                        dataRussian.ENG.collaborationSentence;
+                      teewerZuuchSentence.textContent =
+                        dataRussian.ENG.teewerZuuchSentence;
+
+                      // Request
+
+                      formQuestion.textContent = dataRussian.ENG.formQuestion;
+                      formSentence.textContent = dataRussian.ENG.formSentence;
+                      formButton.textContent = dataRussian.ENG.formButton;
+
+                      footerMainTitle.textContent =
+                        dataRussian.ENG.footerMainTitle;
+                    }}
+                  >
+                    <div className={stylesNav.flagBox}>
+                      <Image
+                        alt="mongolia"
+                        src={"/flagUSA.png"}
+                        fill
+                        sizes="(max-width: 70px) 100vw"
+                        style={{
+                          borderRadius: "4px",
+                        }}
+                      />
+                    </div>
+                    <p className={`${stylesNav.flagList}`}>ENG</p>
                   </li>
                 </ul>
               </div>
