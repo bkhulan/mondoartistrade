@@ -295,13 +295,13 @@ export default function Home() {
       productTitleAwtomashin:
         "Spare parts of automobile, heavy machinery, mining equipments",
       selbeg: "Spare parts of automobile",
-      mechanism: "Механизм, эд анги, тоноглол",
+      mechanism: "Equipments",
 
       productTitleMetal: "Steel and metal materials",
-      gan: "Ган лист",
-      dwutawr: "Двутавр, швеллер, угольник",
-      cube: "Труба, квадрат төмөр",
-      metal: "Металл лист",
+      gan: "Steel coils and sheets",
+      dwutawr: "H-beams,",
+      cube: "Metal channels",
+      metal: "Wire rods",
 
       productTitleBuilding: "Building materials",
       plita: "Slabs",
