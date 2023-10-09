@@ -27,6 +27,7 @@ export default function Home() {
   const router = useRouter();
 
   const [selected, setSelected] = useState("MN");
+  const [langFlag, setLangFlag] = useState("/flagMongolia.png");
   const [isActive, setIsActive] = useState(false);
 
   const [navButt, setnavButt] = useState(false);
@@ -275,7 +276,8 @@ export default function Home() {
       firstList2: "construction materials, and other supply products",
       secondList: "Research and valuation of supply products",
       thirdList: "Solution for payment transaction and transportation",
-      fourthList: "Professional service for international trading & legal consulting",
+      fourthList:
+        "Professional service for international trading & legal consulting",
       mainTitleServiceSpan: "Our services",
       serviceProduct: "Product market research, order purchasing, supplying",
       serviceAdvice: "Negotiation consulting services, legal consulting",
@@ -315,7 +317,8 @@ export default function Home() {
       hongon: "Aluminum blanks",
 
       mainTitleOrderSpan: "How to order?",
-      orderOne: "Give us complete information and material specification about the subscription product.",
+      orderOne:
+        "Give us complete information and material specification about the subscription product.",
       orderTwo:
         "Send information to the manufacturer and obtain price proposals and materials.",
       orderThree:
@@ -354,7 +357,6 @@ export default function Home() {
 
       footerMainTitle: "Contact",
     },
-    
   };
 
   return (
@@ -469,6 +471,17 @@ export default function Home() {
                     setIsActive(!isActive);
                   }}
                 >
+                  <div className={stylesNav.flagBox}>
+                      <Image
+                        alt="mongolia"
+                        src={langFlag}
+                        fill
+                        sizes="(max-width: 70px) 100vw"
+                        style={{
+                          borderRadius: "4px",
+                        }}
+                      />
+                    </div>
                   <p
                     style={{
                       fontWeight: "700",
@@ -494,6 +507,7 @@ export default function Home() {
                     onClick={(e) => {
                       e.preventDefault();
                       setSelected("MN");
+                      setLangFlag("/flagMongolia.png")
                       setIsActive(false);
 
                       const home = document.querySelector(`.${stylesNav.home}`);
@@ -513,7 +527,9 @@ export default function Home() {
                         `.${stylesNav.homeCollaboration}`
                       );
 
-                      const homeColumn = document.querySelector(`.${stylesNav.homeColumn}`);
+                      const homeColumn = document.querySelector(
+                        `.${stylesNav.homeColumn}`
+                      );
                       const homeServiceColumn = document.querySelector(
                         `.${stylesNav.homeServiceColumn}`
                       );
@@ -749,10 +765,14 @@ export default function Home() {
                         dataRussian.MN.homeCollaboration;
 
                       homeColumn.textContent = dataRussian.MN.homeColumn;
-                      homeServiceColumn.textContent = dataRussian.MN.homeServiceColumn;
-                      homeAboutUsColumn.textContent = dataRussian.MN.homeAboutUsColumn;
-                      homeProductsColumn.textContent = dataRussian.MN.homeProductsColumn;
-                      homeOrderColumn.textContent = dataRussian.MN.homeOrderColumn;
+                      homeServiceColumn.textContent =
+                        dataRussian.MN.homeServiceColumn;
+                      homeAboutUsColumn.textContent =
+                        dataRussian.MN.homeAboutUsColumn;
+                      homeProductsColumn.textContent =
+                        dataRussian.MN.homeProductsColumn;
+                      homeOrderColumn.textContent =
+                        dataRussian.MN.homeOrderColumn;
                       homeCollaborationColumn.textContent =
                         dataRussian.MN.homeCollaborationColumn;
 
@@ -877,6 +897,8 @@ export default function Home() {
                     className={stylesNav.otherLanguagesLi}
                     onClick={(e) => {
                       setSelected("RU");
+                      setLangFlag("/flagRussia.png");
+
                       setIsActive(false);
                       const home = document.querySelector(`.${stylesNav.home}`);
                       const homeService = document.querySelector(
@@ -895,7 +917,9 @@ export default function Home() {
                         `.${stylesNav.homeCollaboration}`
                       );
 
-                      const homeColumn = document.querySelector(`.${stylesNav.homeColumn}`);
+                      const homeColumn = document.querySelector(
+                        `.${stylesNav.homeColumn}`
+                      );
                       const homeServiceColumn = document.querySelector(
                         `.${stylesNav.homeServiceColumn}`
                       );
@@ -1130,10 +1154,14 @@ export default function Home() {
                         dataRussian.RU.homeCollaboration;
 
                       homeColumn.textContent = dataRussian.RU.homeColumn;
-                      homeServiceColumn.textContent = dataRussian.RU.homeServiceColumn;
-                      homeAboutUsColumn.textContent = dataRussian.RU.homeAboutUsColumn;
-                      homeProductsColumn.textContent = dataRussian.RU.homeProductsColumn;
-                      homeOrderColumn.textContent = dataRussian.RU.homeOrderColumn;
+                      homeServiceColumn.textContent =
+                        dataRussian.RU.homeServiceColumn;
+                      homeAboutUsColumn.textContent =
+                        dataRussian.RU.homeAboutUsColumn;
+                      homeProductsColumn.textContent =
+                        dataRussian.RU.homeProductsColumn;
+                      homeOrderColumn.textContent =
+                        dataRussian.RU.homeOrderColumn;
                       homeCollaborationColumn.textContent =
                         dataRussian.RU.homeCollaborationColumn;
 
@@ -1261,6 +1289,7 @@ export default function Home() {
                     onClick={(e) => {
                       e.preventDefault();
                       setSelected("ENG");
+                      setLangFlag("/flagUSA.png");
                       setIsActive(false);
 
                       const home = document.querySelector(`.${stylesNav.home}`);
@@ -1280,7 +1309,9 @@ export default function Home() {
                         `.${stylesNav.homeCollaboration}`
                       );
 
-                      const homeColumn = document.querySelector(`.${stylesNav.homeColumn}`);
+                      const homeColumn = document.querySelector(
+                        `.${stylesNav.homeColumn}`
+                      );
                       const homeServiceColumn = document.querySelector(
                         `.${stylesNav.homeServiceColumn}`
                       );
@@ -1516,10 +1547,14 @@ export default function Home() {
                         dataRussian.ENG.homeCollaboration;
 
                       homeColumn.textContent = dataRussian.ENG.homeColumn;
-                      homeServiceColumn.textContent = dataRussian.ENG.homeServiceColumn;
-                      homeAboutUsColumn.textContent = dataRussian.ENG.homeAboutUsColumn;
-                      homeProductsColumn.textContent = dataRussian.ENG.homeProductsColumn;
-                      homeOrderColumn.textContent = dataRussian.ENG.homeOrderColumn;
+                      homeServiceColumn.textContent =
+                        dataRussian.ENG.homeServiceColumn;
+                      homeAboutUsColumn.textContent =
+                        dataRussian.ENG.homeAboutUsColumn;
+                      homeProductsColumn.textContent =
+                        dataRussian.ENG.homeProductsColumn;
+                      homeOrderColumn.textContent =
+                        dataRussian.ENG.homeOrderColumn;
                       homeCollaborationColumn.textContent =
                         dataRussian.ENG.homeCollaborationColumn;
 

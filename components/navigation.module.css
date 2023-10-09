@@ -107,7 +107,7 @@
 
 .otherLanguagesUl {
   position: absolute;
-  left: -15px;
+  left: -5px;
   top: 43px;
   padding: 0px;
   background-color: var(--navigationColor);
@@ -117,7 +117,7 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  padding: 1px 15px;
+  padding: 1px 20px;
 }
 
 .otherLanguagesLi:hover {
