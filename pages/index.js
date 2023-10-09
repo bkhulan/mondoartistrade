@@ -281,7 +281,7 @@ export default function Home() {
       serviceAdvice: "Negotiation consulting services, legal consulting",
       serviceSolutionSpan1: `Transport and logistic,`,
       serviceSolutionSpan2: `payment transaction`,
-      aboutUsTitle: " MONDO ARTIS TRADE LLC-Д ТАВТАЙ МОРИЛ",
+      aboutUsTitle: "WELCOME TO MONDO ARTIS TRADE LLC",
       mainTitleAboutUsSpan: "About us",
       aboutUsText1: `Our company provides international trading services, specially market research and consulting services to connect Europe and Asia areas. We are cooperating with qualified manufacturer companies from Guangdong, Zhejiang, Jiangsu, Shangdong from China, Seoul, Incheon, Busan from South Korea.`,
       aboutUsText2: `Our official agents from Seoul (Korea), Ghuangzhou, Jinan, Shanghai, Huh hot, Erlian (China), Moscow, Ulan-Ude (Russia) will assist you to find potential supplier, to do market research, negotiate better and reasonable settlement.`,
