@@ -11,6 +11,7 @@
   width: 100%;
   z-index: 1000000;
   padding: 0 100px;
+  transition: 0.4s;
 }
 
 .logoBox {
@@ -44,21 +45,36 @@
 }
 
 .linkColumn {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
   flex-direction: column;
   gap: 20px;
   position: fixed;
   top: 0px;
   right: 0px;
   margin: 0;
-  padding: 100px 30px;
+  padding: 90px 0px;
   height: 100%;
   background-color: var(--navigationColor);
   z-index: 10000;
+  transition: all 0.2s ease-in-out;
+}
+
+.linkColumnLi {
+  padding: 10px 25px;
+}
+
+.linkColumnLi:hover {
+  background-color: rgba(155, 172, 190, 0.5);
+}
+
+.linkColumnLi.linkColumnActive {
+  background-color: rgba(155, 172, 190, 0.5);
 }
 
 .linkColDisplay {
-  display: flex;
+  visibility: visible;
+  opacity: 1;
   transition: all 0.3s ease-in-out;
 }
 
@@ -121,10 +137,6 @@
   display: flex;
   align-items: center;
 }
-
-/* .otherLanguagesLi:hover {
-  background-color: rgba(155, 172, 190, 0.5);
-} */
 
 .otherLanguagesLi:hover {
   background-color: rgba(155, 172, 190, 0.5);

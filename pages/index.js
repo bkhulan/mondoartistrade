@@ -1672,7 +1672,7 @@ export default function Home() {
 
               {navButt ? (
                 <button
-                  className={`${stylesNav.navButt} ${stylesNav.navCloseButt}`}
+                  className={`${stylesNav.navButt}`}
                   onClick={(e) => {
                     e.preventDefault();
                     setnavButt(!navButt);
@@ -1767,13 +1767,13 @@ export default function Home() {
               navButt ? stylesNav.linkColDisplay : ""
             }`}
           >
-            <li>
+            <li className={stylesNav.linkColumnLi}>
               <Link className={`${stylesNav.homeColumn}`} href={"/#home"}>
                 Нүүр хуудас
               </Link>
             </li>
 
-            <li>
+            <li className={stylesNav.linkColumnLi}>
               <Link
                 className={`${stylesNav.homeServiceColumn}`}
                 href={"#ourservice"}
@@ -1782,7 +1782,7 @@ export default function Home() {
               </Link>
             </li>
 
-            <li>
+            <li className={stylesNav.linkColumnLi}>
               <Link
                 className={`${stylesNav.homeAboutUsColumn}`}
                 href={"#aboutus"}
@@ -1791,7 +1791,7 @@ export default function Home() {
               </Link>
             </li>
 
-            <li>
+            <li className={stylesNav.linkColumnLi}>
               <Link
                 className={`${stylesNav.homeProductsColumn}`}
                 href={"#products"}
@@ -1800,13 +1800,13 @@ export default function Home() {
               </Link>
             </li>
 
-            <li>
+            <li className={stylesNav.linkColumnLi}>
               <Link className={`${stylesNav.homeOrderColumn}`} href={"#order"}>
                 Захиалга
               </Link>
             </li>
 
-            <li>
+            <li className={stylesNav.linkColumnLi}>
               <Link
                 className={`${stylesNav.homeCollaborationColumn}`}
                 href={"#collaboration"}
