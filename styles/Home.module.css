@@ -101,7 +101,8 @@
 .serviceParts {
   display: grid;
   gap: 8px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  /* grid-template-columns: repeat(auto-fit, minmax(200px, auto)); */
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .servicePart {
