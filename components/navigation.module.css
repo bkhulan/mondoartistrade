@@ -103,29 +103,61 @@
 
 .flagList {
   font-size: 12px;
+  margin: 0px;
 }
 
 .otherLanguagesUl {
   position: absolute;
   left: -5px;
-  top: 43px;
+  top: 60px;
   padding: 0px;
+  margin: 0px;
   background-color: var(--navigationColor);
 }
 
 .otherLanguagesLi {
+  gap: 10px;
+  padding: 10px 15px;
   display: flex;
   align-items: center;
-  gap: 5px;
-  padding: 1px 20px;
 }
 
+/* .otherLanguagesLi:hover {
+  background-color: rgba(155, 172, 190, 0.5);
+} */
+
 .otherLanguagesLi:hover {
-  background-color: rgba(155, 172, 190, 0.3);
+  background-color: rgba(155, 172, 190, 0.5);
+}
+
+.otherLanguagesLi.active {
+  background-color: rgba(155, 172, 190, 0.5);
 }
 
 .display {
   display: none;
+}
+
+@media only screen and (min-width: 600px) {
+  .language {
+    display: none;
+  }
+
+  .otherLanguagesUl {
+    position: relative;
+    display: flex;
+    padding: 0px;
+    top: 0px;
+    left: 0px;
+    gap: 4px;
+  }
+
+  .otherLanguagesLi {
+    flex-direction: column;
+    padding: 5px 5px;
+    border-radius: 5px;
+    gap: 5px;
+  }
 }
 
 /* Close button */

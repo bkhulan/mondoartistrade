@@ -496,7 +496,7 @@ export default function Home() {
                 >
                   <li
                     key={"MN"}
-                    className={stylesNav.otherLanguagesLi}
+                    className={`${stylesNav.otherLanguagesLi} ${selected && selected == "MN" ? stylesNav.active : ""}`}
                     onClick={(e) => {
                       e.preventDefault();
                       setSelected("MN");
@@ -887,7 +887,7 @@ export default function Home() {
                   </li>
                   <li
                     key={"RU"}
-                    className={stylesNav.otherLanguagesLi}
+                    className={`${stylesNav.otherLanguagesLi} ${selected && selected == "RU" ? stylesNav.active : ""}`}
                     onClick={(e) => {
                       setSelected("RU");
                       setLangFlag("/flagRussia.png");
@@ -1278,7 +1278,7 @@ export default function Home() {
                   </li>
                   <li
                     key={"ENG"}
-                    className={stylesNav.otherLanguagesLi}
+                    className={`${stylesNav.otherLanguagesLi} ${selected && selected == "ENG" ? stylesNav.active : ""}`}
                     onClick={(e) => {
                       e.preventDefault();
                       setSelected("ENG");
