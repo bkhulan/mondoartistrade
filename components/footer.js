@@ -125,17 +125,16 @@ export default function RequestForm() {
         <div className={`${styles.list}`}>
           <div>Hohhot China:</div>
           <div>- TUMEN GERILE (Agent) Tel: +86-15647065391</div>
-          <div className={styles.chinaList1}>Office address:</div>
+          <div className={styles.chinaList1}>Address:</div>
           <div>
-            - Saihan district st.University, apartment Yang Guang Ming Zuo
-            1-302, city Huhehaote Inner Mongolia China
+            - 内蒙古呼和浩特市赛罕区东二环万正小区南门绿色农畜产品展销中心 Inner Mongolia Hohhot City Saihan District East second road Wanzheng community. Agricultural and livestock products exhibition center
           </div>
-          <div className={styles.chinaList2}>Storage address:</div>
+          <div>General manager MARIAN:</div>
           <div>
-            - Erlian haote, Inner Mongolia
-            内蒙古自治区锡林郭勒盟二连浩特市环宇商贸城 6-11门市 达尔苏收 Tel:
-            +86-13734819003
+            马力岩: +86-18586289377 <br />
+            韩卫国: +86-18698445319
           </div>
+         
         </div>
       </div>
 

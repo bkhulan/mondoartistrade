@@ -390,7 +390,7 @@ export default function Products() {
           <h4 className={styles.productTitleBuilding}>Барилгын материал</h4>
         </div>
 
-        <div className={styles.boxContainer}>
+        {/* <div className={styles.boxContainer}>
           <div className={styles.column}>
             <ul className={styles.listContainer}>
               <li className={styles.plita}>Плита</li>
@@ -420,9 +420,9 @@ export default function Products() {
               />
             </div>
           </div>
-        </div>
+        </div> */}
 
-        <div className={styles.boxContainer}>
+        {/* <div className={styles.boxContainer}>
           <div>
             <ul className={styles.listContainer}>
               <li className={styles.floor}>Модон ба паркетан шал</li>
@@ -455,7 +455,7 @@ export default function Products() {
               />
             </div>
           </div>
-        </div>
+        </div> */}
 
         <Image
           className={styles.shadowBuilding}
