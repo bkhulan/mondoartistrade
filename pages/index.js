@@ -94,10 +94,10 @@ export default function Home() {
       metal: "Металл лист",
 
       productTitleBuilding: "Барилгын материал",
-      plita: "Плита",
-      paint: "Гадна дотно эмульс будаг",
-      floor: "Модон ба паркетан шал",
-      eloctronic: "Электрон тоноглол, автоматжуулалт, дохиолол",
+      // plita: "Плита",
+      // paint: "Гадна дотно эмульс будаг",
+      // floor: "Модон ба паркетан шал",
+      // eloctronic: "Электрон тоноглол, автоматжуулалт, дохиолол",
       hooloi: "Сантехник хоолой, тоноглол",
       erchim: "Эрчим хүч ба цахилгаан тоноглол",
       paner: "Фанер хавтан",
@@ -196,11 +196,11 @@ export default function Home() {
       metal: "Металлические листы",
 
       productTitleBuilding: "Строительные материалы",
-      plita: "Плиты",
-      paint: "Эмульсии для внутренних и наружных работ, краски",
-      floor: "Напольные покрытия",
-      eloctronic:
-        "Электронные оборудования, автоматика, интеллектуальная система",
+      // plita: "Плиты",
+      // paint: "Эмульсии для внутренних и наружных работ, краски",
+      // floor: "Напольные покрытия",
+      // eloctronic:
+      //   "Электронные оборудования, автоматика, интеллектуальная система",
       hooloi: "Сантехнические трубы",
       erchim: "Энергетика и электроприборы",
       paner: "Фанера, ДСП",
@@ -299,10 +299,10 @@ export default function Home() {
       metal: "Wire rods",
 
       productTitleBuilding: "Building materials",
-      plita: "Slabs",
-      paint: "Exterior and Interior emulsion paints",
-      floor: "Floor coverings",
-      eloctronic: "Electronic equipments, automation, intelligent systems",
+      // plita: "Slabs",
+      // paint: "Exterior and Interior emulsion paints",
+      // floor: "Floor coverings",
+      // eloctronic: "Electronic equipments, automation, intelligent systems",
       hooloi: "Plumbing pipes",
       erchim: "Electrical cable and equipments",
       paner: "OSB panel",
@@ -635,18 +635,18 @@ export default function Home() {
                       const productTitleBuilding = document.querySelector(
                         `.${stylesPro.productTitleBuilding}`
                       );
-                      const plita = document.querySelector(
-                        `.${stylesPro.plita}`
-                      );
-                      const paint = document.querySelector(
-                        `.${stylesPro.paint}`
-                      );
-                      const floor = document.querySelector(
-                        `.${stylesPro.floor}`
-                      );
-                      const eloctronic = document.querySelector(
-                        `.${stylesPro.eloctronic}`
-                      );
+                      // const plita = document.querySelector(
+                      //   `.${stylesPro.plita}`
+                      // );
+                      // const paint = document.querySelector(
+                      //   `.${stylesPro.paint}`
+                      // );
+                      // const floor = document.querySelector(
+                      //   `.${stylesPro.floor}`
+                      // );
+                      // const eloctronic = document.querySelector(
+                      //   `.${stylesPro.eloctronic}`
+                      // );
                       const hooloi = document.querySelector(
                         `.${stylesPro.hooloi}`
                       );
@@ -818,10 +818,10 @@ export default function Home() {
 
                       productTitleBuilding.textContent =
                         dataRussian.MN.productTitleBuilding;
-                      plita.textContent = dataRussian.MN.plita;
-                      paint.textContent = dataRussian.MN.paint;
-                      floor.textContent = dataRussian.MN.floor;
-                      eloctronic.textContent = dataRussian.MN.eloctronic;
+                      // plita.textContent = dataRussian.MN.plita;
+                      // paint.textContent = dataRussian.MN.paint;
+                      // floor.textContent = dataRussian.MN.floor;
+                      // eloctronic.textContent = dataRussian.MN.eloctronic;
                       hooloi.textContent = dataRussian.MN.hooloi;
                       erchim.textContent = dataRussian.MN.erchim;
                       paner.textContent = dataRussian.MN.paner;
@@ -1024,18 +1024,18 @@ export default function Home() {
                       const productTitleBuilding = document.querySelector(
                         `.${stylesPro.productTitleBuilding}`
                       );
-                      const plita = document.querySelector(
-                        `.${stylesPro.plita}`
-                      );
-                      const paint = document.querySelector(
-                        `.${stylesPro.paint}`
-                      );
-                      const floor = document.querySelector(
-                        `.${stylesPro.floor}`
-                      );
-                      const eloctronic = document.querySelector(
-                        `.${stylesPro.eloctronic}`
-                      );
+                      // const plita = document.querySelector(
+                      //   `.${stylesPro.plita}`
+                      // );
+                      // const paint = document.querySelector(
+                      //   `.${stylesPro.paint}`
+                      // );
+                      // const floor = document.querySelector(
+                      //   `.${stylesPro.floor}`
+                      // );
+                      // const eloctronic = document.querySelector(
+                      //   `.${stylesPro.eloctronic}`
+                      // );
                       const hooloi = document.querySelector(
                         `.${stylesPro.hooloi}`
                       );
@@ -1207,10 +1207,10 @@ export default function Home() {
 
                       productTitleBuilding.textContent =
                         dataRussian.RU.productTitleBuilding;
-                      plita.textContent = dataRussian.RU.plita;
-                      paint.textContent = dataRussian.RU.paint;
-                      floor.textContent = dataRussian.RU.floor;
-                      eloctronic.textContent = dataRussian.RU.eloctronic;
+                      // plita.textContent = dataRussian.RU.plita;
+                      // paint.textContent = dataRussian.RU.paint;
+                      // floor.textContent = dataRussian.RU.floor;
+                      // eloctronic.textContent = dataRussian.RU.eloctronic;
                       hooloi.textContent = dataRussian.RU.hooloi;
                       erchim.textContent = dataRussian.RU.erchim;
                       paner.textContent = dataRussian.RU.paner;
@@ -1417,18 +1417,18 @@ export default function Home() {
                       const productTitleBuilding = document.querySelector(
                         `.${stylesPro.productTitleBuilding}`
                       );
-                      const plita = document.querySelector(
-                        `.${stylesPro.plita}`
-                      );
-                      const paint = document.querySelector(
-                        `.${stylesPro.paint}`
-                      );
-                      const floor = document.querySelector(
-                        `.${stylesPro.floor}`
-                      );
-                      const eloctronic = document.querySelector(
-                        `.${stylesPro.eloctronic}`
-                      );
+                      // const plita = document.querySelector(
+                      //   `.${stylesPro.plita}`
+                      // );
+                      // const paint = document.querySelector(
+                      //   `.${stylesPro.paint}`
+                      // );
+                      // const floor = document.querySelector(
+                      //   `.${stylesPro.floor}`
+                      // );
+                      // const eloctronic = document.querySelector(
+                      //   `.${stylesPro.eloctronic}`
+                      // );
                       const hooloi = document.querySelector(
                         `.${stylesPro.hooloi}`
                       );
@@ -1600,10 +1600,10 @@ export default function Home() {
 
                       productTitleBuilding.textContent =
                         dataRussian.ENG.productTitleBuilding;
-                      plita.textContent = dataRussian.ENG.plita;
-                      paint.textContent = dataRussian.ENG.paint;
-                      floor.textContent = dataRussian.ENG.floor;
-                      eloctronic.textContent = dataRussian.ENG.eloctronic;
+                      // plita.textContent = dataRussian.ENG.plita;
+                      // paint.textContent = dataRussian.ENG.paint;
+                      // floor.textContent = dataRussian.ENG.floor;
+                      // eloctronic.textContent = dataRussian.ENG.eloctronic;
                       hooloi.textContent = dataRussian.ENG.hooloi;
                       erchim.textContent = dataRussian.ENG.erchim;
                       paner.textContent = dataRussian.ENG.paner;

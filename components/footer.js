@@ -129,10 +129,10 @@ export default function RequestForm() {
           <div>
             - 内蒙古呼和浩特市赛罕区东二环万正小区南门绿色农畜产品展销中心 Inner Mongolia Hohhot City Saihan District East second road Wanzheng community. Agricultural and livestock products exhibition center
           </div>
-          <div>General manager MARIAN:</div>
+          <div>General manager:</div>
           <div>
-            马力岩: +86-18586289377 <br />
-            韩卫国: +86-18698445319
+          - MARIAN 马力岩 Tel: +86-18586289377 
+            韩卫国 Tel: +86-18698445319
           </div>
          
         </div>
