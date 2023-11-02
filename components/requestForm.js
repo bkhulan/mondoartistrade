@@ -1,9 +1,39 @@
 import Image from "next/image";
 import Script from "next/script";
+import { useParams } from "next/navigation";
+import { useEffect, useState } from "react";
 
 import styles from "../components/requestForm.module.css";
 
-export default function RequestForm() {
+export default function RequestForm({ selected }) {
+  const [name, setName] = useState("Нэр*");
+  const [email, setEmail] = useState("Емайл*");
+  const [phone, setPhone] = useState("Утас*");
+  const [city, setCity] = useState("Хот*");
+  const [message, setMessage] = useState("Зурвас*");
+
+  useEffect(() => {
+    if (selected == "MN") {
+      setName("Нэр*");
+      setEmail("И-мэйл*");
+      setPhone("Утас*");
+      setCity("Хот*");
+      setMessage("Зурвас*")
+    } else if (selected == "RU") {
+      setName("Имя и фамилия*");
+      setEmail("Рабочий email*");
+      setPhone("Телефон*");
+      setCity("Город, область*");
+      setMessage("Интересующий вас продукт или услуга*")
+    } else if (selected == "ENG") {
+      setName("Name*");
+      setEmail("Email*");
+      setPhone("Phone number*");
+      setCity("City*");
+      setMessage("Message*")
+    }
+  });
+
   return (
     <section className={styles.formContainer}>
       <h3 className={styles.formQuestion}>Асуултаа энд бичнэ үү.</h3>
@@ -22,33 +52,33 @@ export default function RequestForm() {
             className={styles.input}
             name="Name"
             type="text"
-            placeholder="Name*"
+            placeholder={name}
             required
           />
           <input
             className={styles.input}
             name="Email"
             type="email"
-            placeholder="Email*"
+            placeholder={email}
             required
           />
           <input
             className={styles.input}
             name="Phone number"
             type="tel"
-            placeholder="Phone number*"
+            placeholder={phone}
           />
           <input
             className={styles.input}
             name="City"
             type="text"
-            placeholder="City*"
+            placeholder={city}
           />
         </div>
         <textarea
           className={styles.textArea}
           name="Message"
-          placeholder="Message*"
+          placeholder={message}
           required
         />
         <div className={styles.buttonContainer}>

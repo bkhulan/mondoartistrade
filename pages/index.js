@@ -344,7 +344,7 @@ export default function Home() {
       teewerZuuchSentence:
         "Let's create together new technologies, affordable creative and smart factories and increase joint competitiveness. We will be your trusted and responsible partner in Asia.",
 
-      formQuestion: "Please fill out the questionnaire ",
+      formQuestion: "Please fill out the questionnaire.",
       formSentence: "We will send more details to your email address.",
       formButton: "Submit",
 
@@ -1972,7 +1972,7 @@ export default function Home() {
             төлбөрийг гүйцэтгэнэ.
           </div>
         </section>
-        <RequestForm />
+        <RequestForm selected={selected}/>
         <Footer />
       </div>
     </>
