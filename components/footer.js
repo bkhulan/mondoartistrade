@@ -131,8 +131,8 @@ export default function RequestForm() {
           </div>
           <div>General manager:</div>
           <div>
-          - MARIAN 马力岩 Tel: +86-18586289377 
-            韩卫国 Tel: +86-18698445319
+          - MARIAN 马力岩 Tel: +86-18586289377 <br />
+            HANA 韩卫国 Tel: +86-18698445319
           </div>
          
         </div>
