@@ -11,7 +11,7 @@
 .productContainer {
   font-family: "Montserrat", sans-serif;
   width: 100%;
-  color: #161616;
+  color: #0c3561;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,7 +75,7 @@
 .productTitleAwtomashin,
 .productTitleMetal,
 .productTitleBuilding {
-  color: #161616;
+  color: #0c3561;
 }
 
 .boxContainer3 {
@@ -139,7 +139,7 @@
 .can,
 .plastic,
 .print {
-  color: #161616;
+  color: #0c3561;
 }
 
 .listTransport {
@@ -166,7 +166,7 @@
 .paner,
 .plywood,
 .hongon {
-  color: #161616;
+  color: #0c3561;
 }
 
 .productContainerSectionTomorLaaz,
