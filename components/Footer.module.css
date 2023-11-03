@@ -126,3 +126,21 @@
     grid-gap: 10px;
   }
 }
+
+.displayIf {
+  display: block;
+}
+
+.displayNone {
+  display: none;
+}
+
+.copyRight {
+  text-align: center;
+  margin-top: 30px;
+  font-weight: 700;
+}
+
+.copyRightC {
+  font-size: 16px;
+}

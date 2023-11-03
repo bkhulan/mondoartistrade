@@ -3,7 +3,8 @@ import Script from "next/script";
 
 import styles from "../components/Footer.module.css";
 
-export default function RequestForm() {
+export default function RequestForm({ selected }) {
+
   return (
     <footer className={styles.footerContainer}>
       <div className={styles.footerMainTitle}>Холбоо барих</div>
@@ -39,8 +40,10 @@ export default function RequestForm() {
             <div>- www.mondoartis.com</div>
             <div>Email: </div>
             <div>- sales@mondoartis.com</div>
-            <div>Менеджер по заказам:</div>
-            <div>- Б. Марал Tel: +976-88255577</div>
+            {/* <div className={selected == "RU" ? `${styles.displayIf}` : `${styles.displayNone}`}>Менеджер по заказам:</div>
+            <div className={selected == "RU" ? `${styles.displayIf}` : `${styles.displayNone}`}>- Б. Марал Tel: +976-88255577</div> */}
+            <div>Захиалгын менежер:</div>
+            <div>- G. Tamir Tel: +976-80197010</div>
           </div>
           <div className={styles.qrContainer}>
             <Image
@@ -168,8 +171,11 @@ export default function RequestForm() {
             - st.Autozavodskaya Build-23A Block-2, Moskow Russian Federation
             115280
           </div>
+          <div>Менеджер по заказам:</div>
+            <div>- B. Maral Tel: +976-88255577</div>
         </div>
       </div>
+      <div className={styles.copyRight}>MONDO ARTIS TRADE INTERNATIONAL TRADING COMPANY <span className={styles.copyRightC}>©</span> 2023 . Conserve Energy Future . All Rights Reserved</div>
     </footer>
   );
 }

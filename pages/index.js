@@ -1973,7 +1973,7 @@ export default function Home() {
           </div>
         </section>
         <RequestForm selected={selected}/>
-        <Footer />
+        <Footer selected={selected} />
       </div>
     </>
   );
