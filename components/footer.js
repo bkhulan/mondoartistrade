@@ -39,6 +39,8 @@ export default function RequestForm() {
             <div>- www.mondoartis.com</div>
             <div>Email: </div>
             <div>- sales@mondoartis.com</div>
+            <div>Менеджер по заказам:</div>
+            <div>- Б. Марал Tel: +976-88255577</div>
           </div>
           <div className={styles.qrContainer}>
             <Image

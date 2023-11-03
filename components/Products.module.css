@@ -76,6 +76,7 @@
 .productTitleMetal,
 .productTitleBuilding {
   color: #0c3561;
+  font-size: 17px;
 }
 
 .boxContainer3 {
@@ -130,7 +131,7 @@
 
 .listContainer {
   margin: 30px;
-  font-size: 14px;
+  font-size: 16px;
   display: flex;
   justify-content: center;
 }
@@ -162,7 +163,7 @@
 .plita,
 .paint,
 .floor,
-.eloctronic .hooloi,
+.eloctronic, .hooloi,
 .erchim,
 .paner,
 .plywood,
