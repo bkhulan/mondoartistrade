@@ -1,6 +1,7 @@
 .footerContainer {
   height: 90vh;
   background-color: rgba(155, 172, 190, 0.5);
+  background-color: #E7EBEF;
   display: flex;
   flex-direction: column;
   justify-content: center;
