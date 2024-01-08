@@ -100,8 +100,8 @@ export default function Home() {
       // eloctronic: "Электрон тоноглол, автоматжуулалт, дохиолол",
       hooloi: "Сантехник хоолой, тоноглол",
       erchim: "Эрчим хүч ба цахилгаан тоноглол",
-      paner: "Фанер хавтан",
-      plywood: "Plywood",
+      paner: "Фанер хавтан, Plywood",
+      plywood: "Батарей, цэнэг хураагуур, генератор",
       hongon: "Хөнгөн цагаан бэлдэц",
 
       mainTitleOrderSpan: "Хэрхэн захиалах вэ ?",
@@ -203,8 +203,8 @@ export default function Home() {
       //   "Электронные оборудования, автоматика, интеллектуальная система",
       hooloi: "Сантехнические трубы",
       erchim: "Энергетика и электроприборы",
-      paner: "Фанера, ДСП",
-      plywood: "Черная фанера",
+      paner: "Фанера, ДСП, Черная фанера",
+      plywood: "Hybrid Energy, Battery storage, Power Generator",
       hongon: "Алюминиевая заготовка",
 
       mainTitleOrderSpan: "Как заказать?",
@@ -305,8 +305,8 @@ export default function Home() {
       // eloctronic: "Electronic equipments, automation, intelligent systems",
       hooloi: "Plumbing pipes",
       erchim: "Electrical cable and equipments",
-      paner: "OSB panel",
-      plywood: "Plywood",
+      paner: "OSB panel, Plywood",
+      plywood: "Hybrid Energy, Battery storage, Power Generator",
       hongon: "Aluminum blanks",
 
       mainTitleOrderSpan: "How to order?",

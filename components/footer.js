@@ -41,9 +41,11 @@ export default function RequestForm({ selected }) {
             <div>Email: </div>
             <div>- sales@mondoartis.com</div>
             <div className={selected == "RU" ? `${styles.displayIf}` : `${styles.displayNone}`}>Менеджер по заказам:</div>
-            <div className={selected == "RU" ? `${styles.displayIf}` : `${styles.displayNone}`}>- Б. Марал Tel: +976-88255577 trade@mondoartis.com</div>
+            {/* <div className={selected == "RU" ? `${styles.displayIf}` : `${styles.displayNone}`}>- Б. Марал Tel: +976-88255577 trade@mondoartis.com</div> */}
             <div className={selected == "MN" ? `${styles.displayIf}` : `${styles.displayNone}`}>Захиалгын менежер:</div>
-            <div className={selected == "MN" ? `${styles.displayIf}` : `${styles.displayNone}`}>- G. Tamir Tel: +976-80197010</div>
+            {/* <div className={selected == "MN" ? `${styles.displayIf}` : `${styles.displayNone}`}>- G.Enkhbayar Tel: +976-95075579</div>
+          </div> */}
+            <div>- G.Enkhbayar Tel: +976-95075579</div>
           </div>
           <div className={styles.qrContainer}>
             <Image
@@ -130,8 +132,7 @@ export default function RequestForm({ selected }) {
         <div className={`${styles.list}`}>
           <div>Hohhot China:</div>
           {/* <div>- TUMEN GERILE (Agent) Tel: +86-15647065391</div> */}
-          <div>- MARIAN 马力岩 Tel: +86-18586289377 <br />
-            HANA 韩卫国 Tel: +86-18698445319</div>
+          <div>- Buyan-Ulzii Tel: +86-13204759797</div>
           <div className={styles.chinaList1}>Address:</div>
           <div>
             - 内蒙古呼和浩特市赛罕区东二环万正小区南门绿色农畜产品展销中心 Inner Mongolia Hohhot City Saihan District East second road Wanzheng community. Agricultural and livestock products exhibition center

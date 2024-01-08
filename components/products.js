@@ -258,11 +258,12 @@ export default function Products() {
         <div className={styles.productContainer}>
           {/* <div className={styles.boxContainerAwto}> */}
             <div className={styles.imageBoxMetal}>
-              <Image
+              <img
                 alt="shil"
-                src={"/products/sawlagaa/selbeg1.png"}
+                src={"/products/sawlagaa/mining.jpg"}
                 fill
                 sizes="(max-width: 1152px) 100vw"
+                className={styles.yellow}
               />
             </div>
           {/* </div> */}
@@ -500,7 +501,7 @@ export default function Products() {
         <div className={styles.boxContainer}>
           <div>
             <ul className={styles.listContainer}>
-              <li className={styles.paner}>Фанер хавтан</li>
+              <li className={styles.paner}>Фанер хавтан, Plywood</li>
             </ul>
             <div className={styles.imageBox1}>
               <Image
@@ -514,7 +515,7 @@ export default function Products() {
 
           <div>
             <ul className={styles.listContainer}>
-              <li className={styles.plywood}>Plywood</li>
+              <li className={styles.plywood}>Батарей, цэнэг хураагуур, генератор</li>
             </ul>
 
             <div className={styles.imageBox1}>

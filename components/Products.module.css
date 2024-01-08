@@ -232,3 +232,8 @@
 .productContainerBuilding {
   margin-bottom: 140px;
 }
+
+.yellow {
+  border: 2px solid rgba(12, 53, 97, 0.5);
+  border-radius: 24px;
+}
