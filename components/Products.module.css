@@ -45,12 +45,12 @@
   aspect-ratio: 70/70;
 }
 
-.imageBoxMetal {
+/* .imageBoxMetal {
   position: relative;
-  width: 80%;
+  width: 40%;
   aspect-ratio: 70/23;
   margin: 2rem auto;
-}
+} */
 
 .imageBoxPlastic {
   aspect-ratio: 70/50;
@@ -77,6 +77,7 @@
 .productTitleBuilding {
   color: #0c3561;
   font-size: 17px;
+  font-weight: 700;
 }
 
 .boxContainer3 {

@@ -28,9 +28,9 @@ export default function Products() {
             height={50}
             src={"/icons/icon1.png"}
           />
-          <h4 className={styles.productTitleSawlagaa}>
+          <h2 className={styles.productTitleSawlagaa}>
             Савлагааны бүтээгдэхүүн
-          </h4>
+          </h2>
         </div>
 
         <ul className={styles.listContainer}>
@@ -251,13 +251,13 @@ export default function Products() {
         </div>
 
         <ul className={styles.productListSelbeg}>
-          <li className={styles.selbeg}>Авто машины сэлбэг</li>
-          <li className={styles.mechanism}>Механизм, эд анги, тоноглол</li>
+          <li className={`${styles.selbeg} ${styles.listContainer}`}>Авто машины сэлбэг</li>
+          <li className={`${styles.mechanism} ${styles.listContainer}`}>Механизм, эд анги, тоноглол</li>
         </ul>
 
         <div className={styles.productContainer}>
-          {/* <div className={styles.boxContainerAwto}> */}
-            <div className={styles.imageBoxMetal}>
+          <div className={styles.boxContainer}>
+            <div className={styles.imageBox1}>
               <img
                 alt="shil"
                 src={"/products/sawlagaa/mining.jpg"}
@@ -266,8 +266,15 @@ export default function Products() {
                 className={styles.yellow}
               />
             </div>
-          {/* </div> */}
-          <div className={styles.boxContainer}>
+            <div className={styles.imageBox1}>
+              <img
+                alt="shil"
+                src={"/products/sawlagaa/mining2.jpg"}
+                fill
+                sizes="(max-width: 1152px) 100vw"
+                className={styles.yellow}
+              />
+            </div>
             <div className={styles.imageBox1}>
               <Image
                 alt="arhi"

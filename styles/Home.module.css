@@ -73,6 +73,7 @@
 .mainTitleCollaborationSpan {
   background-color: rgba(232, 232, 232, 0.5);
   padding: 3px;
+  font-weight: 800;
 }
 
 .mainTitleAboutUsSpan::before,
@@ -139,6 +140,7 @@
 .mainTitleOrderSpan {
   background-color: rgba(232, 232, 232, 0.5);
   padding: 3px;
+  font-weight: 800;
 }
 
 .mainTitleServiceSpan::before,
