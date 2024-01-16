@@ -1,13 +1,17 @@
 import Image from "next/image";
+import useMessage from "@/hooks/useMessage";
 import Script from "next/script";
 
 import styles from "../components/Footer.module.css";
 
 export default function RequestForm({ selected }) {
+  const f = useMessage();
 
   return (
     <footer className={styles.footerContainer}>
-      <div className={styles.footerMainTitle}>Холбоо барих</div>
+      <div className={styles.footerMainTitle}>
+        {f({ id: "footerMainTitle" })}
+      </div>
 
       <div className={styles.footerList}>
         <div></div>
@@ -40,9 +44,25 @@ export default function RequestForm({ selected }) {
             <div>- www.mondoartis.com</div>
             <div>Email: </div>
             <div>- sales@mondoartis.com</div>
-            <div className={selected == "RU" ? `${styles.displayIf}` : `${styles.displayNone}`}>Менеджер по заказам:</div>
+            <div
+              className={
+                selected == "RU"
+                  ? `${styles.displayIf}`
+                  : `${styles.displayNone}`
+              }
+            >
+              Менеджер по заказам:
+            </div>
             {/* <div className={selected == "RU" ? `${styles.displayIf}` : `${styles.displayNone}`}>- Б. Марал Tel: +976-88255577 trade@mondoartis.com</div> */}
-            <div className={selected == "MN" ? `${styles.displayIf}` : `${styles.displayNone}`}>Захиалгын менежер:</div>
+            <div
+              className={
+                selected == "MN"
+                  ? `${styles.displayIf}`
+                  : `${styles.displayNone}`
+              }
+            >
+              Захиалгын менежер:
+            </div>
             {/* <div className={selected == "MN" ? `${styles.displayIf}` : `${styles.displayNone}`}>- G.Enkhbayar Tel: +976-95075579</div>
           </div> */}
             <div>- G.Enkhbayar Tel: +976-95075579</div>
@@ -135,7 +155,9 @@ export default function RequestForm({ selected }) {
           <div>- Buyan-Ulzii Tel: +86-13204759797</div>
           <div className={styles.chinaList1}>Address:</div>
           <div>
-            - 内蒙古呼和浩特市赛罕区东二环万正小区南门绿色农畜产品展销中心 Inner Mongolia Hohhot City Saihan District East second road Wanzheng community. Agricultural and livestock products exhibition center
+            - 内蒙古呼和浩特市赛罕区东二环万正小区南门绿色农畜产品展销中心 Inner
+            Mongolia Hohhot City Saihan District East second road Wanzheng
+            community. Agricultural and livestock products exhibition center
           </div>
         </div>
       </div>
@@ -170,7 +192,11 @@ export default function RequestForm({ selected }) {
           </div>
         </div>
       </div>
-      <div className={styles.copyRight}>MONDO ARTIS TRADE INTERNATIONAL TRADING COMPANY <span className={styles.copyRightC}>©</span> 2023 . Conserve Energy Future . All Rights Reserved</div>
+      <div className={styles.copyRight}>
+        MONDO ARTIS TRADE INTERNATIONAL TRADING COMPANY{" "}
+        <span className={styles.copyRightC}>©</span> 2023 . Conserve Energy
+        Future . All Rights Reserved
+      </div>
     </footer>
   );
 }

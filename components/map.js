@@ -1,4 +1,5 @@
 import Image from "next/image";
+import useMessage from "@/hooks/useMessage";
 import Script from "next/script";
 
 import mapImage from "../public/mapFixed.png";
@@ -6,10 +7,11 @@ import styles from "../components/Map.module.css";
 import styles2 from "../styles/Home.module.css";
 
 export default function Map() {
+  const f = useMessage();
   return (
     <section className={styles.mainContainer}>
       <h3 className={`${styles2.mainTitle} ${styles.mapTitle}`}>
-        <span className={`${styles2.mainTitleMapSpan}`}>Тээвэрлэх чиглэл</span>
+        <span className={`${styles2.mainTitleMapSpan}`}>{f({ id: "mainTitleMapSpan" })}</span>
       </h3>
       <div className={styles.container}>
         <div className={styles.mapBox}>
@@ -22,10 +24,7 @@ export default function Map() {
           />
         </div>
         <div className={styles.sentence}>
-          <div className={styles.mapSequence}>
-            БНХАУ болон БНСУ-с захиалгат барааг ОХУ-руу усан тээврээр
-            Владивосток, төмөр замаар Забайкальск, Монгол улсаар транзит авто
-            болон төмөр замаар Улан-Үд хот руу тус тус тээвэрлэнэ.
+          <div className={styles.mapSequence}>{f({ id: "mapSequence" })}
           </div>
           <div className={styles.mapBoxMobile}>
             <Image
@@ -38,28 +37,21 @@ export default function Map() {
             />
           </div>
           <ol className={styles.mapSentence}>
-            <li className={styles.destination1}>Эрээн боомт</li>
+            <li className={styles.destination1}>{f({ id: "destination1" })}</li>
             <div className={styles.mapSequence1}>
-              БНХАУ-ын үйлвэрийн бүсээс Эрээн хот хүртэл тээвэрлэлтийн хугацаа
-              дунджаар 7-9 хоног.
+            {f({ id: "mapSequence1" })}
             </div>
 
-            <li className={styles.destination2}>Улаанбаатар хот</li>
+            <li className={styles.destination2}>{f({ id: "destination2" })}</li>
             <div className={styles.mapSequence2}>
-              Эрээн хотоос Улаанбаатар хот хүртэл тээвэрлэлтийн хугацаа дунджаар
-              5-7 хоног.
+            {f({ id: "mapSequence2" })}</div>
+
+            <li className={styles.destination3}>{f({ id: "destination3" })}</li>
+            <div className={styles.mapSequence3}>{f({ id: "mapSequence3" })}
             </div>
 
-            <li className={styles.destination3}>Улаан-үүд хот</li>
-            <div className={styles.mapSequence3}>
-              Улаанбаатар хотоос Улаан-Үүд хот хүртэл тээвэрлэлтийн хугацаа
-              дунджаар 5-7 хоног.
-            </div>
-
-            <li className={styles.destination4}>Нийт тээвэрлэлтийн хугацаа</li>
-            <div className={styles.mapSequence4}>
-              Бараа тээвэрлэх хот, тээвэрлэлтийн ачаалал зэргээс шалтгаалан
-              дунджаар 22-30 хоног тээвэрлэлтэнд зарцуулагдана.
+            <li className={styles.destination4}>{f({ id: "destination4" })}</li>
+            <div className={styles.mapSequence4}>{f({ id: "mapSequence4" })}
             </div>
           </ol>
         </div>

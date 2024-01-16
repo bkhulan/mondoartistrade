@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState, useRef } from "react";
+import useMessage from "@/hooks/useMessage";
 
 import { useRouter } from "next/navigation";
 import Image from "next/image";
@@ -21,10 +22,12 @@ import stylesPro from "../components/Products.module.css";
 import stylesMap from "../components/Map.module.css";
 import stylesReq from "../components/requestForm.module.css";
 import stylesFooter from "../components/Footer.module.css";
+import Language from "@/components/Language";
 
 export default function Home() {
   const input = useRef();
   const router = useRouter();
+  const f = useMessage();
 
   const [selected, setSelected] = useState("MN");
   const [langFlag, setLangFlag] = useState("/flagMongolia.png");
@@ -57,7 +60,7 @@ export default function Home() {
       fourthList: "Professional consulting",
       mainTitleServiceSpan: "Манай үйлчилгээ",
       serviceProduct: "Бараа материалын судалгаа, захиалга, нийлүүлэлт",
-      serviceAdvice: "Гэрээ хэлцэл, хууль зүйн зөвлөгөө",
+      // serviceAdvice: "Гэрээ хэлцэл, хууль зүйн зөвлөгөө",
       serviceSolutionSpan1: `Ачаа тээвэр,`,
       serviceSolutionSpan2: `мөнгөн гүйлгээний шийдэл`,
       aboutUsTitle: " MONDO ARTIS TRADE LLC-Д ТАВТАЙ МОРИЛ",
@@ -170,7 +173,7 @@ export default function Home() {
       fourthList: "Профессональные консультации, юридические услуги",
       mainTitleServiceSpan: "Наши услуги",
       serviceProduct: "Заказ и доставка товаров",
-      serviceAdvice: "Договоры, юридические консультации",
+      // serviceAdvice: "Договоры, юридические консультации",
       serviceSolutionSpan1: `Процесс транспортировки,`,
       serviceSolutionSpan2: `организация и управление денежными потоками`,
       aboutUsTitle: "Мондо Артиз Трейд",
@@ -273,7 +276,7 @@ export default function Home() {
         "Professional service for international trading & legal consulting",
       mainTitleServiceSpan: "Our services",
       serviceProduct: "Product market research, order purchasing, supplying",
-      serviceAdvice: "Negotiation consulting services, legal consulting",
+      // serviceAdvice: "Negotiation consulting services, legal consulting",
       serviceSolutionSpan1: `Transport and logistic,`,
       serviceSolutionSpan2: `payment transaction`,
       aboutUsTitle: "WELCOME TO MONDO ARTIS TRADE LLC",
@@ -406,7 +409,7 @@ export default function Home() {
             <ul className={stylesNav.link}>
               <li>
                 <Link className={`${stylesNav.home}`} href={"/#home"}>
-                  Нүүр хуудас
+                  {f({ id: "home" })}
                 </Link>
               </li>
 
@@ -415,13 +418,13 @@ export default function Home() {
                   className={`${stylesNav.homeService}`}
                   href={"#ourservice"}
                 >
-                  Үйлчилгээ
+                  {f({ id: "homeService" })}
                 </Link>
               </li>
 
               <li>
                 <Link className={`${stylesNav.homeAboutUs}`} href={"#aboutus"}>
-                  Бидний тухай
+                  {f({ id: "homeAboutUs" })}
                 </Link>
               </li>
 
@@ -430,13 +433,13 @@ export default function Home() {
                   className={`${stylesNav.homeProducts}`}
                   href={"#products"}
                 >
-                  Бүтээгдэхүүн
+                  {f({ id: "homeProducts" })}
                 </Link>
               </li>
 
               <li>
                 <Link className={`${stylesNav.homeOrder}`} href={"#order"}>
-                  Захиалга
+                  {f({ id: "homeOrder" })}
                 </Link>
               </li>
 
@@ -445,14 +448,14 @@ export default function Home() {
                   className={`${stylesNav.homeCollaboration}`}
                   href={"#collaboration"}
                 >
-                  Хамтын ажиллагаа
+                  {f({ id: "homeCollaboration" })}
                 </Link>
               </li>
             </ul>
             <div className={stylesNav.btnLangBox}>
               {/* Language ==== */}
 
-              <div
+              {/* <div
                 className={stylesNav.languageContainer}
                 style={{
                   cursor: "pointer",
@@ -465,16 +468,16 @@ export default function Home() {
                   }}
                 >
                   <div className={stylesNav.flagBox}>
-                      <Image
-                        alt="mongolia"
-                        src={langFlag}
-                        fill
-                        sizes="(max-width: 70px) 100vw"
-                        style={{
-                          borderRadius: "4px",
-                        }}
-                      />
-                    </div>
+                    <Image
+                      alt="mongolia"
+                      src={langFlag}
+                      fill
+                      sizes="(max-width: 70px) 100vw"
+                      style={{
+                        borderRadius: "4px",
+                      }}
+                    />
+                  </div>
                   <p
                     style={{
                       fontWeight: "700",
@@ -496,380 +499,14 @@ export default function Home() {
                 >
                   <li
                     key={"MN"}
-                    className={`${stylesNav.otherLanguagesLi} ${selected && selected == "MN" ? stylesNav.active : ""}`}
+                    className={`${stylesNav.otherLanguagesLi} ${
+                      selected && selected == "MN" ? stylesNav.active : ""
+                    }`}
                     onClick={(e) => {
                       e.preventDefault();
                       setSelected("MN");
-                      setLangFlag("/flagMongolia.png")
+                      setLangFlag("/flagMongolia.png");
                       setIsActive(false);
-
-                      const home = document.querySelector(`.${stylesNav.home}`);
-                      const homeService = document.querySelector(
-                        `.${stylesNav.homeService}`
-                      );
-                      const homeAboutUs = document.querySelector(
-                        `.${stylesNav.homeAboutUs}`
-                      );
-                      const homeProducts = document.querySelector(
-                        `.${stylesNav.homeProducts}`
-                      );
-                      const homeOrder = document.querySelector(
-                        `.${stylesNav.homeOrder}`
-                      );
-                      const homeCollaboration = document.querySelector(
-                        `.${stylesNav.homeCollaboration}`
-                      );
-
-                      const homeColumn = document.querySelector(
-                        `.${stylesNav.homeColumn}`
-                      );
-                      const homeServiceColumn = document.querySelector(
-                        `.${stylesNav.homeServiceColumn}`
-                      );
-                      const homeAboutUsColumn = document.querySelector(
-                        `.${stylesNav.homeAboutUsColumn}`
-                      );
-                      const homeProductsColumn = document.querySelector(
-                        `.${stylesNav.homeProductsColumn}`
-                      );
-                      const homeOrderColumn = document.querySelector(
-                        `.${stylesNav.homeOrderColumn}`
-                      );
-                      const homeCollaborationColumn = document.querySelector(
-                        `.${stylesNav.homeCollaborationColumn}`
-                      );
-
-                      const homeTitle = document.querySelector(
-                        `.${styles.homeTitle}`
-                      );
-                      const homeInfo = document.querySelector(
-                        `.${styles.homeInfo}`
-                      );
-                      const firstList1 = document.querySelector(
-                        `.${styles.firstList1}`
-                      );
-                      const firstList2 = document.querySelector(
-                        `.${styles.firstList2}`
-                      );
-                      const secondList = document.querySelector(
-                        `.${styles.secondList}`
-                      );
-                      const thirdList = document.querySelector(
-                        `.${styles.thirdList}`
-                      );
-                      const fourthList = document.querySelector(
-                        `.${styles.fourthList}`
-                      );
-
-                      const mainTitleServiceSpan = document.querySelector(
-                        `.${styles.mainTitleServiceSpan}`
-                      );
-                      const serviceProduct = document.querySelector(
-                        `.${styles.serviceProduct}`
-                      );
-                      const serviceAdvice = document.querySelector(
-                        `.${styles.serviceAdvice}`
-                      );
-
-                      const serviceSolutionSpan1 = document.querySelector(
-                        `.${styles.serviceSolutionSpan1}`
-                      );
-                      const serviceSolutionSpan2 = document.querySelector(
-                        `.${styles.serviceSolutionSpan2}`
-                      );
-
-                      const aboutUsTitle = document.querySelector(
-                        `.${styles.aboutUsTitle}`
-                      );
-                      const mainTitleAboutUsSpan = document.querySelector(
-                        `.${styles.mainTitleAboutUsSpan}`
-                      );
-                      const aboutUsText1 = document.querySelector(
-                        `.${styles.aboutUsText1}`
-                      );
-                      const aboutUsText2 = document.querySelector(
-                        `.${styles.aboutUsText2}`
-                      );
-
-                      // // Product-----------
-
-                      const mainTitleProductSpan = document.querySelector(
-                        `.${styles.mainTitleProductSpan}`
-                      );
-                      const productTitleSawlagaa = document.querySelector(
-                        `.${stylesPro.productTitleSawlagaa}`
-                      );
-                      const glass = document.querySelector(
-                        `.${stylesPro.glass}`
-                      );
-                      const can = document.querySelector(`.${stylesPro.can}`);
-                      const plastic = document.querySelector(
-                        `.${stylesPro.plastic}`
-                      );
-                      const print = document.querySelector(
-                        `.${stylesPro.print}`
-                      );
-
-                      const productTitleAwtomashin = document.querySelector(
-                        `.${stylesPro.productTitleAwtomashin}`
-                      );
-                      const selbeg = document.querySelector(
-                        `.${stylesPro.selbeg}`
-                      );
-                      const mechanism = document.querySelector(
-                        `.${stylesPro.mechanism}`
-                      );
-
-                      const productTitleMetal = document.querySelector(
-                        `.${stylesPro.productTitleMetal}`
-                      );
-                      const gan = document.querySelector(`.${stylesPro.gan}`);
-                      const dwutawr = document.querySelector(
-                        `.${stylesPro.dwutawr}`
-                      );
-                      const cube = document.querySelector(`.${stylesPro.cube}`);
-                      const metal = document.querySelector(
-                        `.${stylesPro.metal}`
-                      );
-
-                      const productTitleBuilding = document.querySelector(
-                        `.${stylesPro.productTitleBuilding}`
-                      );
-                      // const plita = document.querySelector(
-                      //   `.${stylesPro.plita}`
-                      // );
-                      // const paint = document.querySelector(
-                      //   `.${stylesPro.paint}`
-                      // );
-                      // const floor = document.querySelector(
-                      //   `.${stylesPro.floor}`
-                      // );
-                      // const eloctronic = document.querySelector(
-                      //   `.${stylesPro.eloctronic}`
-                      // );
-                      const hooloi = document.querySelector(
-                        `.${stylesPro.hooloi}`
-                      );
-                      const erchim = document.querySelector(
-                        `.${stylesPro.erchim}`
-                      );
-                      const paner = document.querySelector(
-                        `.${stylesPro.paner}`
-                      );
-                      const plywood = document.querySelector(
-                        `.${stylesPro.plywood}`
-                      );
-                      const hongon = document.querySelector(
-                        `.${stylesPro.hongon}`
-                      );
-
-                      // Order-------------
-
-                      const mainTitleOrderSpan = document.querySelector(
-                        `.${styles.mainTitleOrderSpan}`
-                      );
-                      const orderOne = document.querySelector(
-                        `.${styles.orderOne}`
-                      );
-                      const orderTwo = document.querySelector(
-                        `.${styles.orderTwo}`
-                      );
-                      const orderThree = document.querySelector(
-                        `.${styles.orderThree}`
-                      );
-                      const orderFour = document.querySelector(
-                        `.${styles.orderFour}`
-                      );
-                      const orderFive = document.querySelector(
-                        `.${styles.orderFive}`
-                      );
-                      const orderSix = document.querySelector(
-                        `.${styles.orderSix}`
-                      );
-
-                      // Map-------------
-                      const mainTitleMapSpan = document.querySelector(
-                        `.${styles.mainTitleMapSpan}`
-                      );
-                      const mapSequence = document.querySelector(
-                        `.${stylesMap.mapSequence}`
-                      );
-                      const destination1 = document.querySelector(
-                        `.${stylesMap.destination1}`
-                      );
-                      const mapSequence1 = document.querySelector(
-                        `.${stylesMap.mapSequence1}`
-                      );
-                      const destination2 = document.querySelector(
-                        `.${stylesMap.destination2}`
-                      );
-                      const mapSequence2 = document.querySelector(
-                        `.${stylesMap.mapSequence2}`
-                      );
-                      const destination3 = document.querySelector(
-                        `.${stylesMap.destination3}`
-                      );
-                      const mapSequence3 = document.querySelector(
-                        `.${stylesMap.mapSequence3}`
-                      );
-                      const destination4 = document.querySelector(
-                        `.${stylesMap.destination4}`
-                      );
-                      const mapSequence4 = document.querySelector(
-                        `.${stylesMap.mapSequence4}`
-                      );
-
-                      // Collaboration
-
-                      const mainTitleCollaborationSpan = document.querySelector(
-                        `.${styles.mainTitleCollaborationSpan}`
-                      );
-                      const collaborationSentence = document.querySelector(
-                        `.${styles.collaborationSentence}`
-                      );
-                      const teewerZuuchSentence = document.querySelector(
-                        `.${styles.teewerZuuchSentence}`
-                      );
-
-                      // Request
-
-                      const formQuestion = document.querySelector(
-                        `.${stylesReq.formQuestion}`
-                      );
-                      const formSentence = document.querySelector(
-                        `.${stylesReq.formSentence}`
-                      );
-                      const formButton = document.querySelector(
-                        `.${stylesReq.formButton}`
-                      );
-
-                      const footerMainTitle = document.querySelector(
-                        `.${stylesFooter.footerMainTitle}`
-                      );
-
-                      // =============================================
-
-                      home.textContent = dataRussian.MN.home;
-                      homeService.textContent = dataRussian.MN.homeService;
-                      homeAboutUs.textContent = dataRussian.MN.homeAboutUs;
-                      homeProducts.textContent = dataRussian.MN.homeProducts;
-                      homeOrder.textContent = dataRussian.MN.homeOrder;
-                      homeCollaboration.textContent =
-                        dataRussian.MN.homeCollaboration;
-
-                      homeColumn.textContent = dataRussian.MN.homeColumn;
-                      homeServiceColumn.textContent =
-                        dataRussian.MN.homeServiceColumn;
-                      homeAboutUsColumn.textContent =
-                        dataRussian.MN.homeAboutUsColumn;
-                      homeProductsColumn.textContent =
-                        dataRussian.MN.homeProductsColumn;
-                      homeOrderColumn.textContent =
-                        dataRussian.MN.homeOrderColumn;
-                      homeCollaborationColumn.textContent =
-                        dataRussian.MN.homeCollaborationColumn;
-
-                      homeTitle.textContent = dataRussian.MN.homeTitle;
-                      homeInfo.textContent = dataRussian.MN.homeInfo;
-                      firstList1.textContent = dataRussian.MN.firstList1;
-                      firstList2.textContent = dataRussian.MN.firstList2;
-                      secondList.textContent = dataRussian.MN.secondList;
-                      thirdList.textContent = dataRussian.MN.thirdList;
-                      fourthList.textContent = dataRussian.MN.fourthList;
-
-                      mainTitleServiceSpan.textContent =
-                        dataRussian.MN.mainTitleServiceSpan;
-                      serviceProduct.textContent =
-                        dataRussian.MN.serviceProduct;
-                      serviceAdvice.textContent = dataRussian.MN.serviceAdvice;
-                      serviceSolutionSpan1.textContent =
-                        dataRussian.MN.serviceSolutionSpan1;
-                      serviceSolutionSpan2.textContent =
-                        dataRussian.MN.serviceSolutionSpan2;
-
-                      aboutUsTitle.textContent = dataRussian.MN.aboutUsTitle;
-                      mainTitleAboutUsSpan.textContent =
-                        dataRussian.MN.mainTitleAboutUsSpan;
-                      aboutUsText1.textContent = dataRussian.MN.aboutUsText1;
-                      aboutUsText2.textContent = dataRussian.MN.aboutUsText2;
-
-                      // Product -----------
-
-                      mainTitleProductSpan.textContent =
-                        dataRussian.MN.mainTitleProductSpan;
-                      productTitleSawlagaa.textContent =
-                        dataRussian.MN.productTitleSawlagaa;
-                      glass.textContent = dataRussian.MN.glass;
-                      can.textContent = dataRussian.MN.can;
-                      plastic.textContent = dataRussian.MN.plastic;
-                      print.textContent = dataRussian.MN.print;
-
-                      productTitleAwtomashin.textContent =
-                        dataRussian.MN.productTitleAwtomashin;
-                      selbeg.textContent = dataRussian.MN.selbeg;
-                      mechanism.textContent = dataRussian.MN.mechanism;
-
-                      productTitleMetal.textContent =
-                        dataRussian.MN.productTitleMetal;
-                      gan.textContent = dataRussian.MN.gan;
-                      dwutawr.textContent = dataRussian.MN.dwutawr;
-                      cube.textContent = dataRussian.MN.cube;
-                      metal.textContent = dataRussian.MN.metal;
-
-                      productTitleBuilding.textContent =
-                        dataRussian.MN.productTitleBuilding;
-                      // plita.textContent = dataRussian.MN.plita;
-                      // paint.textContent = dataRussian.MN.paint;
-                      // floor.textContent = dataRussian.MN.floor;
-                      // eloctronic.textContent = dataRussian.MN.eloctronic;
-                      hooloi.textContent = dataRussian.MN.hooloi;
-                      erchim.textContent = dataRussian.MN.erchim;
-                      paner.textContent = dataRussian.MN.paner;
-                      plywood.textContent = dataRussian.MN.plywood;
-                      hongon.textContent = dataRussian.MN.hongon;
-
-                      // Order-------------
-
-                      mainTitleOrderSpan.textContent =
-                        dataRussian.MN.mainTitleOrderSpan;
-                      orderOne.textContent = dataRussian.MN.orderOne;
-                      orderTwo.textContent = dataRussian.MN.orderTwo;
-                      orderThree.textContent = dataRussian.MN.orderThree;
-                      orderFour.textContent = dataRussian.MN.orderFour;
-                      orderFive.textContent = dataRussian.MN.orderFive;
-                      orderSix.textContent = dataRussian.MN.orderSix;
-
-                      // Map-------------
-
-                      mainTitleMapSpan.textContent =
-                        dataRussian.MN.mainTitleMapSpan;
-                      mapSequence.textContent = dataRussian.MN.mapSequence;
-                      destination1.textContent = dataRussian.MN.destination1;
-                      mapSequence1.textContent = dataRussian.MN.mapSequence1;
-                      destination2.textContent = dataRussian.MN.destination2;
-                      mapSequence2.textContent = dataRussian.MN.mapSequence2;
-                      destination3.textContent = dataRussian.MN.destination3;
-                      mapSequence3.textContent = dataRussian.MN.mapSequence3;
-                      destination4.textContent = dataRussian.MN.destination4;
-                      mapSequence4.textContent = dataRussian.MN.mapSequence4;
-
-                      // Collaboration
-
-                      mainTitleCollaborationSpan.textContent =
-                        dataRussian.MN.mainTitleCollaborationSpan;
-                      collaborationSentence.textContent =
-                        dataRussian.MN.collaborationSentence;
-                      teewerZuuchSentence.textContent =
-                        dataRussian.MN.teewerZuuchSentence;
-
-                      // Request
-
-                      formQuestion.textContent = dataRussian.MN.formQuestion;
-                      formSentence.textContent = dataRussian.MN.formSentence;
-                      formButton.textContent = dataRussian.MN.formButton;
-
-                      footerMainTitle.textContent =
-                        dataRussian.MN.footerMainTitle;
                     }}
                   >
                     <div className={stylesNav.flagBox}>
@@ -887,771 +524,14 @@ export default function Home() {
                   </li>
                   <li
                     key={"RU"}
-                    className={`${stylesNav.otherLanguagesLi} ${selected && selected == "RU" ? stylesNav.active : ""}`}
+                    className={`${stylesNav.otherLanguagesLi} ${
+                      selected && selected == "RU" ? stylesNav.active : ""
+                    }`}
                     onClick={(e) => {
                       setSelected("RU");
                       setLangFlag("/flagRussia.png");
 
                       setIsActive(false);
-                      const home = document.querySelector(`.${stylesNav.home}`);
-                      const homeService = document.querySelector(
-                        `.${stylesNav.homeService}`
-                      );
-                      const homeAboutUs = document.querySelector(
-                        `.${stylesNav.homeAboutUs}`
-                      );
-                      const homeProducts = document.querySelector(
-                        `.${stylesNav.homeProducts}`
-                      );
-                      const homeOrder = document.querySelector(
-                        `.${stylesNav.homeOrder}`
-                      );
-                      const homeCollaboration = document.querySelector(
-                        `.${stylesNav.homeCollaboration}`
-                      );
-
-                      const homeColumn = document.querySelector(
-                        `.${stylesNav.homeColumn}`
-                      );
-                      const homeServiceColumn = document.querySelector(
-                        `.${stylesNav.homeServiceColumn}`
-                      );
-                      const homeAboutUsColumn = document.querySelector(
-                        `.${stylesNav.homeAboutUsColumn}`
-                      );
-                      const homeProductsColumn = document.querySelector(
-                        `.${stylesNav.homeProductsColumn}`
-                      );
-                      const homeOrderColumn = document.querySelector(
-                        `.${stylesNav.homeOrderColumn}`
-                      );
-                      const homeCollaborationColumn = document.querySelector(
-                        `.${stylesNav.homeCollaborationColumn}`
-                      );
-
-                      const homeTitle = document.querySelector(
-                        `.${styles.homeTitle}`
-                      );
-                      const homeInfo = document.querySelector(
-                        `.${styles.homeInfo}`
-                      );
-                      const firstList1 = document.querySelector(
-                        `.${styles.firstList1}`
-                      );
-                      const firstList2 = document.querySelector(
-                        `.${styles.firstList2}`
-                      );
-                      const secondList = document.querySelector(
-                        `.${styles.secondList}`
-                      );
-                      const thirdList = document.querySelector(
-                        `.${styles.thirdList}`
-                      );
-                      const fourthList = document.querySelector(
-                        `.${styles.fourthList}`
-                      );
-
-                      const mainTitleServiceSpan = document.querySelector(
-                        `.${styles.mainTitleServiceSpan}`
-                      );
-                      const serviceProduct = document.querySelector(
-                        `.${styles.serviceProduct}`
-                      );
-                      const serviceAdvice = document.querySelector(
-                        `.${styles.serviceAdvice}`
-                      );
-                      const serviceSolutionSpan1 = document.querySelector(
-                        `.${styles.serviceSolutionSpan1}`
-                      );
-                      const serviceSolutionSpan2 = document.querySelector(
-                        `.${styles.serviceSolutionSpan2}`
-                      );
-
-                      const aboutUsTitle = document.querySelector(
-                        `.${styles.aboutUsTitle}`
-                      );
-                      const mainTitleAboutUsSpan = document.querySelector(
-                        `.${styles.mainTitleAboutUsSpan}`
-                      );
-                      const aboutUsText1 = document.querySelector(
-                        `.${styles.aboutUsText1}`
-                      );
-                      const aboutUsText2 = document.querySelector(
-                        `.${styles.aboutUsText2}`
-                      );
-
-                      // Product-----------
-
-                      const mainTitleProductSpan = document.querySelector(
-                        `.${styles.mainTitleProductSpan}`
-                      );
-                      const productTitleSawlagaa = document.querySelector(
-                        `.${stylesPro.productTitleSawlagaa}`
-                      );
-                      const glass = document.querySelector(
-                        `.${stylesPro.glass}`
-                      );
-                      const can = document.querySelector(`.${stylesPro.can}`);
-                      const plastic = document.querySelector(
-                        `.${stylesPro.plastic}`
-                      );
-                      const print = document.querySelector(
-                        `.${stylesPro.print}`
-                      );
-
-                      const productTitleAwtomashin = document.querySelector(
-                        `.${stylesPro.productTitleAwtomashin}`
-                      );
-                      const selbeg = document.querySelector(
-                        `.${stylesPro.selbeg}`
-                      );
-                      const mechanism = document.querySelector(
-                        `.${stylesPro.mechanism}`
-                      );
-
-                      const productTitleMetal = document.querySelector(
-                        `.${stylesPro.productTitleMetal}`
-                      );
-                      const gan = document.querySelector(`.${stylesPro.gan}`);
-                      const dwutawr = document.querySelector(
-                        `.${stylesPro.dwutawr}`
-                      );
-                      const cube = document.querySelector(`.${stylesPro.cube}`);
-                      const metal = document.querySelector(
-                        `.${stylesPro.metal}`
-                      );
-
-                      const productTitleBuilding = document.querySelector(
-                        `.${stylesPro.productTitleBuilding}`
-                      );
-                      // const plita = document.querySelector(
-                      //   `.${stylesPro.plita}`
-                      // );
-                      // const paint = document.querySelector(
-                      //   `.${stylesPro.paint}`
-                      // );
-                      // const floor = document.querySelector(
-                      //   `.${stylesPro.floor}`
-                      // );
-                      // const eloctronic = document.querySelector(
-                      //   `.${stylesPro.eloctronic}`
-                      // );
-                      const hooloi = document.querySelector(
-                        `.${stylesPro.hooloi}`
-                      );
-                      const erchim = document.querySelector(
-                        `.${stylesPro.erchim}`
-                      );
-                      const paner = document.querySelector(
-                        `.${stylesPro.paner}`
-                      );
-                      const plywood = document.querySelector(
-                        `.${stylesPro.plywood}`
-                      );
-                      const hongon = document.querySelector(
-                        `.${stylesPro.hongon}`
-                      );
-
-                      // Order-------------
-
-                      const mainTitleOrderSpan = document.querySelector(
-                        `.${styles.mainTitleOrderSpan}`
-                      );
-                      const orderOne = document.querySelector(
-                        `.${styles.orderOne}`
-                      );
-                      const orderTwo = document.querySelector(
-                        `.${styles.orderTwo}`
-                      );
-                      const orderThree = document.querySelector(
-                        `.${styles.orderThree}`
-                      );
-                      const orderFour = document.querySelector(
-                        `.${styles.orderFour}`
-                      );
-                      const orderFive = document.querySelector(
-                        `.${styles.orderFive}`
-                      );
-                      const orderSix = document.querySelector(
-                        `.${styles.orderSix}`
-                      );
-
-                      // Map-------------
-                      const mainTitleMapSpan = document.querySelector(
-                        `.${styles.mainTitleMapSpan}`
-                      );
-                      const mapSequence = document.querySelector(
-                        `.${stylesMap.mapSequence}`
-                      );
-                      const destination1 = document.querySelector(
-                        `.${stylesMap.destination1}`
-                      );
-                      const mapSequence1 = document.querySelector(
-                        `.${stylesMap.mapSequence1}`
-                      );
-                      const destination2 = document.querySelector(
-                        `.${stylesMap.destination2}`
-                      );
-                      const mapSequence2 = document.querySelector(
-                        `.${stylesMap.mapSequence2}`
-                      );
-                      const destination3 = document.querySelector(
-                        `.${stylesMap.destination3}`
-                      );
-                      const mapSequence3 = document.querySelector(
-                        `.${stylesMap.mapSequence3}`
-                      );
-                      const destination4 = document.querySelector(
-                        `.${stylesMap.destination4}`
-                      );
-                      const mapSequence4 = document.querySelector(
-                        `.${stylesMap.mapSequence4}`
-                      );
-
-                      // Collaboration
-
-                      const mainTitleCollaborationSpan = document.querySelector(
-                        `.${styles.mainTitleCollaborationSpan}`
-                      );
-                      const collaborationSentence = document.querySelector(
-                        `.${styles.collaborationSentence}`
-                      );
-                      const teewerZuuchSentence = document.querySelector(
-                        `.${styles.teewerZuuchSentence}`
-                      );
-
-                      // Request
-
-                      const formQuestion = document.querySelector(
-                        `.${stylesReq.formQuestion}`
-                      );
-                      const formSentence = document.querySelector(
-                        `.${stylesReq.formSentence}`
-                      );
-                      const formButton = document.querySelector(
-                        `.${stylesReq.formButton}`
-                      );
-
-                      const footerMainTitle = document.querySelector(
-                        `.${stylesFooter.footerMainTitle}`
-                      );
-
-                      // =============================================
-
-                      home.textContent = dataRussian.RU.home;
-                      homeService.textContent = dataRussian.RU.homeService;
-                      homeAboutUs.textContent = dataRussian.RU.homeAboutUs;
-                      homeProducts.textContent = dataRussian.RU.homeProducts;
-                      homeOrder.textContent = dataRussian.RU.homeOrder;
-                      homeCollaboration.textContent =
-                        dataRussian.RU.homeCollaboration;
-
-                      homeColumn.textContent = dataRussian.RU.homeColumn;
-                      homeServiceColumn.textContent =
-                        dataRussian.RU.homeServiceColumn;
-                      homeAboutUsColumn.textContent =
-                        dataRussian.RU.homeAboutUsColumn;
-                      homeProductsColumn.textContent =
-                        dataRussian.RU.homeProductsColumn;
-                      homeOrderColumn.textContent =
-                        dataRussian.RU.homeOrderColumn;
-                      homeCollaborationColumn.textContent =
-                        dataRussian.RU.homeCollaborationColumn;
-
-                      homeTitle.textContent = dataRussian.RU.homeTitle;
-                      homeInfo.textContent = dataRussian.RU.homeInfo;
-                      firstList1.textContent = dataRussian.RU.firstList1;
-                      firstList2.textContent = dataRussian.RU.firstList2;
-                      secondList.textContent = dataRussian.RU.secondList;
-                      thirdList.textContent = dataRussian.RU.thirdList;
-                      fourthList.textContent = dataRussian.RU.fourthList;
-
-                      mainTitleServiceSpan.textContent =
-                        dataRussian.RU.mainTitleServiceSpan;
-                      serviceProduct.textContent =
-                        dataRussian.RU.serviceProduct;
-                      serviceAdvice.textContent = dataRussian.RU.serviceAdvice;
-                      serviceSolutionSpan1.textContent =
-                        dataRussian.RU.serviceSolutionSpan1;
-                      serviceSolutionSpan2.textContent =
-                        dataRussian.RU.serviceSolutionSpan2;
-
-                      aboutUsTitle.textContent = dataRussian.RU.aboutUsTitle;
-                      mainTitleAboutUsSpan.textContent =
-                        dataRussian.RU.mainTitleAboutUsSpan;
-                      aboutUsText1.textContent = dataRussian.RU.aboutUsText1;
-                      aboutUsText2.textContent = dataRussian.RU.aboutUsText2;
-
-                      // Product -----------
-
-                      mainTitleProductSpan.textContent =
-                        dataRussian.RU.mainTitleProductSpan;
-                      productTitleSawlagaa.textContent =
-                        dataRussian.RU.productTitleSawlagaa;
-                      glass.textContent = dataRussian.RU.glass;
-                      can.textContent = dataRussian.RU.can;
-                      plastic.textContent = dataRussian.RU.plastic;
-                      print.textContent = dataRussian.RU.print;
-
-                      productTitleAwtomashin.textContent =
-                        dataRussian.RU.productTitleAwtomashin;
-                      selbeg.textContent = dataRussian.RU.selbeg;
-                      mechanism.textContent = dataRussian.RU.mechanism;
-
-                      productTitleMetal.textContent =
-                        dataRussian.RU.productTitleMetal;
-                      gan.textContent = dataRussian.RU.gan;
-                      dwutawr.textContent = dataRussian.RU.dwutawr;
-                      cube.textContent = dataRussian.RU.cube;
-                      metal.textContent = dataRussian.RU.metal;
-
-                      productTitleBuilding.textContent =
-                        dataRussian.RU.productTitleBuilding;
-                      // plita.textContent = dataRussian.RU.plita;
-                      // paint.textContent = dataRussian.RU.paint;
-                      // floor.textContent = dataRussian.RU.floor;
-                      // eloctronic.textContent = dataRussian.RU.eloctronic;
-                      hooloi.textContent = dataRussian.RU.hooloi;
-                      erchim.textContent = dataRussian.RU.erchim;
-                      paner.textContent = dataRussian.RU.paner;
-                      plywood.textContent = dataRussian.RU.plywood;
-                      hongon.textContent = dataRussian.RU.hongon;
-
-                      // Order-------------
-
-                      mainTitleOrderSpan.textContent =
-                        dataRussian.RU.mainTitleOrderSpan;
-                      orderOne.textContent = dataRussian.RU.orderOne;
-                      orderTwo.textContent = dataRussian.RU.orderTwo;
-                      orderThree.textContent = dataRussian.RU.orderThree;
-                      orderFour.textContent = dataRussian.RU.orderFour;
-                      orderFive.textContent = dataRussian.RU.orderFive;
-                      orderSix.textContent = dataRussian.RU.orderSix;
-
-                      // Map-------------
-
-                      mainTitleMapSpan.textContent =
-                        dataRussian.RU.mainTitleMapSpan;
-                      mapSequence.textContent = dataRussian.RU.mapSequence;
-                      destination1.textContent = dataRussian.RU.destination1;
-                      mapSequence1.textContent = dataRussian.RU.mapSequence1;
-                      destination2.textContent = dataRussian.RU.destination2;
-                      mapSequence2.textContent = dataRussian.RU.mapSequence2;
-                      destination3.textContent = dataRussian.RU.destination3;
-                      mapSequence3.textContent = dataRussian.RU.mapSequence3;
-                      destination4.textContent = dataRussian.RU.destination4;
-                      mapSequence4.textContent = dataRussian.RU.mapSequence4;
-
-                      // Collaboration
-
-                      mainTitleCollaborationSpan.textContent =
-                        dataRussian.RU.mainTitleCollaborationSpan;
-                      collaborationSentence.textContent =
-                        dataRussian.RU.collaborationSentence;
-                      teewerZuuchSentence.textContent =
-                        dataRussian.RU.teewerZuuchSentence;
-
-                      // Request
-
-                      formQuestion.textContent = dataRussian.RU.formQuestion;
-                      formSentence.textContent = dataRussian.RU.formSentence;
-                      formButton.textContent = dataRussian.RU.formButton;
-
-                      footerMainTitle.textContent =
-                        dataRussian.RU.footerMainTitle;
-                    }}
-                  >
-                    <div className={stylesNav.flagBox}>
-                      <Image
-                        alt="russia"
-                        // width={30}
-                        // height={30}
-                        src={"/flagRussia.png"}
-                        fill
-                        sizes="(max-width: 70px) 100vw"
-                        style={{
-                          borderRadius: "4px",
-                        }}
-                      />
-                    </div>
-                    <p className={`${stylesNav.flagList}`}>RU</p>
-                  </li>
-                  <li
-                    key={"ENG"}
-                    className={`${stylesNav.otherLanguagesLi} ${selected && selected == "ENG" ? stylesNav.active : ""}`}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setSelected("ENG");
-                      setLangFlag("/flagUSA.png");
-                      setIsActive(false);
-
-                      const home = document.querySelector(`.${stylesNav.home}`);
-                      const homeService = document.querySelector(
-                        `.${stylesNav.homeService}`
-                      );
-                      const homeAboutUs = document.querySelector(
-                        `.${stylesNav.homeAboutUs}`
-                      );
-                      const homeProducts = document.querySelector(
-                        `.${stylesNav.homeProducts}`
-                      );
-                      const homeOrder = document.querySelector(
-                        `.${stylesNav.homeOrder}`
-                      );
-                      const homeCollaboration = document.querySelector(
-                        `.${stylesNav.homeCollaboration}`
-                      );
-
-                      const homeColumn = document.querySelector(
-                        `.${stylesNav.homeColumn}`
-                      );
-                      const homeServiceColumn = document.querySelector(
-                        `.${stylesNav.homeServiceColumn}`
-                      );
-                      const homeAboutUsColumn = document.querySelector(
-                        `.${stylesNav.homeAboutUsColumn}`
-                      );
-                      const homeProductsColumn = document.querySelector(
-                        `.${stylesNav.homeProductsColumn}`
-                      );
-                      const homeOrderColumn = document.querySelector(
-                        `.${stylesNav.homeOrderColumn}`
-                      );
-                      const homeCollaborationColumn = document.querySelector(
-                        `.${stylesNav.homeCollaborationColumn}`
-                      );
-
-                      const homeTitle = document.querySelector(
-                        `.${styles.homeTitle}`
-                      );
-                      const homeInfo = document.querySelector(
-                        `.${styles.homeInfo}`
-                      );
-                      const firstList1 = document.querySelector(
-                        `.${styles.firstList1}`
-                      );
-                      const firstList2 = document.querySelector(
-                        `.${styles.firstList2}`
-                      );
-                      const secondList = document.querySelector(
-                        `.${styles.secondList}`
-                      );
-                      const thirdList = document.querySelector(
-                        `.${styles.thirdList}`
-                      );
-                      const fourthList = document.querySelector(
-                        `.${styles.fourthList}`
-                      );
-
-                      const mainTitleServiceSpan = document.querySelector(
-                        `.${styles.mainTitleServiceSpan}`
-                      );
-                      const serviceProduct = document.querySelector(
-                        `.${styles.serviceProduct}`
-                      );
-                      const serviceAdvice = document.querySelector(
-                        `.${styles.serviceAdvice}`
-                      );
-
-                      const serviceSolutionSpan1 = document.querySelector(
-                        `.${styles.serviceSolutionSpan1}`
-                      );
-                      const serviceSolutionSpan2 = document.querySelector(
-                        `.${styles.serviceSolutionSpan2}`
-                      );
-
-                      const aboutUsTitle = document.querySelector(
-                        `.${styles.aboutUsTitle}`
-                      );
-                      const mainTitleAboutUsSpan = document.querySelector(
-                        `.${styles.mainTitleAboutUsSpan}`
-                      );
-                      const aboutUsText1 = document.querySelector(
-                        `.${styles.aboutUsText1}`
-                      );
-                      const aboutUsText2 = document.querySelector(
-                        `.${styles.aboutUsText2}`
-                      );
-
-                      // // Product-----------
-
-                      const mainTitleProductSpan = document.querySelector(
-                        `.${styles.mainTitleProductSpan}`
-                      );
-                      const productTitleSawlagaa = document.querySelector(
-                        `.${stylesPro.productTitleSawlagaa}`
-                      );
-                      const glass = document.querySelector(
-                        `.${stylesPro.glass}`
-                      );
-                      const can = document.querySelector(`.${stylesPro.can}`);
-                      const plastic = document.querySelector(
-                        `.${stylesPro.plastic}`
-                      );
-                      const print = document.querySelector(
-                        `.${stylesPro.print}`
-                      );
-
-                      const productTitleAwtomashin = document.querySelector(
-                        `.${stylesPro.productTitleAwtomashin}`
-                      );
-                      const selbeg = document.querySelector(
-                        `.${stylesPro.selbeg}`
-                      );
-                      const mechanism = document.querySelector(
-                        `.${stylesPro.mechanism}`
-                      );
-
-                      const productTitleMetal = document.querySelector(
-                        `.${stylesPro.productTitleMetal}`
-                      );
-                      const gan = document.querySelector(`.${stylesPro.gan}`);
-                      const dwutawr = document.querySelector(
-                        `.${stylesPro.dwutawr}`
-                      );
-                      const cube = document.querySelector(`.${stylesPro.cube}`);
-                      const metal = document.querySelector(
-                        `.${stylesPro.metal}`
-                      );
-
-                      const productTitleBuilding = document.querySelector(
-                        `.${stylesPro.productTitleBuilding}`
-                      );
-                      // const plita = document.querySelector(
-                      //   `.${stylesPro.plita}`
-                      // );
-                      // const paint = document.querySelector(
-                      //   `.${stylesPro.paint}`
-                      // );
-                      // const floor = document.querySelector(
-                      //   `.${stylesPro.floor}`
-                      // );
-                      // const eloctronic = document.querySelector(
-                      //   `.${stylesPro.eloctronic}`
-                      // );
-                      const hooloi = document.querySelector(
-                        `.${stylesPro.hooloi}`
-                      );
-                      const erchim = document.querySelector(
-                        `.${stylesPro.erchim}`
-                      );
-                      const paner = document.querySelector(
-                        `.${stylesPro.paner}`
-                      );
-                      const plywood = document.querySelector(
-                        `.${stylesPro.plywood}`
-                      );
-                      const hongon = document.querySelector(
-                        `.${stylesPro.hongon}`
-                      );
-
-                      // Order-------------
-
-                      const mainTitleOrderSpan = document.querySelector(
-                        `.${styles.mainTitleOrderSpan}`
-                      );
-                      const orderOne = document.querySelector(
-                        `.${styles.orderOne}`
-                      );
-                      const orderTwo = document.querySelector(
-                        `.${styles.orderTwo}`
-                      );
-                      const orderThree = document.querySelector(
-                        `.${styles.orderThree}`
-                      );
-                      const orderFour = document.querySelector(
-                        `.${styles.orderFour}`
-                      );
-                      const orderFive = document.querySelector(
-                        `.${styles.orderFive}`
-                      );
-                      const orderSix = document.querySelector(
-                        `.${styles.orderSix}`
-                      );
-
-                      // Map-------------
-                      const mainTitleMapSpan = document.querySelector(
-                        `.${styles.mainTitleMapSpan}`
-                      );
-                      const mapSequence = document.querySelector(
-                        `.${stylesMap.mapSequence}`
-                      );
-                      const destination1 = document.querySelector(
-                        `.${stylesMap.destination1}`
-                      );
-                      const mapSequence1 = document.querySelector(
-                        `.${stylesMap.mapSequence1}`
-                      );
-                      const destination2 = document.querySelector(
-                        `.${stylesMap.destination2}`
-                      );
-                      const mapSequence2 = document.querySelector(
-                        `.${stylesMap.mapSequence2}`
-                      );
-                      const destination3 = document.querySelector(
-                        `.${stylesMap.destination3}`
-                      );
-                      const mapSequence3 = document.querySelector(
-                        `.${stylesMap.mapSequence3}`
-                      );
-                      const destination4 = document.querySelector(
-                        `.${stylesMap.destination4}`
-                      );
-                      const mapSequence4 = document.querySelector(
-                        `.${stylesMap.mapSequence4}`
-                      );
-
-                      // Collaboration
-
-                      const mainTitleCollaborationSpan = document.querySelector(
-                        `.${styles.mainTitleCollaborationSpan}`
-                      );
-                      const collaborationSentence = document.querySelector(
-                        `.${styles.collaborationSentence}`
-                      );
-                      const teewerZuuchSentence = document.querySelector(
-                        `.${styles.teewerZuuchSentence}`
-                      );
-
-                      // Request
-
-                      const formQuestion = document.querySelector(
-                        `.${stylesReq.formQuestion}`
-                      );
-                      const formSentence = document.querySelector(
-                        `.${stylesReq.formSentence}`
-                      );
-                      const formButton = document.querySelector(
-                        `.${stylesReq.formButton}`
-                      );
-
-                      const footerMainTitle = document.querySelector(
-                        `.${stylesFooter.footerMainTitle}`
-                      );
-
-                      // =============================================
-
-                      home.textContent = dataRussian.ENG.home;
-                      homeService.textContent = dataRussian.ENG.homeService;
-                      homeAboutUs.textContent = dataRussian.ENG.homeAboutUs;
-                      homeProducts.textContent = dataRussian.ENG.homeProducts;
-                      homeOrder.textContent = dataRussian.ENG.homeOrder;
-                      homeCollaboration.textContent =
-                        dataRussian.ENG.homeCollaboration;
-
-                      homeColumn.textContent = dataRussian.ENG.homeColumn;
-                      homeServiceColumn.textContent =
-                        dataRussian.ENG.homeServiceColumn;
-                      homeAboutUsColumn.textContent =
-                        dataRussian.ENG.homeAboutUsColumn;
-                      homeProductsColumn.textContent =
-                        dataRussian.ENG.homeProductsColumn;
-                      homeOrderColumn.textContent =
-                        dataRussian.ENG.homeOrderColumn;
-                      homeCollaborationColumn.textContent =
-                        dataRussian.ENG.homeCollaborationColumn;
-
-                      homeTitle.textContent = dataRussian.ENG.homeTitle;
-                      homeInfo.textContent = dataRussian.ENG.homeInfo;
-                      firstList1.textContent = dataRussian.ENG.firstList1;
-                      firstList2.textContent = dataRussian.ENG.firstList2;
-                      secondList.textContent = dataRussian.ENG.secondList;
-                      thirdList.textContent = dataRussian.ENG.thirdList;
-                      fourthList.textContent = dataRussian.ENG.fourthList;
-
-                      mainTitleServiceSpan.textContent =
-                        dataRussian.ENG.mainTitleServiceSpan;
-                      serviceProduct.textContent =
-                        dataRussian.ENG.serviceProduct;
-                      serviceAdvice.textContent = dataRussian.ENG.serviceAdvice;
-                      serviceSolutionSpan1.textContent =
-                        dataRussian.ENG.serviceSolutionSpan1;
-                      serviceSolutionSpan2.textContent =
-                        dataRussian.ENG.serviceSolutionSpan2;
-
-                      aboutUsTitle.textContent = dataRussian.ENG.aboutUsTitle;
-                      mainTitleAboutUsSpan.textContent =
-                        dataRussian.ENG.mainTitleAboutUsSpan;
-                      aboutUsText1.textContent = dataRussian.ENG.aboutUsText1;
-                      aboutUsText2.textContent = dataRussian.ENG.aboutUsText2;
-
-                      // Product -----------
-
-                      mainTitleProductSpan.textContent =
-                        dataRussian.ENG.mainTitleProductSpan;
-                      productTitleSawlagaa.textContent =
-                        dataRussian.ENG.productTitleSawlagaa;
-                      glass.textContent = dataRussian.ENG.glass;
-                      can.textContent = dataRussian.ENG.can;
-                      plastic.textContent = dataRussian.ENG.plastic;
-                      print.textContent = dataRussian.ENG.print;
-
-                      productTitleAwtomashin.textContent =
-                        dataRussian.ENG.productTitleAwtomashin;
-                      selbeg.textContent = dataRussian.ENG.selbeg;
-                      mechanism.textContent = dataRussian.ENG.mechanism;
-
-                      productTitleMetal.textContent =
-                        dataRussian.ENG.productTitleMetal;
-                      gan.textContent = dataRussian.ENG.gan;
-                      dwutawr.textContent = dataRussian.ENG.dwutawr;
-                      cube.textContent = dataRussian.ENG.cube;
-                      metal.textContent = dataRussian.ENG.metal;
-
-                      productTitleBuilding.textContent =
-                        dataRussian.ENG.productTitleBuilding;
-                      // plita.textContent = dataRussian.ENG.plita;
-                      // paint.textContent = dataRussian.ENG.paint;
-                      // floor.textContent = dataRussian.ENG.floor;
-                      // eloctronic.textContent = dataRussian.ENG.eloctronic;
-                      hooloi.textContent = dataRussian.ENG.hooloi;
-                      erchim.textContent = dataRussian.ENG.erchim;
-                      paner.textContent = dataRussian.ENG.paner;
-                      plywood.textContent = dataRussian.ENG.plywood;
-                      hongon.textContent = dataRussian.ENG.hongon;
-
-                      // Order-------------
-
-                      mainTitleOrderSpan.textContent =
-                        dataRussian.ENG.mainTitleOrderSpan;
-                      orderOne.textContent = dataRussian.ENG.orderOne;
-                      orderTwo.textContent = dataRussian.ENG.orderTwo;
-                      orderThree.textContent = dataRussian.ENG.orderThree;
-                      orderFour.textContent = dataRussian.ENG.orderFour;
-                      orderFive.textContent = dataRussian.ENG.orderFive;
-                      orderSix.textContent = dataRussian.ENG.orderSix;
-
-                      // Map-------------
-
-                      mainTitleMapSpan.textContent =
-                        dataRussian.ENG.mainTitleMapSpan;
-                      mapSequence.textContent = dataRussian.ENG.mapSequence;
-                      destination1.textContent = dataRussian.ENG.destination1;
-                      mapSequence1.textContent = dataRussian.ENG.mapSequence1;
-                      destination2.textContent = dataRussian.ENG.destination2;
-                      mapSequence2.textContent = dataRussian.ENG.mapSequence2;
-                      destination3.textContent = dataRussian.ENG.destination3;
-                      mapSequence3.textContent = dataRussian.ENG.mapSequence3;
-                      destination4.textContent = dataRussian.ENG.destination4;
-                      mapSequence4.textContent = dataRussian.ENG.mapSequence4;
-
-                      // Collaboration
-
-                      mainTitleCollaborationSpan.textContent =
-                        dataRussian.ENG.mainTitleCollaborationSpan;
-                      collaborationSentence.textContent =
-                        dataRussian.ENG.collaborationSentence;
-                      teewerZuuchSentence.textContent =
-                        dataRussian.ENG.teewerZuuchSentence;
-
-                      // Request
-
-                      formQuestion.textContent = dataRussian.ENG.formQuestion;
-                      formSentence.textContent = dataRussian.ENG.formSentence;
-                      formButton.textContent = dataRussian.ENG.formButton;
-
-                      footerMainTitle.textContent =
-                        dataRussian.ENG.footerMainTitle;
                     }}
                   >
                     <div className={stylesNav.flagBox}>
@@ -1668,8 +548,9 @@ export default function Home() {
                     <p className={`${stylesNav.flagList}`}>ENG</p>
                   </li>
                 </ul>
-              </div>
+              </div> */}
 
+              <Language />
               {navButt ? (
                 <button
                   className={`${stylesNav.navButt}`}
@@ -1728,9 +609,9 @@ export default function Home() {
           <div className={styles.home}>
             <div className={styles.homeTitleContainer}>
               <h3 className={styles.homeTitle} ref={input}>
-                MONDO ARTIS TRADE LLC
+                {f({ id: "homeTitle" })}
               </h3>
-              <p className={styles.homeInfo}>International trading company</p>
+              <p className={styles.homeInfo}>{f({ id: "homeInfo" })}</p>
             </div>
 
             <div style={{ textAlign: "start" }}>
@@ -1741,7 +622,7 @@ export default function Home() {
                   marginBottom: "0px",
                 }}
               >
-                Guide for Packaging solutions, Spare parts
+                {f({ id: "firstList1" })}
               </p>
               <p
                 className={`${styles.firstList2}`}
@@ -1750,15 +631,15 @@ export default function Home() {
                   marginTop: "0px",
                 }}
               >
-                Equipments, Building and Raw materials
+                {f({ id: "firstList2" })}
               </p>
               <p className={`${styles.secondList}`}>
-                Product Research and Data Materials
+                {f({ id: "secondList" })}
               </p>
-              <p className={`${styles.thirdList}`}>
-                Payment and Transportation Options
+              <p className={`${styles.thirdList}`}>{f({ id: "thirdList" })}</p>
+              <p className={`${styles.fourthList}`}>
+                {f({ id: "fourthList" })}
               </p>
-              <p className={`${styles.fourthList}`}>Professional consulting</p>
             </div>
           </div>
 
@@ -1769,7 +650,7 @@ export default function Home() {
           >
             <li className={stylesNav.linkColumnLi}>
               <Link className={`${stylesNav.homeColumn}`} href={"/#home"}>
-                Нүүр хуудас
+                {f({ id: "home" })}
               </Link>
             </li>
 
@@ -1778,7 +659,7 @@ export default function Home() {
                 className={`${stylesNav.homeServiceColumn}`}
                 href={"#ourservice"}
               >
-                Үйлчилгээ
+                {f({ id: "homeService" })}
               </Link>
             </li>
 
@@ -1787,7 +668,7 @@ export default function Home() {
                 className={`${stylesNav.homeAboutUsColumn}`}
                 href={"#aboutus"}
               >
-                Бидний тухай
+                {f({ id: "homeAboutUs" })}
               </Link>
             </li>
 
@@ -1796,13 +677,13 @@ export default function Home() {
                 className={`${stylesNav.homeProductsColumn}`}
                 href={"#products"}
               >
-                Бүтээгдэхүүн
+                {f({ id: "homeProducts" })}
               </Link>
             </li>
 
             <li className={stylesNav.linkColumnLi}>
               <Link className={`${stylesNav.homeOrderColumn}`} href={"#order"}>
-                Захиалга
+                {f({ id: "homeOrder" })}
               </Link>
             </li>
 
@@ -1811,7 +692,7 @@ export default function Home() {
                 className={`${stylesNav.homeCollaborationColumn}`}
                 href={"#collaboration"}
               >
-                Хамтын ажиллагаа
+                {f({ id: "homeCollaboration" })}
               </Link>
             </li>
           </ul>
@@ -1821,7 +702,7 @@ export default function Home() {
           <div className={styles.service}>
             <h3 className={`${styles.mainTitle} ${styles.serviceTitle}`}>
               <span className={`${styles.mainTitleServiceSpan}`}>
-                Манай үйлчилгээ
+                {f({ id: "mainTitleServiceSpan" })}
               </span>
             </h3>
 
@@ -1840,9 +721,7 @@ export default function Home() {
                   />
                 </div>
                 <p className={`${styles.serviceProduct}`}>
-                  Бараа материалын судалгаа, захиалга,
-                  <br />
-                  нийлүүлэлт
+                  {f({ id: "serviceProduct" })}
                 </p>
               </div>
 
@@ -1859,7 +738,7 @@ export default function Home() {
                   />
                 </div>
                 <p className={`${styles.serviceAdvice}`}>
-                  Гэрээ хэлцэл, хууль зүйн зөвлөгөө
+                  {f({ id: "serviceAdvice" })}
                 </p>
               </div>
 
@@ -1877,10 +756,10 @@ export default function Home() {
                 </div>
                 <p className={`${styles.serviceSolution}`}>
                   <span className={styles.serviceSolutionSpan1}>
-                    Ачаа тээвэр,
+                  {f({ id: "serviceSolutionSpan1" })}
                   </span>
                   <span className={styles.serviceSolutionSpan2}>
-                    мөнгөн гүйлгээний шийдэл
+                  {f({ id: "serviceSolutionSpan2" })}
                   </span>
                 </p>
               </div>
@@ -1889,31 +768,19 @@ export default function Home() {
         </section>
         <section id="aboutus" className={styles.aboutUs}>
           <h1 className={styles.aboutUsTitle}>
-            MONDO ARTIS TRADE LLC-Д <br />
-            ТАВТАЙ МОРИЛ
+          {f({ id: "aboutUsTitle" })}
           </h1>
           <div className={styles.aboutUsTextContainer}>
             <h3 className={`${styles.mainTitle} ${styles.aboutUsMainTitle}`}>
               <span className={`${styles.mainTitleAboutUsSpan}`}>
-                Бидний тухай
+              {f({ id: "mainTitleAboutUsSpan" })}
               </span>
             </h3>
             <div className={styles.aboutUsText1}>
-              Манай компани нь олон улсад үйл ажиллагаа явуулдаг, Ази Европыг
-              холбосон худалдаа, зуучлал, судалгаа зөвлөгөөний үйлчилгээ
-              үзүүлдэг. Бид БНХАУ-ын үйлдвэрлэлийн тэргүүлэх Guangdong,
-              Zhejiang, Jiangsu, Shandong, БНСУ-ын Seoul, Incheon, Busan хот
-              мужид байрлах хамтын ажиллагаат олон жилийн туршлагатай, өндөр
-              хүчин чадалтай үйлдвэрүүдээс баталгаат бараа бүтээгдэхүүн түүхий
-              эдийг хурдан шуурхай ханган нийлүүлж байна.
+            {f({ id: "aboutUsText1" })}
             </div>
             <div className={styles.aboutUsText2}>
-              Компанийн агент, төлөөлөгчийн газрууд БНСУ-ын Сөүл, БНХАУ-ын
-              Гуанжоу, Жинан, Шанхай, Хөх хот, Эрээн (агуулах), ОХУ-ын Москва,
-              Улан-Үд хотуудад тус тус үйл ажиллагаа явуулж байна. Өөрийн
-              мэргэжлийн агентуудаар дамжуулан бараа материал ханган нийлүүлэх,
-              судалгаа хийх, үйлдвэрүүдтэй худалдан авагчийн эрх ашигт нийцсэн
-              тохиролцоо, таатай нөхцлөөр гэрээ хэлцэл хийж үйлчилдэг.
+            {f({ id: "aboutUsText2" })}
             </div>
           </div>
         </section>
@@ -1923,30 +790,27 @@ export default function Home() {
         <section id="order" className={styles.order}>
           <h3 className={`${styles.mainTitle} ${styles.orderMainTitle}`}>
             <span className={`${styles.mainTitleOrderSpan}`}>
-              Хэрхэн захиалах вэ ?
+            {f({ id: "mainTitleOrderSpan" })}
             </span>
           </h3>
           <ol className={styles.orderSentence}>
             <li className={styles.orderOne}>
-              Захиалах бүтээгдэхүүний иж бүрэн мэдээллийг бидэнд өгнө.
+            {f({ id: "orderOne" })}
             </li>
             <li className={styles.orderTwo}>
-              Үйлдвэрт мэдээллийг илгээж үнийн санал, материал хийцлэлийн
-              мэдээлэл авна.
+            {f({ id: "orderTwo" })}
             </li>
             <li className={styles.orderThree}>
-              Загвар, өнгө, сери дугаар, код, тоо хэмжээг тохирч гэрээ хийгдэнэ.
+            {f({ id: "orderThree" })}
             </li>
             <li className={styles.orderFour}>
-              Барааны урьдчилгаа төлбөр төлж захиалга баталгаажна.
+            {f({ id: "orderFour" })}
             </li>
             <li className={styles.orderFive}>
-              Бараа үйлдвэрлэгдэж, ачихад бэлэн болмогц үлдэгдэл төлбөрийг
-              төлнө.
+            {f({ id: "orderFive" })}
             </li>
             <li className={styles.orderSix}>
-              Бараа замдаа гарч сонгосон маршрут ба тээвэр зуучаар захиалсан
-              хаягт хүргэгдэнэ.
+            {f({ id: "orderSix" })}
             </li>
           </ol>
         </section>
@@ -1956,23 +820,18 @@ export default function Home() {
           <div className={styles.overlay} />
           <h3 className={`${styles.mainTitle} ${styles.collaborationTitle}`}>
             <span className={`${styles.mainTitleCollaborationSpan}`}>
-              Хамтын ажиллагаа
+            {f({ id: "mainTitleCollaborationSpan" })}
             </span>
           </h3>
           <div className={styles.collaborationSentence}>
-            Бид санал болгож байгаа бүтээгдэхүүн, бараа материалыг хамтын
-            ажиллагаат үйлдвэрүүдээс ханган нийлүүлж байна. Уян хатан нөхцөл,
-            дундын зуучлагчгүй хямд үнэ, чанарын баталгаа, төлбөрийн болон
-            тээврийн тохиромжтой нөхцлөөр тантай хамтран ажиллах болно.
+          {f({ id: "collaborationSentence" })}
           </div>
 
           <div className={styles.teewerZuuchSentence}>
-            Төлбөр болон тээвэр зуучийн шийдэл: LC болон 20/80, 30/70 зарчмаар
-            төлбөр хийгдэх ба монголын арилжааны банкинд Эскроу данс нээж
-            төлбөрийг гүйцэтгэнэ.
+          {f({ id: "teewerZuuchSentence" })}
           </div>
         </section>
-        <RequestForm selected={selected}/>
+        <RequestForm selected={selected} />
         <Footer selected={selected} />
       </div>
     </>
